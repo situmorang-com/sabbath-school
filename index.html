@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 10 - Repentance and Forgiveness</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5d6875;
+      --line: #d8e0e8;
+      --paper: #fbfcfd;
+      --panel: #ffffff;
+      --navy: #102235;
+      --teal: #0e7c7b;
+      --gold: #b47b1f;
+      --soft-teal: #e8f5f4;
+      --soft-gold: #fff4dc;
+      --soft-blue: #eef5fb;
+      --shadow: 0 18px 48px rgba(16, 34, 53, 0.14);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      align-items: end;
+      background:
+        linear-gradient(180deg, rgba(16, 34, 53, 0.18), rgba(16, 34, 53, 0.86)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80") center / cover;
+      color: #fff;
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 88px 0 44px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      max-width: 900px;
+      font-size: clamp(2.45rem, 7vw, 5.8rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .primary-link, .secondary-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .primary-link {
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .secondary-link {
+      border: 1px solid rgba(255, 255, 255, 0.44);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 252, 253, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scrollbar-width: thin;
+    }
+
+    .nav-row a {
+      flex: 0 0 auto;
+      min-height: 38px;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    main {
+      padding: 34px 0 110px;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .panel, .day {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 8px 26px rgba(16, 34, 53, 0.06);
+    }
+
+    .panel {
+      padding: 22px;
+    }
+
+    .panel h2, .day h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .meta-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .tag {
+      flex: 0 0 auto;
+      min-width: 86px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .memory {
+      border-left: 5px solid var(--gold);
+      background: var(--soft-gold);
+    }
+
+    .memory blockquote {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.55;
+      color: #2a2213;
+    }
+
+    .scripture-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .verse-btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 10px;
+      border: 1px solid #b7d5d4;
+      border-radius: var(--radius);
+      background: var(--soft-teal);
+      color: #064948;
+      font-weight: 850;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .verse-btn:hover, .verse-btn:focus {
+      outline: 2px solid rgba(14, 124, 123, 0.22);
+      border-color: var(--teal);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 30px 0 12px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .day {
+      margin: 14px 0;
+      overflow: hidden;
+    }
+
+    .day-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, #fff, var(--soft-blue));
+    }
+
+    .day-label {
+      margin: 0 0 4px;
+      color: var(--teal);
+      font-size: 0.86rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+
+    .day-title {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .done-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .done-toggle input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--teal);
+    }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+      gap: 18px;
+      padding: 22px;
+    }
+
+    .guide-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: #fff;
+    }
+
+    .guide-box h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.02rem;
+      letter-spacing: 0;
+    }
+
+    .guide-box p, .guide-box ul, .guide-box ol {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    .guide-box li {
+      margin: 6px 0;
+    }
+
+    .callout {
+      border-left: 5px solid var(--teal);
+      background: var(--soft-teal);
+    }
+
+    .question {
+      border-left: 5px solid var(--gold);
+      background: #fffaf0;
+    }
+
+    .full-row {
+      grid-column: 1 / -1;
+    }
+
+    .note-area {
+      width: 100%;
+      min-height: 84px;
+      resize: vertical;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfdff;
+      color: var(--ink);
+    }
+
+    .closing {
+      margin-top: 22px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .closing h2 {
+      margin: 0 0 10px;
+      color: #fff;
+    }
+
+    .closing p {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .drawer {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 40;
+      width: min(860px, calc(100% - 28px));
+      max-height: min(72vh, 720px);
+      transform: translate(-50%, calc(100% + 38px));
+      opacity: 0;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .drawer.open {
+      transform: translate(-50%, 0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .drawer-title {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .drawer-close {
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 900;
+      min-width: 38px;
+      min-height: 38px;
+    }
+
+    .drawer-body {
+      max-height: calc(min(72vh, 720px) - 58px);
+      overflow: auto;
+      padding: 16px;
+    }
+
+    .scripture-text {
+      margin: 0;
+      white-space: pre-wrap;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      font-size: 1.08rem;
+      line-height: 1.65;
+    }
+
+    .drawer-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding: 26px 0 42px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 64vh;
+      }
+
+      .top-grid, .day-body {
+        grid-template-columns: 1fr;
+      }
+
+      .day-head {
+        grid-template-columns: 1fr;
+      }
+
+      .done-toggle {
+        justify-content: flex-start;
+        width: fit-content;
+      }
+
+      .panel, .day-body {
+        padding: 16px;
+      }
+
+      .day-head {
+        padding: 16px;
+      }
+
+      .memory blockquote {
+        font-size: 1.08rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Lesson 10 - May 30 to June 5, 2026</div>
+      <h1>Repentance and Forgiveness</h1>
+      <p>A follow-along Sabbath School guide for students: read the verses, discuss the questions, write your response, and move through the lesson in the same flow as the main weekly study.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#lesson-start">Start Lesson</a>
+        <a class="secondary-link" href="#memory">Memory Text</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky-nav" aria-label="Lesson sections">
+    <div class="wrap nav-row">
+      <a href="#lesson-start">Overview</a>
+      <a href="#sabbath">Sabbath</a>
+      <a href="#sunday">Sunday</a>
+      <a href="#monday">Monday</a>
+      <a href="#tuesday">Tuesday</a>
+      <a href="#wednesday">Wednesday</a>
+      <a href="#thursday">Thursday</a>
+      <a href="#friday">Friday</a>
+      <a href="#closing">Closing</a>
+    </div>
+  </nav>
+
+  <main id="lesson-start" class="wrap">
+    <section class="top-grid" aria-label="Lesson overview">
+      <div class="panel">
+        <h2>Lesson Identification</h2>
+        <ul class="meta-list">
+          <li><span class="tag">Quarter</span><span>2nd Quarter 2026 - Growing in a Relationship With God</span></li>
+          <li><span class="tag">Lesson</span><span>Lesson 10</span></li>
+          <li><span class="tag">Title</span><span>Repentance and Forgiveness</span></li>
+          <li><span class="tag">Date</span><span>May 30-June 5, 2026</span></li>
+          <li><span class="tag">Goal</span><span>Understand how the Holy Spirit leads us to repent, how God forgives, and why we need Christ's righteousness.</span></li>
+        </ul>
+      </div>
+
+      <div id="memory" class="panel memory">
+        <h2>Memory Text</h2>
+        <blockquote>
+          "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
+          <br>- <button class="verse-btn" data-ref="1 John 1:9">1 John 1:9</button>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Read for This Week's Study</h2>
+      <p>Click a reference to open the Bible text inside this page.</p>
+      <div class="scripture-grid">
+        <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button>
+        <button class="verse-btn" data-ref="Hosea 6">Hosea 6</button>
+        <button class="verse-btn" data-ref="Acts 3:18-19">Acts 3:18-19</button>
+        <button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button>
+        <button class="verse-btn" data-ref="Romans 6:23">Romans 6:23</button>
+        <button class="verse-btn" data-ref="Matthew 22:1-14">Matthew 22:1-14</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Big Idea</h2>
+      <p>Repentance is more than feeling sorry. It is returning to God when the Holy Spirit shows us the truth about our sin. Forgiveness is not earned by our regret; it is received through Jesus. God forgives the repentant sinner, cleanses the heart, and covers us with Christ's righteousness.</p>
+    </section>
+
+    <div class="section-title">
+      <h2>Follow the Lesson Flow</h2>
+    </div>
+
+    <article id="sabbath" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Sabbath Afternoon</p>
+          <h2 class="day-title">Repentance and Forgiveness</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="sabbath"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>The golden calf story reminds us that people can fail badly even after seeing God's power. Yet God still calls sinners back to Himself.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button> and <button class="verse-btn" data-ref="1 John 1:9">1 John 1:9</button></p>
+        </div>
+        <div class="guide-box question full-row">
+          <h3>Class Question</h3>
+          <p>When people sin, why do they often hide, justify, or blame instead of returning to God?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Student Note</h3>
+          <textarea class="note-area" data-note="sabbath" placeholder="Write one sentence about what repentance means to you."></textarea>
+        </div>
+      </div>
+    </article>
+
+    <article id="sunday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Sunday - May 31</p>
+          <h2 class="day-title">The Rush of Life</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="sunday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>Busy lives can make us lose sight of the most important thing: drawing near to Jesus. Sabbath is not only about stopping work; it is about receiving time with God.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Isaiah 64:6">Isaiah 64:6</button> <button class="verse-btn" data-ref="Zechariah 3:4">Zechariah 3:4</button> <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>The lesson points us from distraction to Christ's robe of righteousness. We cannot clean ourselves spiritually. We need Jesus to take away our filthy garments and cover us with His righteousness.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>What are the normal things in student life that can crowd out time with God?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Life Step</h3>
+          <p>Choose one moment this week to pause, pray, and sit with Jesus before rushing into the next task.</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="monday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Monday - June 1</p>
+          <h2 class="day-title">Holy Spirit Promptings</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="monday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>The Holy Spirit convicts us of sin so that our relationship with God can be restored. Conviction is uncomfortable, but it is a gift.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Hosea 6">Hosea 6</button> <button class="verse-btn" data-ref="John 16:8">John 16:8</button> <button class="verse-btn" data-ref="Ephesians 4:30">Ephesians 4:30</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>It is easy to move from remorse to excuse-making. Real spiritual growth begins when we stop defending our sin and listen to God's voice.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>How can you tell the difference between hopeless shame and the Holy Spirit's conviction?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Answer Guide</h3>
+          <p>Shame says, "Hide from God." Conviction says, "Return to God."</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="tuesday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Tuesday - June 2</p>
+          <h2 class="day-title">Real Repentance</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="tuesday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>True repentance includes sincere sorrow for sin and a surrendered decision to turn away from it.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Acts 3:18-19">Acts 3:18-19</button> <button class="verse-btn" data-ref="Romans 2:4">Romans 2:4</button> <button class="verse-btn" data-ref="2 Peter 3:9">2 Peter 3:9</button> <button class="verse-btn" data-ref="Matthew 3:8">Matthew 3:8</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>The world often says, "You are fine as you are." The gospel says, "Come to Jesus as you are, and let Him change you." Repentance is not self-improvement; it is surrender.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>What is the difference between being sorry you got caught and being sorry for the sin itself?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Student Note</h3>
+          <textarea class="note-area" data-note="tuesday" placeholder="Write one practical example of repentance in school, family, friendship, or online life."></textarea>
+        </div>
+      </div>
+    </article>
+
+    <article id="wednesday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Wednesday - June 3</p>
+          <h2 class="day-title">Sufficient Grace</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="wednesday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>God's grace is sufficient for the repentant sinner. He is merciful, gracious, patient, and abundant in goodness and truth.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button> <button class="verse-btn" data-ref="Romans 6:23">Romans 6:23</button> <button class="verse-btn" data-ref="Romans 5:20-21">Romans 5:20-21</button> <button class="verse-btn" data-ref="Romans 5:8">Romans 5:8</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>After Israel's serious failure, God revealed His character to Moses. Grace does not make sin small; grace shows that God's mercy is greater than our failure when we return to Him.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>Why is it important to know God's character when we feel guilty?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Life Step</h3>
+          <p>When guilt comes, do not run away from God. Pray honestly: "Lord, be merciful to me. I need Your grace."</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="thursday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Thursday - June 4</p>
+          <h2 class="day-title">The Most Expensive Robe</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="thursday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>The wedding garment points to Christ's righteousness. We cannot stand before God in our own goodness.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Matthew 22:1-14">Matthew 22:1-14</button> <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button> <button class="verse-btn" data-ref="Zechariah 3:4">Zechariah 3:4</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>In the parable, the man without the wedding garment had been invited but refused the covering provided. The lesson is clear: salvation is not self-made. Christ gives the robe we could never make.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>What does it mean in daily life to accept Christ's robe of righteousness?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Answer Guide</h3>
+          <p>It means trusting Jesus instead of our own goodness, confessing sin instead of hiding it, and allowing His grace to change our conduct.</p>
+        </div>
+      </div>
+    </article>
+
+    <article id="friday" class="day">
+      <div class="day-head">
+        <div>
+          <p class="day-label">Friday - June 5</p>
+          <h2 class="day-title">Further Thought</h2>
+        </div>
+        <label class="done-toggle"><input type="checkbox" data-done="friday"> Done</label>
+      </div>
+      <div class="day-body">
+        <div class="guide-box callout">
+          <h3>Key Point</h3>
+          <p>Hosea uses farming language: break up the hard ground, seek the Lord, and let Him rain righteousness on you. A hard heart can become ready soil for God's work.</p>
+        </div>
+        <div class="guide-box">
+          <h3>Read Together</h3>
+          <p><button class="verse-btn" data-ref="Hosea 10:12">Hosea 10:12</button> <button class="verse-btn" data-ref="Philippians 2:12-13">Philippians 2:12-13</button> <button class="verse-btn" data-ref="Deuteronomy 4:3-4">Deuteronomy 4:3-4</button> <button class="verse-btn" data-ref="Matthew 6:13">Matthew 6:13</button></p>
+        </div>
+        <div class="guide-box">
+          <h3>Follow Along</h3>
+          <p>Repentance is not a one-time classroom topic. It is part of a living relationship with God. We turn toward Him, cling to Him, and ask Him to keep working in us.</p>
+        </div>
+        <div class="guide-box question">
+          <h3>Ask Together</h3>
+          <p>Which part is hardest for you: confessing, receiving forgiveness, making things right, or changing direction?</p>
+        </div>
+        <div class="guide-box full-row">
+          <h3>Weekly Challenge</h3>
+          <ol>
+            <li>Pause when the Holy Spirit convicts you.</li>
+            <li>Confess honestly to God.</li>
+            <li>Receive forgiveness by faith.</li>
+            <li>Make things right with someone if needed.</li>
+            <li>Ask Jesus for power to walk differently.</li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <section id="closing" class="closing">
+      <h2>Closing Appeal</h2>
+      <p>God is not asking you to clean yourself before you come to Him. He is asking you to come to Him so He can forgive and cleanse you. Do not hide from the only One who can heal you.</p>
+      <p><strong>Prayer thought:</strong> Lord, give us honest hearts. Help us listen when Your Spirit speaks. Teach us to confess without fear, receive Your forgiveness by faith, and wear the righteousness of Jesus instead of trusting ourselves. Amen.</p>
+    </section>
+  </main>
+
+  <aside id="scriptureDrawer" class="drawer" aria-live="polite" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 id="scriptureTitle" class="drawer-title">Scripture</h2>
+      <button class="drawer-close" type="button" aria-label="Close Scripture" id="closeDrawer">X</button>
+    </div>
+    <div class="drawer-body">
+      <p id="scriptureText" class="scripture-text"></p>
+      <p class="drawer-note">Bible text shown from the King James Version.</p>
+    </div>
+  </aside>
+
+  <footer class="wrap">
+    <p>Lesson metadata verified from <a href="https://ssnet.org/lessons/26b/less10.html">Sabbath School Net</a> and the official lesson PDF listing at <a href="https://www.sabbath.school/SSchool/2026/2/ETQ226_10.pdf">sabbath.school</a>. Lesson content is summarized in original language for classroom use.</p>
+  </footer>
+
+  <script>
+    const scriptures = {
+      "1 John 1:9": `1 John 1:9
+If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.`,
+      "Isaiah 61:10": `Isaiah 61:10
+I will greatly rejoice in the LORD, my soul shall be joyful in my God; for he hath clothed me with the garments of salvation, he hath covered me with the robe of righteousness, as a bridegroom decketh himself with ornaments, and as a bride adorneth herself with her jewels.`,
+      "Isaiah 64:6": `Isaiah 64:6
+But we are all as an unclean thing, and all our righteousnesses are as filthy rags; and we all do fade as a leaf; and our iniquities, like the wind, have taken us away.`,
+      "Zechariah 3:4": `Zechariah 3:4
+And he answered and spake unto those that stood before him, saying, Take away the filthy garments from him. And unto him he said, Behold, I have caused thine iniquity to pass from thee, and I will clothe thee with change of raiment.`,
+      "Hosea 6": `Hosea 6
+1 Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.
+2 After two days will he revive us: in the third day he will raise us up, and we shall live in his sight.
+3 Then shall we know, if we follow on to know the LORD: his going forth is prepared as the morning; and he shall come unto us as the rain, as the latter and former rain unto the earth.
+4 O Ephraim, what shall I do unto thee? O Judah, what shall I do unto thee? for your goodness is as a morning cloud, and as the early dew it goeth away.
+5 Therefore have I hewed them by the prophets; I have slain them by the words of my mouth: and thy judgments are as the light that goeth forth.
+6 For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.
+7 But they like men have transgressed the covenant: there have they dealt treacherously against me.
+8 Gilead is a city of them that work iniquity, and is polluted with blood.
+9 And as troops of robbers wait for a man, so the company of priests murder in the way by consent: for they commit lewdness.
+10 I have seen an horrible thing in the house of Israel: there is the whoredom of Ephraim, Israel is defiled.
+11 Also, O Judah, he hath set an harvest for thee, when I returned the captivity of my people.`,
+      "Acts 3:18-19": `Acts 3:18-19
+18 But those things, which God before had shewed by the mouth of all his prophets, that Christ should suffer, he hath so fulfilled.
+19 Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;`,
+      "Exodus 34:1-10": `Exodus 34:1-10
+1 And the LORD said unto Moses, Hew thee two tables of stone like unto the first: and I will write upon these tables the words that were in the first tables, which thou brakest.
+2 And be ready in the morning, and come up in the morning unto mount Sinai, and present thyself there to me in the top of the mount.
+3 And no man shall come up with thee, neither let any man be seen throughout all the mount; neither let the flocks nor herds feed before that mount.
+4 And he hewed two tables of stone like unto the first; and Moses rose up early in the morning, and went up unto mount Sinai, as the LORD had commanded him, and took in his hand the two tables of stone.
+5 And the LORD descended in the cloud, and stood with him there, and proclaimed the name of the LORD.
+6 And the LORD passed by before him, and proclaimed, The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth,
+7 Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children's children, unto the third and to the fourth generation.
+8 And Moses made haste, and bowed his head toward the earth, and worshipped.
+9 And he said, If now I have found grace in thy sight, O Lord, let my Lord, I pray thee, go among us; for it is a stiffnecked people; and pardon our iniquity and our sin, and take us for thine inheritance.
+10 And he said, Behold, I make a covenant: before all thy people I will do marvels, such as have not been done in all the earth, nor in any nation: and all the people among which thou art shall see the work of the LORD: for it is a terrible thing that I will do with thee.`,
+      "Romans 6:23": `Romans 6:23
+For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.`,
+      "Matthew 22:1-14": `Matthew 22:1-14
+1 And Jesus answered and spake unto them again by parables, and said,
+2 The kingdom of heaven is like unto a certain king, which made a marriage for his son,
+3 And sent forth his servants to call them that were bidden to the wedding: and they would not come.
+4 Again, he sent forth other servants, saying, Tell them which are bidden, Behold, I have prepared my dinner: my oxen and my fatlings are killed, and all things are ready: come unto the marriage.
+5 But they made light of it, and went their ways, one to his farm, another to his merchandise:
+6 And the remnant took his servants, and entreated them spitefully, and slew them.
+7 But when the king heard thereof, he was wroth: and he sent forth his armies, and destroyed those murderers, and burned up their city.
+8 Then saith he to his servants, The wedding is ready, but they which were bidden were not worthy.
+9 Go ye therefore into the highways, and as many as ye shall find, bid to the marriage.
+10 So those servants went out into the highways, and gathered together all as many as they found, both bad and good: and the wedding was furnished with guests.
+11 And when the king came in to see the guests, he saw there a man which had not on a wedding garment:
+12 And he saith unto him, Friend, how camest thou in hither not having a wedding garment? And he was speechless.
+13 Then said the king to the servants, Bind him hand and foot, and take him away, and cast him into outer darkness; there shall be weeping and gnashing of teeth.
+14 For many are called, but few are chosen.`,
+      "John 16:8": `John 16:8
+And when he is come, he will reprove the world of sin, and of righteousness, and of judgment:`,
+      "Ephesians 4:30": `Ephesians 4:30
+And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.`,
+      "Romans 2:4": `Romans 2:4
+Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance?`,
+      "2 Peter 3:9": `2 Peter 3:9
+The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance.`,
+      "Matthew 3:8": `Matthew 3:8
+Bring forth therefore fruits meet for repentance:`,
+      "Romans 5:20-21": `Romans 5:20-21
+20 Moreover the law entered, that the offence might abound. But where sin abounded, grace did much more abound:
+21 That as sin hath reigned unto death, even so might grace reign through righteousness unto eternal life by Jesus Christ our Lord.`,
+      "Romans 5:8": `Romans 5:8
+But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.`,
+      "Hosea 10:12": `Hosea 10:12
+Sow to yourselves in righteousness, reap in mercy; break up your fallow ground: for it is time to seek the LORD, till he come and rain righteousness upon you.`,
+      "Philippians 2:12-13": `Philippians 2:12-13
+12 Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.
+13 For it is God which worketh in you both to will and to do of his good pleasure.`,
+      "Deuteronomy 4:3-4": `Deuteronomy 4:3-4
+3 Your eyes have seen what the LORD did because of Baalpeor: for all the men that followed Baalpeor, the LORD thy God hath destroyed them from among you.
+4 But ye that did cleave unto the LORD your God are alive every one of you this day.`,
+      "Matthew 6:13": `Matthew 6:13
+And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.`
+    };
+
+    const drawer = document.getElementById("scriptureDrawer");
+    const title = document.getElementById("scriptureTitle");
+    const text = document.getElementById("scriptureText");
+    const closeDrawer = document.getElementById("closeDrawer");
+
+    function openScripture(ref) {
+      title.textContent = ref;
+      text.textContent = scriptures[ref] || "Scripture text is not loaded for this reference.";
+      drawer.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+      closeDrawer.focus({ preventScroll: true });
+    }
+
+    function closeScripture() {
+      drawer.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll("[data-ref]").forEach((button) => {
+      button.addEventListener("click", () => openScripture(button.dataset.ref));
+    });
+
+    closeDrawer.addEventListener("click", closeScripture);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeScripture();
+      }
+    });
+
+    document.querySelectorAll("[data-done]").forEach((checkbox) => {
+      const key = `ss-l10-done-${checkbox.dataset.done}`;
+      checkbox.checked = localStorage.getItem(key) === "true";
+      checkbox.addEventListener("change", () => {
+        localStorage.setItem(key, String(checkbox.checked));
+      });
+    });
+
+    document.querySelectorAll("[data-note]").forEach((area) => {
+      const key = `ss-l10-note-${area.dataset.note}`;
+      area.value = localStorage.getItem(key) || "";
+      area.addEventListener("input", () => {
+        localStorage.setItem(key, area.value);
+      });
+    });
+  </script>
+</body>
+</html>
