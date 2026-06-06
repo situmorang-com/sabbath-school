@@ -1,3 +1,3 @@
-# Sabbath School
+# Sekolah Sabat
 
-Interactive Sabbath School lesson page.
+Halaman pelajaran Sekolah Sabat interaktif dalam bahasa Indonesia.

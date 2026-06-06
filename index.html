@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lesson 10 - Repentance and Forgiveness</title>
+  <title>Pelajaran 10 - Pertobatan dan Pengampunan</title>
   <style>
     :root {
       color-scheme: light;
@@ -22,13 +22,8 @@
       --radius: 8px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -38,9 +33,7 @@
       line-height: 1.6;
     }
 
-    button, input, textarea {
-      font: inherit;
-    }
+    button, input, textarea { font: inherit; }
 
     .hero {
       min-height: 72vh;
@@ -102,21 +95,10 @@
       font-weight: 800;
     }
 
-    .primary-link {
-      background: #fff;
-      color: var(--navy);
-    }
+    .primary-link { background: #fff; color: var(--navy); }
+    .secondary-link { border: 1px solid rgba(255, 255, 255, 0.44); color: #fff; background: rgba(255, 255, 255, 0.12); }
 
-    .secondary-link {
-      border: 1px solid rgba(255, 255, 255, 0.44);
-      color: #fff;
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
 
     .sticky-nav {
       position: sticky;
@@ -127,13 +109,7 @@
       backdrop-filter: blur(12px);
     }
 
-    .nav-row {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 10px 0;
-      scrollbar-width: thin;
-    }
+    .nav-row { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0; scrollbar-width: thin; }
 
     .nav-row a {
       flex: 0 0 auto;
@@ -149,9 +125,7 @@
       white-space: nowrap;
     }
 
-    main {
-      padding: 34px 0 110px;
-    }
+    main { padding: 34px 0 110px; }
 
     .top-grid {
       display: grid;
@@ -167,30 +141,12 @@
       box-shadow: 0 8px 26px rgba(16, 34, 53, 0.06);
     }
 
-    .panel {
-      padding: 22px;
-    }
+    .panel { padding: 22px; }
 
-    .panel h2, .day h2 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      line-height: 1.15;
-      letter-spacing: 0;
-    }
+    .panel h2, .day h2 { margin: 0 0 10px; color: var(--navy); line-height: 1.15; letter-spacing: 0; }
 
-    .meta-list {
-      display: grid;
-      gap: 10px;
-      margin: 16px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .meta-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
+    .meta-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .meta-list li { display: flex; gap: 10px; align-items: flex-start; }
 
     .tag {
       flex: 0 0 auto;
@@ -201,24 +157,10 @@
       text-transform: uppercase;
     }
 
-    .memory {
-      border-left: 5px solid var(--gold);
-      background: var(--soft-gold);
-    }
+    .memory { border-left: 5px solid var(--gold); background: var(--soft-gold); }
+    .memory blockquote { margin: 0; font-size: 1.25rem; line-height: 1.55; color: #2a2213; }
 
-    .memory blockquote {
-      margin: 0;
-      font-size: 1.25rem;
-      line-height: 1.55;
-      color: #2a2213;
-    }
-
-    .scripture-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
+    .scripture-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
     .verse-btn {
       display: inline-flex;
@@ -234,29 +176,12 @@
       text-align: left;
     }
 
-    .verse-btn:hover, .verse-btn:focus {
-      outline: 2px solid rgba(14, 124, 123, 0.22);
-      border-color: var(--teal);
-    }
+    .verse-btn:hover, .verse-btn:focus { outline: 2px solid rgba(14, 124, 123, 0.22); border-color: var(--teal); }
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin: 30px 0 12px;
-    }
+    .section-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 30px 0 12px; }
+    .section-title h2 { margin: 0; color: var(--navy); line-height: 1.15; }
 
-    .section-title h2 {
-      margin: 0;
-      color: var(--navy);
-      line-height: 1.15;
-    }
-
-    .day {
-      margin: 14px 0;
-      overflow: hidden;
-    }
+    .day { margin: 14px 0; overflow: hidden; }
 
     .day-head {
       display: grid;
@@ -268,18 +193,8 @@
       background: linear-gradient(90deg, #fff, var(--soft-blue));
     }
 
-    .day-label {
-      margin: 0 0 4px;
-      color: var(--teal);
-      font-size: 0.86rem;
-      font-weight: 950;
-      text-transform: uppercase;
-    }
-
-    .day-title {
-      margin: 0;
-      font-size: clamp(1.35rem, 3vw, 2rem);
-    }
+    .day-label { margin: 0 0 4px; color: var(--teal); font-size: 0.86rem; font-weight: 950; text-transform: uppercase; }
+    .day-title { margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); }
 
     .done-toggle {
       display: inline-flex;
@@ -296,11 +211,7 @@
       white-space: nowrap;
     }
 
-    .done-toggle input {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--teal);
-    }
+    .done-toggle input { width: 18px; height: 18px; accent-color: var(--teal); }
 
     .day-body {
       display: grid;
@@ -309,42 +220,14 @@
       padding: 22px;
     }
 
-    .guide-box {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 16px;
-      background: #fff;
-    }
+    .guide-box { border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; background: #fff; }
+    .guide-box h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.02rem; letter-spacing: 0; }
+    .guide-box p, .guide-box ul, .guide-box ol { margin-top: 8px; margin-bottom: 0; }
+    .guide-box li { margin: 6px 0; }
 
-    .guide-box h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-size: 1.02rem;
-      letter-spacing: 0;
-    }
-
-    .guide-box p, .guide-box ul, .guide-box ol {
-      margin-top: 8px;
-      margin-bottom: 0;
-    }
-
-    .guide-box li {
-      margin: 6px 0;
-    }
-
-    .callout {
-      border-left: 5px solid var(--teal);
-      background: var(--soft-teal);
-    }
-
-    .question {
-      border-left: 5px solid var(--gold);
-      background: #fffaf0;
-    }
-
-    .full-row {
-      grid-column: 1 / -1;
-    }
+    .callout { border-left: 5px solid var(--teal); background: var(--soft-teal); }
+    .question { border-left: 5px solid var(--gold); background: #fffaf0; }
+    .full-row { grid-column: 1 / -1; }
 
     .note-area {
       width: 100%;
@@ -357,23 +240,9 @@
       color: var(--ink);
     }
 
-    .closing {
-      margin-top: 22px;
-      padding: 24px;
-      border-radius: var(--radius);
-      background: var(--navy);
-      color: #fff;
-    }
-
-    .closing h2 {
-      margin: 0 0 10px;
-      color: #fff;
-    }
-
-    .closing p {
-      margin: 8px 0 0;
-      color: rgba(255, 255, 255, 0.9);
-    }
+    .closing { margin-top: 22px; padding: 24px; border-radius: var(--radius); background: var(--navy); color: #fff; }
+    .closing h2 { margin: 0 0 10px; color: #fff; }
+    .closing p { margin: 8px 0 0; color: rgba(255, 255, 255, 0.9); }
 
     .drawer {
       position: fixed;
@@ -393,500 +262,211 @@
       transition: transform 180ms ease, opacity 180ms ease;
     }
 
-    .drawer.open {
-      transform: translate(-50%, 0);
-      opacity: 1;
-      pointer-events: auto;
-    }
+    .drawer.open { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+    .drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; background: var(--navy); color: #fff; }
+    .drawer-title { margin: 0; font-size: 1.05rem; line-height: 1.25; }
+    .drawer-close { border: 1px solid rgba(255, 255, 255, 0.38); border-radius: var(--radius); background: rgba(255, 255, 255, 0.12); color: #fff; cursor: pointer; font-weight: 900; min-width: 38px; min-height: 38px; }
+    .drawer-body { max-height: calc(min(72vh, 720px) - 58px); overflow: auto; padding: 16px; }
+    .scripture-text { margin: 0; white-space: pre-wrap; font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: 1.08rem; line-height: 1.65; }
+    .drawer-note { margin: 12px 0 0; color: var(--muted); font-size: 0.92rem; }
 
-    .drawer-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      background: var(--navy);
-      color: #fff;
-    }
-
-    .drawer-title {
-      margin: 0;
-      font-size: 1.05rem;
-      line-height: 1.25;
-    }
-
-    .drawer-close {
-      border: 1px solid rgba(255, 255, 255, 0.38);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      cursor: pointer;
-      font-weight: 900;
-      min-width: 38px;
-      min-height: 38px;
-    }
-
-    .drawer-body {
-      max-height: calc(min(72vh, 720px) - 58px);
-      overflow: auto;
-      padding: 16px;
-    }
-
-    .scripture-text {
-      margin: 0;
-      white-space: pre-wrap;
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
-      font-size: 1.08rem;
-      line-height: 1.65;
-    }
-
-    .drawer-note {
-      margin: 12px 0 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    footer {
-      padding: 26px 0 42px;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    footer a {
-      color: var(--teal);
-      font-weight: 800;
-    }
+    footer { padding: 26px 0 42px; color: var(--muted); font-size: 0.92rem; }
+    footer a { color: var(--teal); font-weight: 800; }
 
     @media (max-width: 760px) {
-      .hero {
-        min-height: 64vh;
-      }
-
-      .top-grid, .day-body {
-        grid-template-columns: 1fr;
-      }
-
-      .day-head {
-        grid-template-columns: 1fr;
-      }
-
-      .done-toggle {
-        justify-content: flex-start;
-        width: fit-content;
-      }
-
-      .panel, .day-body {
-        padding: 16px;
-      }
-
-      .day-head {
-        padding: 16px;
-      }
-
-      .memory blockquote {
-        font-size: 1.08rem;
-      }
+      .hero { min-height: 64vh; }
+      .top-grid, .day-body { grid-template-columns: 1fr; }
+      .day-head { grid-template-columns: 1fr; padding: 16px; }
+      .done-toggle { justify-content: flex-start; width: fit-content; }
+      .panel, .day-body { padding: 16px; }
+      .memory blockquote { font-size: 1.08rem; }
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">Lesson 10 - May 30 to June 5, 2026</div>
-      <h1>Repentance and Forgiveness</h1>
-      <p>A follow-along Sabbath School guide for students: read the verses, discuss the questions, write your response, and move through the lesson in the same flow as the main weekly study.</p>
+      <div class="eyebrow">Pelajaran 10 - 30 Mei sampai 5 Juni 2026</div>
+      <h1>Pertobatan dan Pengampunan</h1>
+      <p>Panduan Sekolah Sabat interaktif untuk siswa: baca ayat, diskusikan pertanyaan, tulis responsmu, dan ikuti alur pelajaran mingguan bersama kelas.</p>
       <div class="hero-actions">
-        <a class="primary-link" href="#lesson-start">Start Lesson</a>
-        <a class="secondary-link" href="#memory">Memory Text</a>
+        <a class="primary-link" href="#lesson-start">Mulai Pelajaran</a>
+        <a class="secondary-link" href="#memory">Ayat Hafalan</a>
       </div>
     </div>
   </header>
 
-  <nav class="sticky-nav" aria-label="Lesson sections">
+  <nav class="sticky-nav" aria-label="Bagian pelajaran">
     <div class="wrap nav-row">
-      <a href="#lesson-start">Overview</a>
-      <a href="#sabbath">Sabbath</a>
-      <a href="#sunday">Sunday</a>
-      <a href="#monday">Monday</a>
-      <a href="#tuesday">Tuesday</a>
-      <a href="#wednesday">Wednesday</a>
-      <a href="#thursday">Thursday</a>
-      <a href="#friday">Friday</a>
-      <a href="#closing">Closing</a>
+      <a href="#lesson-start">Ikhtisar</a>
+      <a href="#sabbath">Sabat</a>
+      <a href="#sunday">Minggu</a>
+      <a href="#monday">Senin</a>
+      <a href="#tuesday">Selasa</a>
+      <a href="#wednesday">Rabu</a>
+      <a href="#thursday">Kamis</a>
+      <a href="#friday">Jumat</a>
+      <a href="#closing">Penutup</a>
     </div>
   </nav>
 
   <main id="lesson-start" class="wrap">
-    <section class="top-grid" aria-label="Lesson overview">
+    <section class="top-grid" aria-label="Ikhtisar pelajaran">
       <div class="panel">
-        <h2>Lesson Identification</h2>
+        <h2>Identitas Pelajaran</h2>
         <ul class="meta-list">
-          <li><span class="tag">Quarter</span><span>2nd Quarter 2026 - Growing in a Relationship With God</span></li>
-          <li><span class="tag">Lesson</span><span>Lesson 10</span></li>
-          <li><span class="tag">Title</span><span>Repentance and Forgiveness</span></li>
-          <li><span class="tag">Date</span><span>May 30-June 5, 2026</span></li>
-          <li><span class="tag">Goal</span><span>Understand how the Holy Spirit leads us to repent, how God forgives, and why we need Christ's righteousness.</span></li>
+          <li><span class="tag">Triwulan</span><span>Triwulan 2 2026 - Bertumbuh dalam Hubungan Dengan Allah</span></li>
+          <li><span class="tag">Pelajaran</span><span>Pelajaran 10</span></li>
+          <li><span class="tag">Judul</span><span>Pertobatan dan Pengampunan</span></li>
+          <li><span class="tag">Tanggal</span><span>30 Mei-5 Juni 2026</span></li>
+          <li><span class="tag">Tujuan</span><span>Memahami bagaimana Roh Kudus menuntun kita bertobat, bagaimana Allah mengampuni, dan mengapa kita membutuhkan kebenaran Kristus.</span></li>
         </ul>
       </div>
 
       <div id="memory" class="panel memory">
-        <h2>Memory Text</h2>
+        <h2>Ayat Hafalan</h2>
         <blockquote>
-          "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
-          <br>- <button class="verse-btn" data-ref="1 John 1:9">1 John 1:9</button>
+          "Jika kita mengaku dosa kita, maka Ia adalah setia dan adil, sehingga Ia akan mengampuni segala dosa kita dan menyucikan kita dari segala kejahatan."
+          <br>- <button class="verse-btn" data-ref="1 Yohanes 1:9">1 Yohanes 1:9</button>
         </blockquote>
       </div>
     </section>
 
     <section class="panel">
-      <h2>Read for This Week's Study</h2>
-      <p>Click a reference to open the Bible text inside this page.</p>
+      <h2>Bacaan untuk Pelajaran Minggu Ini</h2>
+      <p>Klik referensi untuk membuka teks Alkitab di halaman ini.</p>
       <div class="scripture-grid">
-        <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button>
+        <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button>
         <button class="verse-btn" data-ref="Hosea 6">Hosea 6</button>
-        <button class="verse-btn" data-ref="Acts 3:18-19">Acts 3:18-19</button>
-        <button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button>
-        <button class="verse-btn" data-ref="Romans 6:23">Romans 6:23</button>
-        <button class="verse-btn" data-ref="Matthew 22:1-14">Matthew 22:1-14</button>
+        <button class="verse-btn" data-ref="Kisah Para Rasul 3:18-19">Kisah Para Rasul 3:18-19</button>
+        <button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button>
+        <button class="verse-btn" data-ref="Roma 6:23">Roma 6:23</button>
+        <button class="verse-btn" data-ref="Matius 22:1-14">Matius 22:1-14</button>
       </div>
     </section>
 
     <section class="panel">
-      <h2>Big Idea</h2>
-      <p>Repentance is more than feeling sorry. It is returning to God when the Holy Spirit shows us the truth about our sin. Forgiveness is not earned by our regret; it is received through Jesus. God forgives the repentant sinner, cleanses the heart, and covers us with Christ's righteousness.</p>
+      <h2>Gagasan Besar</h2>
+      <p>Pertobatan lebih dari sekadar merasa menyesal. Pertobatan adalah kembali kepada Allah ketika Roh Kudus menunjukkan kebenaran tentang dosa kita. Pengampunan tidak diperoleh karena penyesalan kita; pengampunan diterima melalui Yesus. Allah mengampuni orang berdosa yang bertobat, menyucikan hati, dan menutupi kita dengan kebenaran Kristus.</p>
     </section>
 
-    <div class="section-title">
-      <h2>Follow the Lesson Flow</h2>
-    </div>
+    <div class="section-title"><h2>Ikuti Alur Pelajaran</h2></div>
 
     <article id="sabbath" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Sabbath Afternoon</p>
-          <h2 class="day-title">Repentance and Forgiveness</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="sabbath"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Sabat Sore</p><h2 class="day-title">Pertobatan dan Pengampunan</h2></div><label class="done-toggle"><input type="checkbox" data-done="sabbath"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>The golden calf story reminds us that people can fail badly even after seeing God's power. Yet God still calls sinners back to Himself.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button> and <button class="verse-btn" data-ref="1 John 1:9">1 John 1:9</button></p>
-        </div>
-        <div class="guide-box question full-row">
-          <h3>Class Question</h3>
-          <p>When people sin, why do they often hide, justify, or blame instead of returning to God?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Student Note</h3>
-          <textarea class="note-area" data-note="sabbath" placeholder="Write one sentence about what repentance means to you."></textarea>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Kisah anak lembu emas mengingatkan kita bahwa manusia dapat gagal dengan serius bahkan setelah melihat kuasa Allah. Namun Allah tetap memanggil orang berdosa kembali kepada-Nya.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> dan <button class="verse-btn" data-ref="1 Yohanes 1:9">1 Yohanes 1:9</button></p></div>
+        <div class="guide-box question full-row"><h3>Pertanyaan Kelas</h3><p>Ketika orang berdosa, mengapa mereka sering bersembunyi, membenarkan diri, atau menyalahkan orang lain daripada kembali kepada Allah?</p></div>
+        <div class="guide-box full-row"><h3>Catatan Siswa</h3><textarea class="note-area" data-note="sabbath" placeholder="Tulis satu kalimat tentang arti pertobatan bagimu."></textarea></div>
       </div>
     </article>
 
     <article id="sunday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Sunday - May 31</p>
-          <h2 class="day-title">The Rush of Life</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="sunday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Minggu - 31 Mei</p><h2 class="day-title">Kesibukan Hidup</h2></div><label class="done-toggle"><input type="checkbox" data-done="sunday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>Busy lives can make us lose sight of the most important thing: drawing near to Jesus. Sabbath is not only about stopping work; it is about receiving time with God.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Isaiah 64:6">Isaiah 64:6</button> <button class="verse-btn" data-ref="Zechariah 3:4">Zechariah 3:4</button> <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>The lesson points us from distraction to Christ's robe of righteousness. We cannot clean ourselves spiritually. We need Jesus to take away our filthy garments and cover us with His righteousness.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>What are the normal things in student life that can crowd out time with God?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Life Step</h3>
-          <p>Choose one moment this week to pause, pray, and sit with Jesus before rushing into the next task.</p>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Hidup yang sibuk dapat membuat kita kehilangan hal terpenting: mendekat kepada Yesus. Sabat bukan hanya tentang berhenti bekerja; Sabat adalah menerima waktu bersama Allah.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Yesaya 64:6">Yesaya 64:6</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pelajaran ini menuntun kita dari gangguan hidup kepada jubah kebenaran Kristus. Kita tidak dapat membersihkan diri secara rohani. Kita membutuhkan Yesus untuk menanggalkan pakaian kotor kita dan menutupi kita dengan kebenaran-Nya.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Hal-hal normal apa dalam kehidupan siswa yang dapat menyingkirkan waktu bersama Allah?</p></div>
+        <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Pilih satu momen minggu ini untuk berhenti sejenak, berdoa, dan duduk bersama Yesus sebelum bergegas ke tugas berikutnya.</p></div>
       </div>
     </article>
 
     <article id="monday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Monday - June 1</p>
-          <h2 class="day-title">Holy Spirit Promptings</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="monday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Senin - 1 Juni</p><h2 class="day-title">Dorongan Roh Kudus</h2></div><label class="done-toggle"><input type="checkbox" data-done="monday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>The Holy Spirit convicts us of sin so that our relationship with God can be restored. Conviction is uncomfortable, but it is a gift.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Hosea 6">Hosea 6</button> <button class="verse-btn" data-ref="John 16:8">John 16:8</button> <button class="verse-btn" data-ref="Ephesians 4:30">Ephesians 4:30</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>It is easy to move from remorse to excuse-making. Real spiritual growth begins when we stop defending our sin and listen to God's voice.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>How can you tell the difference between hopeless shame and the Holy Spirit's conviction?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Answer Guide</h3>
-          <p>Shame says, "Hide from God." Conviction says, "Return to God."</p>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Roh Kudus menegur kita tentang dosa supaya hubungan kita dengan Allah dapat dipulihkan. Teguran itu tidak nyaman, tetapi itu adalah karunia.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 6">Hosea 6</button> <button class="verse-btn" data-ref="Yohanes 16:8">Yohanes 16:8</button> <button class="verse-btn" data-ref="Efesus 4:30">Efesus 4:30</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Mudah sekali berpindah dari rasa menyesal kepada mencari alasan. Pertumbuhan rohani yang nyata dimulai ketika kita berhenti membela dosa dan mendengarkan suara Allah.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Bagaimana kamu membedakan rasa malu yang membuat putus asa dengan teguran Roh Kudus?</p></div>
+        <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Rasa malu berkata, "Bersembunyilah dari Allah." Teguran berkata, "Kembalilah kepada Allah."</p></div>
       </div>
     </article>
 
     <article id="tuesday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Tuesday - June 2</p>
-          <h2 class="day-title">Real Repentance</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="tuesday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Selasa - 2 Juni</p><h2 class="day-title">Pertobatan Sejati</h2></div><label class="done-toggle"><input type="checkbox" data-done="tuesday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>True repentance includes sincere sorrow for sin and a surrendered decision to turn away from it.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Acts 3:18-19">Acts 3:18-19</button> <button class="verse-btn" data-ref="Romans 2:4">Romans 2:4</button> <button class="verse-btn" data-ref="2 Peter 3:9">2 Peter 3:9</button> <button class="verse-btn" data-ref="Matthew 3:8">Matthew 3:8</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>The world often says, "You are fine as you are." The gospel says, "Come to Jesus as you are, and let Him change you." Repentance is not self-improvement; it is surrender.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>What is the difference between being sorry you got caught and being sorry for the sin itself?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Student Note</h3>
-          <textarea class="note-area" data-note="tuesday" placeholder="Write one practical example of repentance in school, family, friendship, or online life."></textarea>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Pertobatan sejati mencakup dukacita yang tulus atas dosa dan keputusan yang diserahkan kepada Allah untuk berbalik darinya.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Kisah Para Rasul 3:18-19">Kisah Para Rasul 3:18-19</button> <button class="verse-btn" data-ref="Roma 2:4">Roma 2:4</button> <button class="verse-btn" data-ref="2 Petrus 3:9">2 Petrus 3:9</button> <button class="verse-btn" data-ref="Matius 3:8">Matius 3:8</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Dunia sering berkata, "Kamu baik-baik saja apa adanya." Injil berkata, "Datanglah kepada Yesus apa adanya, dan biarkan Dia mengubahmu." Pertobatan bukan perbaikan diri; pertobatan adalah penyerahan.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Apa perbedaan antara menyesal karena ketahuan dan menyesal karena dosa itu sendiri?</p></div>
+        <div class="guide-box full-row"><h3>Catatan Siswa</h3><textarea class="note-area" data-note="tuesday" placeholder="Tulis satu contoh praktis pertobatan di sekolah, keluarga, persahabatan, atau kehidupan daring."></textarea></div>
       </div>
     </article>
 
     <article id="wednesday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Wednesday - June 3</p>
-          <h2 class="day-title">Sufficient Grace</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="wednesday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Rabu - 3 Juni</p><h2 class="day-title">Kasih Karunia yang Cukup</h2></div><label class="done-toggle"><input type="checkbox" data-done="wednesday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>God's grace is sufficient for the repentant sinner. He is merciful, gracious, patient, and abundant in goodness and truth.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Exodus 34:1-10">Exodus 34:1-10</button> <button class="verse-btn" data-ref="Romans 6:23">Romans 6:23</button> <button class="verse-btn" data-ref="Romans 5:20-21">Romans 5:20-21</button> <button class="verse-btn" data-ref="Romans 5:8">Romans 5:8</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>After Israel's serious failure, God revealed His character to Moses. Grace does not make sin small; grace shows that God's mercy is greater than our failure when we return to Him.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>Why is it important to know God's character when we feel guilty?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Life Step</h3>
-          <p>When guilt comes, do not run away from God. Pray honestly: "Lord, be merciful to me. I need Your grace."</p>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Kasih karunia Allah cukup bagi orang berdosa yang bertobat. Ia penyayang, pengasih, sabar, dan berlimpah dalam kebaikan serta kebenaran.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> <button class="verse-btn" data-ref="Roma 6:23">Roma 6:23</button> <button class="verse-btn" data-ref="Roma 5:20-21">Roma 5:20-21</button> <button class="verse-btn" data-ref="Roma 5:8">Roma 5:8</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Setelah kegagalan Israel yang serius, Allah menyatakan karakter-Nya kepada Musa. Kasih karunia tidak mengecilkan dosa; kasih karunia menunjukkan bahwa belas kasihan Allah lebih besar daripada kegagalan kita ketika kita kembali kepada-Nya.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Mengapa penting mengenal karakter Allah ketika kita merasa bersalah?</p></div>
+        <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Ketika rasa bersalah datang, jangan lari dari Allah. Berdoalah dengan jujur: "Tuhan, kasihanilah aku. Aku membutuhkan kasih karunia-Mu."</p></div>
       </div>
     </article>
 
     <article id="thursday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Thursday - June 4</p>
-          <h2 class="day-title">The Most Expensive Robe</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="thursday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Kamis - 4 Juni</p><h2 class="day-title">Jubah yang Paling Mahal</h2></div><label class="done-toggle"><input type="checkbox" data-done="thursday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>The wedding garment points to Christ's righteousness. We cannot stand before God in our own goodness.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Matthew 22:1-14">Matthew 22:1-14</button> <button class="verse-btn" data-ref="Isaiah 61:10">Isaiah 61:10</button> <button class="verse-btn" data-ref="Zechariah 3:4">Zechariah 3:4</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>In the parable, the man without the wedding garment had been invited but refused the covering provided. The lesson is clear: salvation is not self-made. Christ gives the robe we could never make.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>What does it mean in daily life to accept Christ's robe of righteousness?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Answer Guide</h3>
-          <p>It means trusting Jesus instead of our own goodness, confessing sin instead of hiding it, and allowing His grace to change our conduct.</p>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Pakaian pesta menunjuk kepada kebenaran Kristus. Kita tidak dapat berdiri di hadapan Allah dengan kebaikan kita sendiri.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Matius 22:1-14">Matius 22:1-14</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Dalam perumpamaan itu, orang tanpa pakaian pesta sudah diundang tetapi menolak penutup yang disediakan. Pelajarannya jelas: keselamatan bukan buatan sendiri. Kristus memberikan jubah yang tidak mungkin kita buat.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Apa artinya dalam kehidupan sehari-hari menerima jubah kebenaran Kristus?</p></div>
+        <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Artinya mempercayai Yesus, bukan kebaikan kita sendiri; mengaku dosa, bukan menyembunyikannya; dan mengizinkan kasih karunia-Nya mengubah perilaku kita.</p></div>
       </div>
     </article>
 
     <article id="friday" class="day">
-      <div class="day-head">
-        <div>
-          <p class="day-label">Friday - June 5</p>
-          <h2 class="day-title">Further Thought</h2>
-        </div>
-        <label class="done-toggle"><input type="checkbox" data-done="friday"> Done</label>
-      </div>
+      <div class="day-head"><div><p class="day-label">Jumat - 5 Juni</p><h2 class="day-title">Pemikiran Lanjutan</h2></div><label class="done-toggle"><input type="checkbox" data-done="friday"> Selesai</label></div>
       <div class="day-body">
-        <div class="guide-box callout">
-          <h3>Key Point</h3>
-          <p>Hosea uses farming language: break up the hard ground, seek the Lord, and let Him rain righteousness on you. A hard heart can become ready soil for God's work.</p>
-        </div>
-        <div class="guide-box">
-          <h3>Read Together</h3>
-          <p><button class="verse-btn" data-ref="Hosea 10:12">Hosea 10:12</button> <button class="verse-btn" data-ref="Philippians 2:12-13">Philippians 2:12-13</button> <button class="verse-btn" data-ref="Deuteronomy 4:3-4">Deuteronomy 4:3-4</button> <button class="verse-btn" data-ref="Matthew 6:13">Matthew 6:13</button></p>
-        </div>
-        <div class="guide-box">
-          <h3>Follow Along</h3>
-          <p>Repentance is not a one-time classroom topic. It is part of a living relationship with God. We turn toward Him, cling to Him, and ask Him to keep working in us.</p>
-        </div>
-        <div class="guide-box question">
-          <h3>Ask Together</h3>
-          <p>Which part is hardest for you: confessing, receiving forgiveness, making things right, or changing direction?</p>
-        </div>
-        <div class="guide-box full-row">
-          <h3>Weekly Challenge</h3>
-          <ol>
-            <li>Pause when the Holy Spirit convicts you.</li>
-            <li>Confess honestly to God.</li>
-            <li>Receive forgiveness by faith.</li>
-            <li>Make things right with someone if needed.</li>
-            <li>Ask Jesus for power to walk differently.</li>
-          </ol>
-        </div>
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Hosea memakai bahasa pertanian: bukalah tanah yang keras, carilah Tuhan, dan biarkan Ia mencurahkan kebenaran atasmu. Hati yang keras dapat menjadi tanah yang siap untuk pekerjaan Allah.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 10:12">Hosea 10:12</button> <button class="verse-btn" data-ref="Filipi 2:12-13">Filipi 2:12-13</button> <button class="verse-btn" data-ref="Ulangan 4:3-4">Ulangan 4:3-4</button> <button class="verse-btn" data-ref="Matius 6:13">Matius 6:13</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pertobatan bukan topik kelas satu kali saja. Pertobatan adalah bagian dari hubungan yang hidup dengan Allah. Kita berbalik kepada-Nya, berpaut kepada-Nya, dan meminta Dia terus bekerja di dalam kita.</p></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Bagian mana yang paling sulit bagimu: mengaku, menerima pengampunan, memperbaiki hubungan, atau mengubah arah?</p></div>
+        <div class="guide-box full-row"><h3>Tantangan Mingguan</h3><ol><li>Berhenti sejenak ketika Roh Kudus menegurmu.</li><li>Mengakulah dengan jujur kepada Allah.</li><li>Terimalah pengampunan dengan iman.</li><li>Perbaiki hubungan dengan seseorang jika perlu.</li><li>Mintalah kuasa Yesus untuk berjalan dengan cara yang berbeda.</li></ol></div>
       </div>
     </article>
 
     <section id="closing" class="closing">
-      <h2>Closing Appeal</h2>
-      <p>God is not asking you to clean yourself before you come to Him. He is asking you to come to Him so He can forgive and cleanse you. Do not hide from the only One who can heal you.</p>
-      <p><strong>Prayer thought:</strong> Lord, give us honest hearts. Help us listen when Your Spirit speaks. Teach us to confess without fear, receive Your forgiveness by faith, and wear the righteousness of Jesus instead of trusting ourselves. Amen.</p>
+      <h2>Ajakan Penutup</h2>
+      <p>Allah tidak memintamu membersihkan dirimu sebelum datang kepada-Nya. Ia memintamu datang kepada-Nya supaya Ia dapat mengampuni dan menyucikanmu. Jangan bersembunyi dari satu-satunya Pribadi yang dapat menyembuhkanmu.</p>
+      <p><strong>Pokok doa:</strong> Tuhan, berikan kami hati yang jujur. Tolong kami mendengar ketika Roh-Mu berbicara. Ajarlah kami mengaku tanpa takut, menerima pengampunan-Mu dengan iman, dan memakai kebenaran Yesus daripada mempercayai diri sendiri. Amin.</p>
     </section>
   </main>
 
   <aside id="scriptureDrawer" class="drawer" aria-live="polite" aria-hidden="true">
-    <div class="drawer-head">
-      <h2 id="scriptureTitle" class="drawer-title">Scripture</h2>
-      <button class="drawer-close" type="button" aria-label="Close Scripture" id="closeDrawer">X</button>
-    </div>
-    <div class="drawer-body">
-      <p id="scriptureText" class="scripture-text"></p>
-      <p class="drawer-note">Bible text shown from the King James Version.</p>
-    </div>
+    <div class="drawer-head"><h2 id="scriptureTitle" class="drawer-title">Alkitab</h2><button class="drawer-close" type="button" aria-label="Tutup teks Alkitab" id="closeDrawer">X</button></div>
+    <div class="drawer-body"><p id="scriptureText" class="scripture-text"></p><p class="drawer-note">Teks Alkitab adalah saduran Indonesia dari teks KJV untuk diskusi kelas.</p></div>
   </aside>
 
   <footer class="wrap">
-    <p>Lesson metadata verified from <a href="https://ssnet.org/lessons/26b/less10.html">Sabbath School Net</a> and the official lesson PDF listing at <a href="https://www.sabbath.school/SSchool/2026/2/ETQ226_10.pdf">sabbath.school</a>. Lesson content is summarized in original language for classroom use.</p>
+    <p>Metadata pelajaran diverifikasi dari <a href="https://ssnet.org/lessons/26b/less10.html">Sabbath School Net</a> dan daftar PDF pelajaran resmi di <a href="https://www.sabbath.school/SSchool/2026/2/ETQ226_10.pdf">sabbath.school</a>. Materi disusun ulang dalam bahasa Indonesia untuk penggunaan kelas.</p>
   </footer>
 
   <script>
     const scriptures = {
-      "1 John 1:9": `1 John 1:9
-If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.`,
-      "Isaiah 61:10": `Isaiah 61:10
-I will greatly rejoice in the LORD, my soul shall be joyful in my God; for he hath clothed me with the garments of salvation, he hath covered me with the robe of righteousness, as a bridegroom decketh himself with ornaments, and as a bride adorneth herself with her jewels.`,
-      "Isaiah 64:6": `Isaiah 64:6
-But we are all as an unclean thing, and all our righteousnesses are as filthy rags; and we all do fade as a leaf; and our iniquities, like the wind, have taken us away.`,
-      "Zechariah 3:4": `Zechariah 3:4
-And he answered and spake unto those that stood before him, saying, Take away the filthy garments from him. And unto him he said, Behold, I have caused thine iniquity to pass from thee, and I will clothe thee with change of raiment.`,
-      "Hosea 6": `Hosea 6
-1 Come, and let us return unto the LORD: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.
-2 After two days will he revive us: in the third day he will raise us up, and we shall live in his sight.
-3 Then shall we know, if we follow on to know the LORD: his going forth is prepared as the morning; and he shall come unto us as the rain, as the latter and former rain unto the earth.
-4 O Ephraim, what shall I do unto thee? O Judah, what shall I do unto thee? for your goodness is as a morning cloud, and as the early dew it goeth away.
-5 Therefore have I hewed them by the prophets; I have slain them by the words of my mouth: and thy judgments are as the light that goeth forth.
-6 For I desired mercy, and not sacrifice; and the knowledge of God more than burnt offerings.
-7 But they like men have transgressed the covenant: there have they dealt treacherously against me.
-8 Gilead is a city of them that work iniquity, and is polluted with blood.
-9 And as troops of robbers wait for a man, so the company of priests murder in the way by consent: for they commit lewdness.
-10 I have seen an horrible thing in the house of Israel: there is the whoredom of Ephraim, Israel is defiled.
-11 Also, O Judah, he hath set an harvest for thee, when I returned the captivity of my people.`,
-      "Acts 3:18-19": `Acts 3:18-19
-18 But those things, which God before had shewed by the mouth of all his prophets, that Christ should suffer, he hath so fulfilled.
-19 Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord;`,
-      "Exodus 34:1-10": `Exodus 34:1-10
-1 And the LORD said unto Moses, Hew thee two tables of stone like unto the first: and I will write upon these tables the words that were in the first tables, which thou brakest.
-2 And be ready in the morning, and come up in the morning unto mount Sinai, and present thyself there to me in the top of the mount.
-3 And no man shall come up with thee, neither let any man be seen throughout all the mount; neither let the flocks nor herds feed before that mount.
-4 And he hewed two tables of stone like unto the first; and Moses rose up early in the morning, and went up unto mount Sinai, as the LORD had commanded him, and took in his hand the two tables of stone.
-5 And the LORD descended in the cloud, and stood with him there, and proclaimed the name of the LORD.
-6 And the LORD passed by before him, and proclaimed, The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth,
-7 Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children's children, unto the third and to the fourth generation.
-8 And Moses made haste, and bowed his head toward the earth, and worshipped.
-9 And he said, If now I have found grace in thy sight, O Lord, let my Lord, I pray thee, go among us; for it is a stiffnecked people; and pardon our iniquity and our sin, and take us for thine inheritance.
-10 And he said, Behold, I make a covenant: before all thy people I will do marvels, such as have not been done in all the earth, nor in any nation: and all the people among which thou art shall see the work of the LORD: for it is a terrible thing that I will do with thee.`,
-      "Romans 6:23": `Romans 6:23
-For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.`,
-      "Matthew 22:1-14": `Matthew 22:1-14
-1 And Jesus answered and spake unto them again by parables, and said,
-2 The kingdom of heaven is like unto a certain king, which made a marriage for his son,
-3 And sent forth his servants to call them that were bidden to the wedding: and they would not come.
-4 Again, he sent forth other servants, saying, Tell them which are bidden, Behold, I have prepared my dinner: my oxen and my fatlings are killed, and all things are ready: come unto the marriage.
-5 But they made light of it, and went their ways, one to his farm, another to his merchandise:
-6 And the remnant took his servants, and entreated them spitefully, and slew them.
-7 But when the king heard thereof, he was wroth: and he sent forth his armies, and destroyed those murderers, and burned up their city.
-8 Then saith he to his servants, The wedding is ready, but they which were bidden were not worthy.
-9 Go ye therefore into the highways, and as many as ye shall find, bid to the marriage.
-10 So those servants went out into the highways, and gathered together all as many as they found, both bad and good: and the wedding was furnished with guests.
-11 And when the king came in to see the guests, he saw there a man which had not on a wedding garment:
-12 And he saith unto him, Friend, how camest thou in hither not having a wedding garment? And he was speechless.
-13 Then said the king to the servants, Bind him hand and foot, and take him away, and cast him into outer darkness; there shall be weeping and gnashing of teeth.
-14 For many are called, but few are chosen.`,
-      "John 16:8": `John 16:8
-And when he is come, he will reprove the world of sin, and of righteousness, and of judgment:`,
-      "Ephesians 4:30": `Ephesians 4:30
-And grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.`,
-      "Romans 2:4": `Romans 2:4
-Or despisest thou the riches of his goodness and forbearance and longsuffering; not knowing that the goodness of God leadeth thee to repentance?`,
-      "2 Peter 3:9": `2 Peter 3:9
-The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance.`,
-      "Matthew 3:8": `Matthew 3:8
-Bring forth therefore fruits meet for repentance:`,
-      "Romans 5:20-21": `Romans 5:20-21
-20 Moreover the law entered, that the offence might abound. But where sin abounded, grace did much more abound:
-21 That as sin hath reigned unto death, even so might grace reign through righteousness unto eternal life by Jesus Christ our Lord.`,
-      "Romans 5:8": `Romans 5:8
-But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.`,
-      "Hosea 10:12": `Hosea 10:12
-Sow to yourselves in righteousness, reap in mercy; break up your fallow ground: for it is time to seek the LORD, till he come and rain righteousness upon you.`,
-      "Philippians 2:12-13": `Philippians 2:12-13
-12 Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.
-13 For it is God which worketh in you both to will and to do of his good pleasure.`,
-      "Deuteronomy 4:3-4": `Deuteronomy 4:3-4
-3 Your eyes have seen what the LORD did because of Baalpeor: for all the men that followed Baalpeor, the LORD thy God hath destroyed them from among you.
-4 But ye that did cleave unto the LORD your God are alive every one of you this day.`,
-      "Matthew 6:13": `Matthew 6:13
-And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.`
-    };
+      "1 Yohanes 1:9": "1 Yohanes 1:9\nJika kita mengaku dosa kita, Ia setia dan adil untuk mengampuni dosa-dosa kita dan menyucikan kita dari segala kejahatan.",
+      "Yesaya 61:10": "Yesaya 61:10\nAku akan sangat bersukacita di dalam TUHAN; jiwaku akan bergembira di dalam Allahku, sebab Ia mengenakan kepadaku pakaian keselamatan dan menyelubungi aku dengan jubah kebenaran, seperti pengantin laki-laki memakai hiasan dan pengantin perempuan mengenakan perhiasannya.",
+      "Yesaya 64:6": "Yesaya 64:6\nKami semua seperti sesuatu yang najis, dan segala kebenaran kami seperti kain kotor. Kami layu seperti daun, dan kesalahan kami membawa kami pergi seperti angin.",
+      "Zakharia 3:4": "Zakharia 3:4\nIa berkata kepada mereka yang berdiri di hadapannya, \"Tanggalkan pakaian kotor itu dari padanya.\" Lalu kepada Yosua Ia berkata, \"Lihat, Aku telah menjauhkan kesalahanmu dari padamu, dan Aku akan mengenakan kepadamu pakaian yang baru.\"",
+      "Hosea 6": "Hosea 6\n1 Mari, kita berbalik kepada TUHAN; sebab Dialah yang telah menerkam dan Dialah yang akan menyembuhkan kita; Dialah yang telah memukul dan Dialah yang akan membalut kita.\n2 Sesudah dua hari Ia akan menghidupkan kita; pada hari yang ketiga Ia akan membangkitkan kita, dan kita akan hidup di hadapan-Nya.\n3 Marilah kita mengenal, sungguh-sungguh berusaha mengenal TUHAN. Kedatangan-Nya pasti seperti fajar; Ia akan datang kepada kita seperti hujan, seperti hujan akhir dan hujan awal yang membasahi bumi.\n4 Apakah yang harus Kulakukan terhadapmu, hai Efraim? Apakah yang harus Kulakukan terhadapmu, hai Yehuda? Kasih setiamu seperti awan pagi dan seperti embun yang segera lenyap.\n5 Sebab itu Aku menegur mereka melalui para nabi; Aku menghukum mereka dengan perkataan mulut-Ku, dan hukum-Ku keluar seperti terang.\n6 Sebab Aku menghendaki kasih setia, bukan korban sembelihan; pengenalan akan Allah lebih daripada korban bakaran.\n7 Tetapi mereka melanggar perjanjian seperti manusia biasa; di sana mereka berlaku tidak setia terhadap Aku.\n8 Gilead adalah kota para pembuat kejahatan, penuh jejak darah.\n9 Seperti gerombolan perampok menghadang orang, demikianlah imam-imam bersekutu melakukan kekerasan di jalan; mereka melakukan kejahatan.\n10 Di rumah Israel Aku melihat hal yang mengerikan: di sana Efraim berzinah dan Israel menjadi najis.\n11 Juga bagimu, hai Yehuda, telah ditetapkan tuaian ketika Aku memulihkan keadaan umat-Ku.",
+      "Kisah Para Rasul 3:18-19": "Kisah Para Rasul 3:18-19\n18 Tetapi apa yang dahulu telah diberitahukan Allah melalui mulut semua nabi, bahwa Kristus harus menderita, telah digenapi-Nya.\n19 Karena itu bertobatlah dan berbaliklah, supaya dosa-dosamu dihapuskan, sehingga datang waktu penyegaran dari hadirat Tuhan.",
+      "Keluaran 34:1-10": "Keluaran 34:1-10\n1 TUHAN berkata kepada Musa, \"Pahatlah dua loh batu seperti yang pertama; Aku akan menuliskan pada loh itu perkataan yang ada pada loh pertama, yang telah kaupecahkan.\n2 Bersiaplah pada waktu pagi, naiklah pada pagi hari ke Gunung Sinai, dan hadaplah Aku di puncak gunung itu.\n3 Jangan ada seorang pun naik bersamamu; jangan seorang pun terlihat di seluruh gunung itu; bahkan kambing domba dan lembu jangan merumput di depan gunung itu.\"\n4 Musa memahat dua loh batu seperti yang pertama. Pagi-pagi ia bangun dan naik ke Gunung Sinai seperti yang diperintahkan TUHAN kepadanya, sambil membawa dua loh batu itu.\n5 TUHAN turun dalam awan, berdiri di sana bersama Musa, dan menyerukan nama TUHAN.\n6 TUHAN lewat di depannya dan berseru, \"TUHAN, TUHAN, Allah yang penyayang dan pengasih, panjang sabar, berlimpah kebaikan dan kebenaran,\n7 yang memelihara kasih setia bagi beribu-ribu orang, yang mengampuni kesalahan, pelanggaran, dan dosa, tetapi tidak membebaskan orang bersalah tanpa hukuman; yang memperhitungkan akibat kesalahan sampai kepada generasi berikutnya.\"\n8 Musa segera sujud menyembah sampai ke tanah.\n9 Ia berkata, \"Jika aku mendapat kasih karunia di mata-Mu, ya Tuhan, kiranya Tuhan berjalan di tengah-tengah kami. Umat ini keras kepala, tetapi ampunilah kesalahan dan dosa kami, dan jadikanlah kami milik-Mu.\"\n10 Tuhan berkata, \"Lihat, Aku mengadakan perjanjian. Di depan seluruh bangsamu Aku akan melakukan keajaiban yang belum pernah dilakukan di seluruh bumi atau di bangsa mana pun. Seluruh bangsa di sekitarmu akan melihat pekerjaan TUHAN, sebab dahsyatlah apa yang akan Kulakukan bersamamu.\"",
+      "Roma 6:23": "Roma 6:23\nSebab upah dosa ialah maut, tetapi karunia Allah ialah hidup kekal melalui Yesus Kristus, Tuhan kita.",
+      "Matius 22:1-14": "Matius 22:1-14\n1 Yesus berbicara lagi kepada mereka dalam perumpamaan.\n2 \"Kerajaan surga seumpama seorang raja yang mengadakan pesta kawin untuk anaknya.\n3 Ia menyuruh hamba-hambanya memanggil orang-orang yang telah diundang ke pesta itu, tetapi mereka tidak mau datang.\n4 Ia menyuruh hamba-hamba lain dan berkata, 'Katakan kepada para undangan: makananku telah siap, lembu dan ternak tambunku telah disembelih, semuanya sudah tersedia; datanglah ke pesta kawin.'\n5 Tetapi mereka mengabaikannya dan pergi, yang seorang ke ladangnya, yang lain ke usahanya.\n6 Yang lain menangkap hamba-hambanya, memperlakukan mereka dengan kasar, dan membunuh mereka.\n7 Raja itu murka; ia mengirim pasukannya, membinasakan para pembunuh itu, dan membakar kota mereka.\n8 Lalu ia berkata kepada hamba-hambanya, 'Pesta kawin sudah siap, tetapi orang-orang yang diundang tidak layak.\n9 Pergilah ke jalan-jalan raya dan undanglah sebanyak mungkin orang yang kamu temui ke pesta kawin.'\n10 Hamba-hamba itu pergi ke jalan-jalan dan mengumpulkan semua orang yang mereka temui, baik yang jahat maupun yang baik, sehingga ruang pesta penuh dengan tamu.\n11 Ketika raja masuk melihat para tamu, ia melihat seorang yang tidak memakai pakaian pesta.\n12 Raja berkata kepadanya, 'Sahabat, bagaimana engkau masuk ke sini tanpa pakaian pesta?' Orang itu terdiam.\n13 Lalu raja berkata kepada para pelayan, 'Ikatlah tangan dan kakinya, bawa dia keluar, dan campakkan dia ke dalam kegelapan. Di sana akan ada tangisan dan kertak gigi.'\n14 Sebab banyak yang dipanggil, tetapi sedikit yang dipilih.\"",
+      "Yohanes 16:8": "Yohanes 16:8\nKetika Ia datang, Ia akan menegur dunia tentang dosa, kebenaran, dan penghakiman.",
+      "Efesus 4:30": "Efesus 4:30\nJangan mendukakan Roh Kudus Allah, yang memeteraikan kamu sampai hari penebusan.",
+      "Roma 2:4": "Roma 2:4\nAtaukah engkau meremehkan kekayaan kebaikan, kesabaran, dan kemurahan-Nya, tidak mengetahui bahwa kebaikan Allah menuntun engkau kepada pertobatan?",
+      "2 Petrus 3:9": "2 Petrus 3:9\nTuhan tidak lalai menepati janji-Nya, seperti yang dianggap sebagian orang sebagai kelalaian, tetapi Ia sabar terhadap kita, tidak menghendaki seorang pun binasa, melainkan semua orang datang kepada pertobatan.",
+      "Matius 3:8": "Matius 3:8\nHasilkanlah buah yang sesuai dengan pertobatan.",
+      "Roma 5:20-21": "Roma 5:20-21\n20 Hukum Taurat masuk supaya pelanggaran menjadi nyata; tetapi di mana dosa bertambah banyak, kasih karunia menjadi semakin berlimpah.\n21 Supaya seperti dosa berkuasa dalam maut, demikian juga kasih karunia berkuasa melalui kebenaran menuju hidup kekal oleh Yesus Kristus, Tuhan kita.",
+      "Roma 5:8": "Roma 5:8\nTetapi Allah menunjukkan kasih-Nya kepada kita: ketika kita masih berdosa, Kristus telah mati untuk kita.",
+      "Hosea 10:12": "Hosea 10:12\nMenaburlah bagimu dalam kebenaran, tuailah menurut kasih setia; bukalah tanah hatimu yang keras, sebab sudah waktunya mencari TUHAN, sampai Ia datang dan mencurahkan kebenaran atasmu.",
+      "Filipi 2:12-13": "Filipi 2:12-13\n12 Karena itu, saudara-saudaraku yang kekasih, sebagaimana kamu selalu taat, kerjakanlah keselamatanmu dengan takut dan gentar, bukan hanya ketika aku hadir, tetapi lebih lagi ketika aku tidak hadir.\n13 Sebab Allahlah yang bekerja di dalam kamu, baik kemauan maupun pekerjaan menurut kerelaan-Nya.",
+      "Ulangan 4:3-4": "Ulangan 4:3-4\n3 Matamu telah melihat apa yang dilakukan TUHAN karena Baal-Peor: semua orang yang mengikuti Baal-Peor telah dibinasakan TUHAN, Allahmu, dari tengah-tengahmu.\n4 Tetapi kamu yang berpaut kepada TUHAN, Allahmu, masih hidup sampai hari ini.",
+      "Matius 6:13": "Matius 6:13\nJanganlah membawa kami ke dalam pencobaan, tetapi lepaskanlah kami dari yang jahat. Karena Engkaulah yang empunya kerajaan, kuasa, dan kemuliaan sampai selama-lamanya. Amin."
+};
 
     const drawer = document.getElementById("scriptureDrawer");
     const title = document.getElementById("scriptureTitle");
@@ -895,7 +475,7 @@ And lead us not into temptation, but deliver us from evil: For thine is the king
 
     function openScripture(ref) {
       title.textContent = ref;
-      text.textContent = scriptures[ref] || "Scripture text is not loaded for this reference.";
+      text.textContent = scriptures[ref] || "Teks Alkitab belum dimuat untuk referensi ini.";
       drawer.classList.add("open");
       drawer.setAttribute("aria-hidden", "false");
       closeDrawer.focus({ preventScroll: true });
@@ -913,25 +493,19 @@ And lead us not into temptation, but deliver us from evil: For thine is the king
     closeDrawer.addEventListener("click", closeScripture);
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeScripture();
-      }
+      if (event.key === "Escape") closeScripture();
     });
 
     document.querySelectorAll("[data-done]").forEach((checkbox) => {
       const key = `ss-l10-done-${checkbox.dataset.done}`;
       checkbox.checked = localStorage.getItem(key) === "true";
-      checkbox.addEventListener("change", () => {
-        localStorage.setItem(key, String(checkbox.checked));
-      });
+      checkbox.addEventListener("change", () => localStorage.setItem(key, String(checkbox.checked)));
     });
 
     document.querySelectorAll("[data-note]").forEach((area) => {
       const key = `ss-l10-note-${area.dataset.note}`;
       area.value = localStorage.getItem(key) || "";
-      area.addEventListener("input", () => {
-        localStorage.setItem(key, area.value);
-      });
+      area.addEventListener("input", () => localStorage.setItem(key, area.value));
     });
   </script>
 </body>
