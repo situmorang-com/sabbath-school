@@ -1,0 +1,10 @@
+{
+  "name": "sabbath-school",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "create:lesson": "node scripts/create-lesson.mjs",
+    "check:lesson": "node scripts/create-lesson.mjs lesson-data/2026-q2-l10.json --dry-run"
+  }
+}

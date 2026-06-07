@@ -1,0 +1,465 @@
+{
+  "slug": "2026-q2-l10",
+  "title": "Pertobatan dan Pengampunan",
+  "subtitle": "Panduan Sekolah Sabat interaktif untuk siswa: baca ayat, diskusikan pertanyaan, dan ikuti alur pelajaran mingguan bersama kelas.",
+  "quarter": "Triwulan 2 2026 - Bertumbuh dalam Hubungan Dengan Allah",
+  "lessonNumber": "10",
+  "dateRange": "30 Mei sampai 5 Juni 2026",
+  "goal": "Memahami bagaimana Roh Kudus menuntun kita bertobat, bagaimana Allah mengampuni, dan mengapa kita membutuhkan kebenaran Kristus.",
+  "memory": {
+    "text": "Jika kita mengaku dosa kita, maka Ia adalah setia dan adil, sehingga Ia akan mengampuni segala dosa kita dan menyucikan kita dari segala kejahatan.",
+    "ref": "1 Yohanes 1:9"
+  },
+  "readings": [
+    "Yesaya 61:10",
+    "Hosea 6",
+    "Kisah Para Rasul 3:18-19",
+    "Keluaran 34:1-10",
+    "Roma 6:23",
+    "Matius 22:1-14"
+  ],
+  "bigIdea": "Pertobatan lebih dari sekadar merasa menyesal. Pertobatan adalah kembali kepada Allah ketika Roh Kudus menunjukkan kebenaran tentang dosa kita. Pengampunan tidak diperoleh karena penyesalan kita; pengampunan diterima melalui Yesus. Allah mengampuni orang berdosa yang bertobat, menyucikan hati, dan menutupi kita dengan kebenaran Kristus.",
+  "hero": {
+    "focus": "Pertobatan dan Pengampunan",
+    "summary": "Belajar untuk kembali kepada Allah dengan jujur, menerima pengampunan, dan memakai kebenaran Kristus.",
+    "bullets": [
+      "Roh Kudus menegur untuk memulihkan, bukan menghancurkan.",
+      "Pertobatan sejati berbalik kepada Allah.",
+      "Kristus memberi jubah kebenaran yang kita tidak dapat buat sendiri."
+    ]
+  },
+  "days": [
+    {
+      "id": "sabbath",
+      "navLabel": "Sabat",
+      "label": "Sabat Sore",
+      "title": "Pertobatan dan Pengampunan",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Kisah anak lembu emas mengingatkan kita bahwa manusia dapat gagal dengan serius bahkan setelah melihat kuasa Allah. Namun Allah tetap memanggil orang berdosa kembali kepada-Nya."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Keluaran 34:1-10", "1 Yohanes 1:9"],
+          "joiner": "dan"
+        },
+        {
+          "type": "question",
+          "fullRow": true,
+          "title": "Pertanyaan Kelas",
+          "text": "Ketika orang berdosa, mengapa mereka sering bersembunyi, membenarkan diri, atau menyalahkan orang lain daripada kembali kepada Allah?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Pengakuan dosa harus lahir dari hati yang sungguh-sungguh.",
+              "source": {
+                "label": "Steps to Christ, hlm. 38",
+                "url": "https://www.ellenwhite.info/books/bk-sc-04.htm"
+              }
+            },
+            {
+              "text": "Pengakuan yang benar selalu jelas, jujur, dan langsung pada dosa yang nyata.",
+              "source": {
+                "label": "Steps to Christ, hlm. 38",
+                "url": "https://www.ellenwhite.info/books/bk-sc-04.htm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunday",
+      "navLabel": "Minggu",
+      "label": "Minggu - 31 Mei",
+      "title": "Kesibukan Hidup",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Hidup yang sibuk dapat membuat kita kehilangan hal terpenting: mendekat kepada Yesus. Sabat bukan hanya tentang berhenti bekerja; Sabat adalah menerima waktu bersama Allah."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Yesaya 64:6", "Zakharia 3:4", "Yesaya 61:10"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Pelajaran ini menuntun kita dari gangguan hidup kepada jubah kebenaran Kristus.",
+          "bullets": [
+            "Kita tidak dapat membersihkan diri secara rohani dengan usaha sendiri.",
+            "Kesibukan dapat membuat hati tidak lagi peka terhadap suara Allah.",
+            "Yesus menanggalkan pakaian kotor kita dan menutupi kita dengan kebenaran-Nya."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Hal-hal normal apa dalam kehidupan siswa yang dapat menyingkirkan waktu bersama Allah?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Pakaian pesta melambangkan karakter yang harus dimiliki setiap orang yang diakui layak hadir di pesta.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 307",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm"
+              }
+            },
+            {
+              "text": "Hanya penutup yang Kristus sendiri sediakan yang dapat membawa kita layak hadir di hadapan Allah.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 311",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm"
+              }
+            }
+          ]
+        },
+        {
+          "fullRow": true,
+          "title": "Langkah Hidup",
+          "text": "Pilih satu momen minggu ini untuk berhenti sejenak, berdoa, dan duduk bersama Yesus sebelum bergegas ke tugas berikutnya."
+        }
+      ]
+    },
+    {
+      "id": "monday",
+      "navLabel": "Senin",
+      "label": "Senin - 1 Juni",
+      "title": "Dorongan Roh Kudus",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Roh Kudus menegur kita tentang dosa supaya hubungan kita dengan Allah dapat dipulihkan. Teguran itu tidak nyaman, tetapi itu adalah karunia."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Hosea 6", "Yohanes 16:8", "Efesus 4:30"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Pertumbuhan rohani yang nyata dimulai ketika kita berhenti membela dosa dan mendengarkan suara Allah.",
+          "bullets": [
+            "Roh Kudus menegur untuk memulihkan, bukan untuk menghancurkan.",
+            "Rasa bersalah harus membawa kita kepada Kristus, bukan kepada keputusasaan.",
+            "Kejujuran di hadapan Allah membuka jalan bagi pengampunan dan perubahan."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Bagaimana kamu membedakan rasa malu yang membuat putus asa dengan teguran Roh Kudus?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Kristus adalah sumber dari setiap dorongan yang benar.",
+              "source": {
+                "label": "Steps to Christ, hlm. 26",
+                "url": "https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm"
+              }
+            },
+            {
+              "text": "Aku akui dosaku di hadapan Allah tanpa alasan.",
+              "source": {
+                "label": "Steps to Christ, hlm. 35",
+                "url": "https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm"
+              }
+            }
+          ]
+        },
+        {
+          "fullRow": true,
+          "title": "Panduan Jawaban",
+          "text": "Rasa malu berkata, \"Bersembunyilah dari Allah.\" Teguran berkata, \"Kembalilah kepada Allah.\""
+        }
+      ]
+    },
+    {
+      "id": "tuesday",
+      "navLabel": "Selasa",
+      "label": "Selasa - 2 Juni",
+      "title": "Pertobatan Sejati",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Pertobatan sejati mencakup dukacita yang tulus atas dosa dan keputusan yang diserahkan kepada Allah untuk berbalik darinya."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Kisah Para Rasul 3:18-19", "Roma 2:4", "2 Petrus 3:9", "Matius 3:8"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Injil berkata, \"Datanglah kepada Yesus apa adanya, dan biarkan Dia mengubahmu.\"",
+          "bullets": [
+            "Pertobatan bukan sekadar takut akibat dosa.",
+            "Pertobatan sejati setuju dengan penilaian Allah tentang dosa.",
+            "Pertobatan membawa penyerahan, perubahan arah, dan buah yang nyata."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Apa perbedaan antara menyesal karena ketahuan dan menyesal karena dosa itu sendiri?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Pertobatan mencakup dukacita karena dosa.",
+              "source": {
+                "label": "Steps to Christ, hlm. 23",
+                "url": "https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm"
+              }
+            },
+            {
+              "text": "Pertobatan juga berarti berbalik meninggalkan dosa.",
+              "source": {
+                "label": "Steps to Christ, hlm. 23",
+                "url": "https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wednesday",
+      "navLabel": "Rabu",
+      "label": "Rabu - 3 Juni",
+      "title": "Kasih Karunia yang Cukup",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Kasih karunia Allah cukup bagi orang berdosa yang bertobat. Ia penyayang, pengasih, sabar, dan berlimpah dalam kebaikan serta kebenaran."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Keluaran 34:1-10", "Roma 6:23", "Roma 5:20-21", "Roma 5:8"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Setelah kegagalan Israel yang serius, Allah menyatakan karakter-Nya kepada Musa.",
+          "bullets": [
+            "Kasih karunia tidak mengecilkan dosa.",
+            "Kasih karunia menunjukkan bahwa belas kasihan Allah lebih besar daripada kegagalan kita.",
+            "Karakter Allah memberi keberanian untuk kembali, mengaku, dan menerima pemulihan."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Mengapa penting mengenal karakter Allah ketika kita merasa bersalah?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Allah berjanji melakukan semua ini bagimu.",
+              "source": {
+                "label": "Steps to Christ, hlm. 49",
+                "url": "https://www.ellenwhite.info/books/bk-sc-06.htm"
+              }
+            },
+            {
+              "text": "Pengampunan itu diberikan dengan cuma-cuma kepada orang yang bertobat.",
+              "source": {
+                "label": "Steps to Christ, hlm. 52",
+                "url": "https://www.ellenwhite.info/books/bk-sc-06.htm"
+              }
+            }
+          ]
+        },
+        {
+          "fullRow": true,
+          "title": "Langkah Hidup",
+          "text": "Ketika rasa bersalah datang, jangan lari dari Allah. Berdoalah dengan jujur: \"Tuhan, kasihanilah aku. Aku membutuhkan kasih karunia-Mu.\""
+        }
+      ]
+    },
+    {
+      "id": "thursday",
+      "navLabel": "Kamis",
+      "label": "Kamis - 4 Juni",
+      "title": "Jubah yang Paling Mahal",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Pakaian pesta menunjuk kepada kebenaran Kristus. Kita tidak dapat berdiri di hadapan Allah dengan kebaikan kita sendiri."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Matius 22:1-14", "Yesaya 61:10", "Zakharia 3:4"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Dalam perumpamaan itu, orang tanpa pakaian pesta sudah diundang tetapi menolak penutup yang disediakan.",
+          "bullets": [
+            "Keselamatan bukan buatan sendiri.",
+            "Kebaikan manusia tidak cukup untuk berdiri di hadapan Allah.",
+            "Kristus memberikan jubah kebenaran yang tidak mungkin kita buat."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Apa artinya dalam kehidupan sehari-hari menerima jubah kebenaran Kristus?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Jubah kebenaran itu adalah jubah milik Kristus sendiri.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 311",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm"
+              }
+            },
+            {
+              "text": "Kebenaran sejati adalah melakukan apa yang benar di hadapan Allah.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 312",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm"
+              }
+            }
+          ]
+        },
+        {
+          "fullRow": true,
+          "title": "Panduan Jawaban",
+          "text": "Artinya mempercayai Yesus, bukan kebaikan kita sendiri; mengaku dosa, bukan menyembunyikannya; dan mengizinkan kasih karunia-Nya mengubah perilaku kita."
+        }
+      ]
+    },
+    {
+      "id": "friday",
+      "navLabel": "Jumat",
+      "label": "Jumat - 5 Juni",
+      "title": "Pemikiran Lanjutan",
+      "boxes": [
+        {
+          "type": "callout",
+          "title": "Poin Utama",
+          "text": "Hosea memakai bahasa pertanian: bukalah tanah yang keras, carilah Tuhan, dan biarkan Ia mencurahkan kebenaran atasmu. Hati yang keras dapat menjadi tanah yang siap untuk pekerjaan Allah."
+        },
+        {
+          "title": "Baca Bersama",
+          "refs": ["Hosea 10:12", "Filipi 2:12-13", "Ulangan 4:3-4", "Matius 6:13"]
+        },
+        {
+          "title": "Ikuti Pelajaran",
+          "text": "Pertobatan bukan topik kelas satu kali saja; pertobatan adalah bagian dari hubungan yang hidup dengan Allah.",
+          "bullets": [
+            "Kita berbalik kepada Allah ketika Roh Kudus menegur.",
+            "Kita berpaut kepada Allah ketika dosa ingin menarik kita kembali.",
+            "Kita meminta Allah terus bekerja di dalam kemauan dan tindakan kita."
+          ]
+        },
+        {
+          "type": "question",
+          "title": "Diskusikan",
+          "text": "Bagian mana yang paling sulit bagimu: mengaku, menerima pengampunan, memperbaiki hubungan, atau mengubah arah?"
+        },
+        {
+          "type": "egw",
+          "fullRow": true,
+          "title": "Ellen White",
+          "items": [
+            {
+              "text": "Taman hati harus diolah.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 56",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm"
+              }
+            },
+            {
+              "text": "Kasih karunia harus dipelihara dengan cermat.",
+              "source": {
+                "label": "Christ's Object Lessons, hlm. 50",
+                "url": "https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm"
+              }
+            },
+            {
+              "text": "Setiap pagi, persembahkanlah dirimu kepada Allah.",
+              "source": {
+                "label": "Steps to Christ, hlm. 70",
+                "url": "https://www.ellenwhite.info/books/bk-sc-08.htm"
+              }
+            }
+          ]
+        },
+        {
+          "fullRow": true,
+          "title": "Tantangan Mingguan",
+          "ordered": [
+            "Berhenti sejenak ketika Roh Kudus menegurmu.",
+            "Mengakulah dengan jujur kepada Allah.",
+            "Terimalah pengampunan dengan iman.",
+            "Perbaiki hubungan dengan seseorang jika perlu.",
+            "Mintalah kuasa Yesus untuk berjalan dengan cara yang berbeda."
+          ]
+        }
+      ]
+    }
+  ],
+  "scriptures": {
+    "1 Yohanes 1:9": "1 Yohanes 1:9\nJika kita mengaku dosa kita, Ia setia dan adil untuk mengampuni dosa-dosa kita dan menyucikan kita dari segala kejahatan.",
+    "Yesaya 61:10": "Yesaya 61:10\nAku akan sangat bersukacita di dalam TUHAN; jiwaku akan bergembira di dalam Allahku, sebab Ia mengenakan kepadaku pakaian keselamatan dan menyelubungi aku dengan jubah kebenaran, seperti pengantin laki-laki memakai hiasan dan pengantin perempuan mengenakan perhiasannya.",
+    "Yesaya 64:6": "Yesaya 64:6\nKami semua seperti sesuatu yang najis, dan segala kebenaran kami seperti kain kotor. Kami layu seperti daun, dan kesalahan kami membawa kami pergi seperti angin.",
+    "Zakharia 3:4": "Zakharia 3:4\nIa berkata kepada mereka yang berdiri di hadapannya, \"Tanggalkan pakaian kotor itu dari padanya.\" Lalu kepada Yosua Ia berkata, \"Lihat, Aku telah menjauhkan kesalahanmu dari padamu, dan Aku akan mengenakan kepadamu pakaian yang baru.\"",
+    "Hosea 6": "Hosea 6\n1 Mari, kita berbalik kepada TUHAN; sebab Dialah yang telah menerkam dan Dialah yang akan menyembuhkan kita; Dialah yang telah memukul dan Dialah yang akan membalut kita.\n2 Sesudah dua hari Ia akan menghidupkan kita; pada hari yang ketiga Ia akan membangkitkan kita, dan kita akan hidup di hadapan-Nya.\n3 Marilah kita mengenal, sungguh-sungguh berusaha mengenal TUHAN. Kedatangan-Nya pasti seperti fajar; Ia akan datang kepada kita seperti hujan, seperti hujan akhir dan hujan awal yang membasahi bumi.\n4 Apakah yang harus Kulakukan terhadapmu, hai Efraim? Apakah yang harus Kulakukan terhadapmu, hai Yehuda? Kasih setiamu seperti awan pagi dan seperti embun yang segera lenyap.\n5 Sebab itu Aku menegur mereka melalui para nabi; Aku menghukum mereka dengan perkataan mulut-Ku, dan hukum-Ku keluar seperti terang.\n6 Sebab Aku menghendaki kasih setia, bukan korban sembelihan; pengenalan akan Allah lebih daripada korban bakaran.",
+    "Kisah Para Rasul 3:18-19": "Kisah Para Rasul 3:18-19\n18 Tetapi apa yang dahulu telah diberitahukan Allah melalui mulut semua nabi, bahwa Kristus harus menderita, telah digenapi-Nya.\n19 Karena itu bertobatlah dan berbaliklah, supaya dosa-dosamu dihapuskan, sehingga datang waktu penyegaran dari hadirat Tuhan.",
+    "Keluaran 34:1-10": "Keluaran 34:1-10\n1 TUHAN berkata kepada Musa, \"Pahatlah dua loh batu seperti yang pertama; Aku akan menuliskan pada loh itu perkataan yang ada pada loh pertama, yang telah kaupecahkan.\"\n5 TUHAN turun dalam awan, berdiri di sana bersama Musa, dan menyerukan nama TUHAN.\n6 TUHAN lewat di depannya dan berseru, \"TUHAN, TUHAN, Allah yang penyayang dan pengasih, panjang sabar, berlimpah kebaikan dan kebenaran,\n7 yang memelihara kasih setia bagi beribu-ribu orang, yang mengampuni kesalahan, pelanggaran, dan dosa.\"",
+    "Roma 6:23": "Roma 6:23\nSebab upah dosa ialah maut, tetapi karunia Allah ialah hidup kekal melalui Yesus Kristus, Tuhan kita.",
+    "Matius 22:1-14": "Matius 22:1-14\nYesus menceritakan perumpamaan tentang seorang raja yang mengadakan pesta kawin. Banyak orang diundang, tetapi beberapa menolak. Ketika ruang pesta penuh, raja melihat seorang tamu tanpa pakaian pesta. Perumpamaan ini menunjuk kepada undangan keselamatan dan kebutuhan akan kebenaran yang Allah sediakan.",
+    "Yohanes 16:8": "Yohanes 16:8\nKetika Ia datang, Ia akan menegur dunia tentang dosa, kebenaran, dan penghakiman.",
+    "Efesus 4:30": "Efesus 4:30\nJangan mendukakan Roh Kudus Allah, yang memeteraikan kamu sampai hari penebusan.",
+    "Roma 2:4": "Roma 2:4\nAtaukah engkau meremehkan kekayaan kebaikan, kesabaran, dan kemurahan-Nya, tidak mengetahui bahwa kebaikan Allah menuntun engkau kepada pertobatan?",
+    "2 Petrus 3:9": "2 Petrus 3:9\nTuhan tidak lalai menepati janji-Nya, tetapi Ia sabar terhadap kita, tidak menghendaki seorang pun binasa, melainkan semua orang datang kepada pertobatan.",
+    "Matius 3:8": "Matius 3:8\nHasilkanlah buah yang sesuai dengan pertobatan.",
+    "Roma 5:20-21": "Roma 5:20-21\nDi mana dosa bertambah banyak, kasih karunia menjadi semakin berlimpah. Kasih karunia berkuasa melalui kebenaran menuju hidup kekal oleh Yesus Kristus, Tuhan kita.",
+    "Roma 5:8": "Roma 5:8\nTetapi Allah menunjukkan kasih-Nya kepada kita: ketika kita masih berdosa, Kristus telah mati untuk kita.",
+    "Hosea 10:12": "Hosea 10:12\nMenaburlah bagimu dalam kebenaran, tuailah menurut kasih setia; bukalah tanah hatimu yang keras, sebab sudah waktunya mencari TUHAN, sampai Ia datang dan mencurahkan kebenaran atasmu.",
+    "Filipi 2:12-13": "Filipi 2:12-13\nKerjakanlah keselamatanmu dengan takut dan gentar, sebab Allahlah yang bekerja di dalam kamu, baik kemauan maupun pekerjaan menurut kerelaan-Nya.",
+    "Ulangan 4:3-4": "Ulangan 4:3-4\nKamu telah melihat apa yang dilakukan TUHAN karena Baal-Peor. Tetapi kamu yang berpaut kepada TUHAN, Allahmu, masih hidup sampai hari ini.",
+    "Matius 6:13": "Matius 6:13\nJanganlah membawa kami ke dalam pencobaan, tetapi lepaskanlah kami dari yang jahat. Karena Engkaulah yang empunya kerajaan, kuasa, dan kemuliaan sampai selama-lamanya. Amin."
+  },
+  "sources": [
+    {
+      "label": "Sabbath School Net",
+      "url": "https://ssnet.org/lessons/26b/less10.html"
+    },
+    {
+      "label": "sabbath.school",
+      "url": "https://www.sabbath.school/SSchool/2026/2/ETQ226_10.pdf"
+    }
+  ],
+  "closing": {
+    "title": "Ajakan Penutup",
+    "text": "Allah tidak memintamu membersihkan dirimu sebelum datang kepada-Nya. Ia memintamu datang kepada-Nya supaya Ia dapat mengampuni dan menyucikanmu. Jangan bersembunyi dari satu-satunya Pribadi yang dapat menyembuhkanmu.",
+    "prayer": "Tuhan, berikan kami hati yang jujur. Tolong kami mendengar ketika Roh-Mu berbicara. Ajarlah kami mengaku tanpa takut, menerima pengampunan-Mu dengan iman, dan memakai kebenaran Yesus daripada mempercayai diri sendiri. Amin."
+  }
+}

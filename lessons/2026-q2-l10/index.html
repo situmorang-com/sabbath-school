@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pelajaran 10 - Pertobatan dan Pengampunan</title>
+  <script>
+    if (location.hostname === "ss.situmorang.com" && location.protocol === "http:") {
+      location.replace(`https://${location.host}${location.pathname}${location.search}${location.hash}`);
+    }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #16212c;
+      --muted: #596674;
+      --line: #d6e0e9;
+      --paper: #f4f7fb;
+      --panel: #ffffff;
+      --navy: #10243a;
+      --teal: #0c7877;
+      --gold: #a97219;
+      --violet: #6f5a8e;
+      --soft-teal: #e7f5f4;
+      --soft-gold: #fff2d9;
+      --soft-blue: #edf4fb;
+      --soft-violet: #f5f0fb;
+      --shadow: 0 20px 50px rgba(16, 36, 58, 0.12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body, h1, h2, h3, p, ul, ol, blockquote { margin: 0; }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(180deg, #fbfdff 0%, #f4f7fb 34%, #eef3f9 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    button { font: inherit; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.16em;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, rgba(12, 36, 58, 0.14), rgba(12, 36, 58, 0.84)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80") center / cover;
+      color: #fff;
+    }
+
+    .hero-inner {
+      width: min(1160px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: clamp(28px, 5vw, 72px) 0 clamp(22px, 4vw, 36px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+      gap: 18px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      max-width: 900px;
+      font-size: clamp(2.4rem, 7vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 64ch;
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .primary-link, .secondary-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .primary-link {
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+    .secondary-link {
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card {
+      align-self: stretch;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 40px rgba(5, 18, 35, 0.18);
+    }
+
+    .hero-card-kicker {
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      line-height: 1.15;
+    }
+
+    .hero-card ul {
+      padding-left: 18px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-card li + li { margin-top: 8px; }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .stat-card {
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-card span {
+      display: block;
+      margin-bottom: 4px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 0.96rem;
+      line-height: 1.3;
+    }
+
+    .wrap { width: min(1160px, calc(100% - 24px)); margin: 0 auto; }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(214, 224, 233, 0.92);
+      background: rgba(250, 252, 254, 0.92);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-row {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scrollbar-width: thin;
+      scroll-snap-type: x proximity;
+    }
+
+    .nav-row a {
+      flex: 0 0 auto;
+      min-height: 38px;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: #fff;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 800;
+      white-space: nowrap;
+      scroll-snap-align: start;
+    }
+
+    main {
+      padding: clamp(18px, 4vw, 34px) 0 110px;
+    }
+
+    main > section,
+    main > article {
+      scroll-margin-top: 82px;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .panel, .day {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: 0 10px 28px rgba(16, 34, 53, 0.06);
+    }
+
+    .panel { padding: 22px; }
+
+    .panel h2, .day h2 { color: var(--navy); line-height: 1.15; letter-spacing: 0; }
+    .panel h2 { margin-bottom: 10px; }
+
+    .meta-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .meta-list li { display: flex; gap: 10px; align-items: flex-start; }
+
+    .tag {
+      flex: 0 0 auto;
+      min-width: 90px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .memory {
+      border-left: 5px solid var(--gold);
+      background: linear-gradient(180deg, #fffaf0, var(--soft-gold));
+    }
+    .memory blockquote { font-size: 1.18rem; line-height: 1.58; color: #2a2213; }
+
+    .scripture-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .verse-btn {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 10px;
+      border: 1px solid #b7d5d4;
+      border-radius: var(--radius);
+      background: var(--soft-teal);
+      color: #064948;
+      font-weight: 850;
+      cursor: pointer;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(12, 120, 119, 0.08);
+    }
+
+    .verse-btn:hover, .verse-btn:focus {
+      outline: 2px solid rgba(12, 120, 119, 0.2);
+      border-color: var(--teal);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 30px 0 14px;
+    }
+    .section-title h2 { color: var(--navy); line-height: 1.15; }
+
+    .day {
+      margin: 14px 0;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .day-head {
+      display: grid;
+      gap: 10px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, #ffffff 0%, var(--soft-blue) 100%);
+    }
+
+    .day-label {
+      margin-bottom: 4px;
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .day-title { font-size: clamp(1.35rem, 3vw, 2rem); }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .day-body > * { min-width: 0; }
+
+    .guide-box {
+      display: grid;
+      gap: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      box-shadow: 0 8px 20px rgba(16, 34, 53, 0.05);
+    }
+    .guide-box h3 {
+      color: var(--navy);
+      font-size: 0.98rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .guide-box p, .guide-box ul, .guide-box ol { margin: 0; }
+    .guide-box ul, .guide-box ol { padding-left: 1.2rem; }
+    .guide-box li { margin: 7px 0; }
+    .guide-box a {
+      color: var(--teal);
+      font-weight: 800;
+    }
+    .guide-box a:hover { text-decoration-thickness: 2px; }
+
+    .callout { border-left: 5px solid var(--teal); background: var(--soft-teal); }
+    .question { border-left: 5px solid var(--gold); background: #fffaf0; }
+    .egw-box { border-left: 5px solid var(--violet); background: var(--soft-violet); }
+    .full-row { grid-column: 1 / -1; }
+
+    .closing {
+      margin-top: 22px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(16, 36, 58, 0.96), rgba(16, 36, 58, 1));
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .closing h2 { color: #fff; }
+    .closing p { margin-top: 10px; color: rgba(255, 255, 255, 0.9); }
+
+    .drawer {
+      position: fixed;
+      left: 50%;
+      bottom: 14px;
+      z-index: 40;
+      width: min(860px, calc(100% - 28px));
+      max-height: min(72vh, 720px);
+      transform: translate(-50%, calc(100% + 38px));
+      opacity: 0;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius);
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .drawer.open { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+    .drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; background: var(--navy); color: #fff; }
+    .drawer-title { margin: 0; font-size: 1.05rem; line-height: 1.25; }
+    .drawer-close { border: 1px solid rgba(255, 255, 255, 0.38); border-radius: var(--radius); background: rgba(255, 255, 255, 0.12); color: #fff; cursor: pointer; font-weight: 900; min-width: 38px; min-height: 38px; }
+    .drawer-body { max-height: calc(min(72vh, 720px) - 58px); overflow: auto; padding: 16px; }
+    .scripture-text { margin: 0; white-space: pre-wrap; font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: 1.08rem; line-height: 1.65; }
+    .drawer-note { margin: 12px 0 0; color: var(--muted); font-size: 0.92rem; }
+
+    footer { padding: 26px 0 42px; color: var(--muted); font-size: 0.92rem; }
+    footer a { color: var(--teal); font-weight: 800; }
+
+    @media (max-width: 920px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { order: -1; }
+      .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .top-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .hero p { max-width: none; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .hero-actions { gap: 8px; }
+      .top-grid, .day-body { grid-template-columns: 1fr; }
+      .day-head { padding: 16px; }
+      .panel, .day-body { padding: 16px; }
+      .memory blockquote { font-size: 1.08rem; }
+      .guide-box { padding: 14px; }
+      .closing { padding: 20px; }
+      .drawer {
+        width: min(100% - 18px, 860px);
+        bottom: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .drawer { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Pelajaran 10 - 30 Mei sampai 5 Juni 2026</div>
+        <h1>Pertobatan dan Pengampunan</h1>
+        <p>Panduan Sekolah Sabat interaktif untuk siswa: baca ayat, diskusikan pertanyaan, dan ikuti alur pelajaran mingguan bersama kelas.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#lesson-start">Mulai Pelajaran</a>
+          <a class="secondary-link" href="#memory">Ayat Hafalan</a>
+        </div>
+        <div class="hero-stats" aria-label="Ringkasan pelajaran">
+          <div class="stat-card"><span>Durasi</span><strong>7 Hari</strong></div>
+          <div class="stat-card"><span>Ayat Hafalan</span><strong>1 Yohanes 1:9</strong></div>
+          <div class="stat-card"><span>Fokus</span><strong>Pertobatan dan Pengampunan</strong></div>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Sorotan pelajaran">
+        <p class="hero-card-kicker">Fokus Pekan Ini</p>
+        <h2>Belajar untuk kembali kepada Allah dengan jujur, menerima pengampunan, dan memakai kebenaran Kristus.</h2>
+        <ul><li>Roh Kudus menegur untuk memulihkan, bukan menghancurkan.</li><li>Pertobatan sejati berbalik kepada Allah.</li><li>Kristus memberi jubah kebenaran yang kita tidak dapat buat sendiri.</li></ul>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="sticky-nav" aria-label="Bagian pelajaran">
+    <div class="wrap nav-row">
+      <a href="#lesson-start">Ikhtisar</a>
+      <a href="#sabbath">Sabat</a>
+      <a href="#sunday">Minggu</a>
+      <a href="#monday">Senin</a>
+      <a href="#tuesday">Selasa</a>
+      <a href="#wednesday">Rabu</a>
+      <a href="#thursday">Kamis</a>
+      <a href="#friday">Jumat</a>
+      <a href="#closing">Penutup</a>
+    </div>
+  </nav>
+
+  <main id="lesson-start" class="wrap">
+    <section class="top-grid" aria-label="Ikhtisar pelajaran">
+      <div class="panel">
+        <h2>Identitas Pelajaran</h2>
+        <ul class="meta-list">
+          <li><span class="tag">Triwulan</span><span>Triwulan 2 2026 - Bertumbuh dalam Hubungan Dengan Allah</span></li>
+          <li><span class="tag">Pelajaran</span><span>Pelajaran 10</span></li>
+          <li><span class="tag">Judul</span><span>Pertobatan dan Pengampunan</span></li>
+          <li><span class="tag">Tanggal</span><span>30 Mei sampai 5 Juni 2026</span></li>
+          <li><span class="tag">Tujuan</span><span>Memahami bagaimana Roh Kudus menuntun kita bertobat, bagaimana Allah mengampuni, dan mengapa kita membutuhkan kebenaran Kristus.</span></li>
+        </ul>
+      </div>
+
+      <div id="memory" class="panel memory">
+        <h2>Ayat Hafalan</h2>
+        <blockquote>
+          "Jika kita mengaku dosa kita, maka Ia adalah setia dan adil, sehingga Ia akan mengampuni segala dosa kita dan menyucikan kita dari segala kejahatan."
+          <br>- <button class="verse-btn" data-ref="1 Yohanes 1:9">1 Yohanes 1:9</button>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Bacaan untuk Pelajaran Minggu Ini</h2>
+      <p>Klik referensi untuk membuka teks Alkitab di halaman ini.</p>
+      <div class="scripture-grid">
+        <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button>
+        <button class="verse-btn" data-ref="Hosea 6">Hosea 6</button>
+        <button class="verse-btn" data-ref="Kisah Para Rasul 3:18-19">Kisah Para Rasul 3:18-19</button>
+        <button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button>
+        <button class="verse-btn" data-ref="Roma 6:23">Roma 6:23</button>
+        <button class="verse-btn" data-ref="Matius 22:1-14">Matius 22:1-14</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Gagasan Besar</h2>
+      <p>Pertobatan lebih dari sekadar merasa menyesal. Pertobatan adalah kembali kepada Allah ketika Roh Kudus menunjukkan kebenaran tentang dosa kita. Pengampunan tidak diperoleh karena penyesalan kita; pengampunan diterima melalui Yesus. Allah mengampuni orang berdosa yang bertobat, menyucikan hati, dan menutupi kita dengan kebenaran Kristus.</p>
+    </section>
+
+    <div class="section-title"><h2>Ikuti Alur Pelajaran</h2></div>
+    
+    <article id="sabbath" class="day">
+      <div class="day-head"><div><p class="day-label">Sabat Sore</p><h2 class="day-title">Pertobatan dan Pengampunan</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Kisah anak lembu emas mengingatkan kita bahwa manusia dapat gagal dengan serius bahkan setelah melihat kuasa Allah. Namun Allah tetap memanggil orang berdosa kembali kepada-Nya.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> dan <button class="verse-btn" data-ref="1 Yohanes 1:9">1 Yohanes 1:9</button></p></div>
+        <div class="guide-box question full-row"><h3>Pertanyaan Kelas</h3><p>Ketika orang berdosa, mengapa mereka sering bersembunyi, membenarkan diri, atau menyalahkan orang lain daripada kembali kepada Allah?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pengakuan dosa harus lahir dari hati yang sungguh-sungguh. - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li><li>Pengakuan yang benar selalu jelas, jujur, dan langsung pada dosa yang nyata. - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li></ul></div>
+      </div>
+    </article>
+
+    <article id="sunday" class="day">
+      <div class="day-head"><div><p class="day-label">Minggu - 31 Mei</p><h2 class="day-title">Kesibukan Hidup</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Hidup yang sibuk dapat membuat kita kehilangan hal terpenting: mendekat kepada Yesus. Sabat bukan hanya tentang berhenti bekerja; Sabat adalah menerima waktu bersama Allah.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Yesaya 64:6">Yesaya 64:6</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pelajaran ini menuntun kita dari gangguan hidup kepada jubah kebenaran Kristus.</p><ul><li>Kita tidak dapat membersihkan diri secara rohani dengan usaha sendiri.</li><li>Kesibukan dapat membuat hati tidak lagi peka terhadap suara Allah.</li><li>Yesus menanggalkan pakaian kotor kita dan menutupi kita dengan kebenaran-Nya.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Hal-hal normal apa dalam kehidupan siswa yang dapat menyingkirkan waktu bersama Allah?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pakaian pesta melambangkan karakter yang harus dimiliki setiap orang yang diakui layak hadir di pesta. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 307</a>.</li><li>Hanya penutup yang Kristus sendiri sediakan yang dapat membawa kita layak hadir di hadapan Allah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li></ul></div>
+        <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Pilih satu momen minggu ini untuk berhenti sejenak, berdoa, dan duduk bersama Yesus sebelum bergegas ke tugas berikutnya.</p></div>
+      </div>
+    </article>
+
+    <article id="monday" class="day">
+      <div class="day-head"><div><p class="day-label">Senin - 1 Juni</p><h2 class="day-title">Dorongan Roh Kudus</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Roh Kudus menegur kita tentang dosa supaya hubungan kita dengan Allah dapat dipulihkan. Teguran itu tidak nyaman, tetapi itu adalah karunia.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 6">Hosea 6</button> <button class="verse-btn" data-ref="Yohanes 16:8">Yohanes 16:8</button> <button class="verse-btn" data-ref="Efesus 4:30">Efesus 4:30</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pertumbuhan rohani yang nyata dimulai ketika kita berhenti membela dosa dan mendengarkan suara Allah.</p><ul><li>Roh Kudus menegur untuk memulihkan, bukan untuk menghancurkan.</li><li>Rasa bersalah harus membawa kita kepada Kristus, bukan kepada keputusasaan.</li><li>Kejujuran di hadapan Allah membuka jalan bagi pengampunan dan perubahan.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Bagaimana kamu membedakan rasa malu yang membuat putus asa dengan teguran Roh Kudus?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Kristus adalah sumber dari setiap dorongan yang benar. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 26</a>.</li><li>Aku akui dosaku di hadapan Allah tanpa alasan. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 35</a>.</li></ul></div>
+        <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Rasa malu berkata, &quot;Bersembunyilah dari Allah.&quot; Teguran berkata, &quot;Kembalilah kepada Allah.&quot;</p></div>
+      </div>
+    </article>
+
+    <article id="tuesday" class="day">
+      <div class="day-head"><div><p class="day-label">Selasa - 2 Juni</p><h2 class="day-title">Pertobatan Sejati</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Pertobatan sejati mencakup dukacita yang tulus atas dosa dan keputusan yang diserahkan kepada Allah untuk berbalik darinya.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Kisah Para Rasul 3:18-19">Kisah Para Rasul 3:18-19</button> <button class="verse-btn" data-ref="Roma 2:4">Roma 2:4</button> <button class="verse-btn" data-ref="2 Petrus 3:9">2 Petrus 3:9</button> <button class="verse-btn" data-ref="Matius 3:8">Matius 3:8</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Injil berkata, &quot;Datanglah kepada Yesus apa adanya, dan biarkan Dia mengubahmu.&quot;</p><ul><li>Pertobatan bukan sekadar takut akibat dosa.</li><li>Pertobatan sejati setuju dengan penilaian Allah tentang dosa.</li><li>Pertobatan membawa penyerahan, perubahan arah, dan buah yang nyata.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Apa perbedaan antara menyesal karena ketahuan dan menyesal karena dosa itu sendiri?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pertobatan mencakup dukacita karena dosa. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li><li>Pertobatan juga berarti berbalik meninggalkan dosa. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li></ul></div>
+      </div>
+    </article>
+
+    <article id="wednesday" class="day">
+      <div class="day-head"><div><p class="day-label">Rabu - 3 Juni</p><h2 class="day-title">Kasih Karunia yang Cukup</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Kasih karunia Allah cukup bagi orang berdosa yang bertobat. Ia penyayang, pengasih, sabar, dan berlimpah dalam kebaikan serta kebenaran.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> <button class="verse-btn" data-ref="Roma 6:23">Roma 6:23</button> <button class="verse-btn" data-ref="Roma 5:20-21">Roma 5:20-21</button> <button class="verse-btn" data-ref="Roma 5:8">Roma 5:8</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Setelah kegagalan Israel yang serius, Allah menyatakan karakter-Nya kepada Musa.</p><ul><li>Kasih karunia tidak mengecilkan dosa.</li><li>Kasih karunia menunjukkan bahwa belas kasihan Allah lebih besar daripada kegagalan kita.</li><li>Karakter Allah memberi keberanian untuk kembali, mengaku, dan menerima pemulihan.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Mengapa penting mengenal karakter Allah ketika kita merasa bersalah?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Allah berjanji melakukan semua ini bagimu. - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 49</a>.</li><li>Pengampunan itu diberikan dengan cuma-cuma kepada orang yang bertobat. - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 52</a>.</li></ul></div>
+        <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Ketika rasa bersalah datang, jangan lari dari Allah. Berdoalah dengan jujur: &quot;Tuhan, kasihanilah aku. Aku membutuhkan kasih karunia-Mu.&quot;</p></div>
+      </div>
+    </article>
+
+    <article id="thursday" class="day">
+      <div class="day-head"><div><p class="day-label">Kamis - 4 Juni</p><h2 class="day-title">Jubah yang Paling Mahal</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Pakaian pesta menunjuk kepada kebenaran Kristus. Kita tidak dapat berdiri di hadapan Allah dengan kebaikan kita sendiri.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Matius 22:1-14">Matius 22:1-14</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Dalam perumpamaan itu, orang tanpa pakaian pesta sudah diundang tetapi menolak penutup yang disediakan.</p><ul><li>Keselamatan bukan buatan sendiri.</li><li>Kebaikan manusia tidak cukup untuk berdiri di hadapan Allah.</li><li>Kristus memberikan jubah kebenaran yang tidak mungkin kita buat.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Apa artinya dalam kehidupan sehari-hari menerima jubah kebenaran Kristus?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Jubah kebenaran itu adalah jubah milik Kristus sendiri. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li><li>Kebenaran sejati adalah melakukan apa yang benar di hadapan Allah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 312</a>.</li></ul></div>
+        <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Artinya mempercayai Yesus, bukan kebaikan kita sendiri; mengaku dosa, bukan menyembunyikannya; dan mengizinkan kasih karunia-Nya mengubah perilaku kita.</p></div>
+      </div>
+    </article>
+
+    <article id="friday" class="day">
+      <div class="day-head"><div><p class="day-label">Jumat - 5 Juni</p><h2 class="day-title">Pemikiran Lanjutan</h2></div></div>
+      <div class="day-body">
+        <div class="guide-box callout"><h3>Poin Utama</h3><p>Hosea memakai bahasa pertanian: bukalah tanah yang keras, carilah Tuhan, dan biarkan Ia mencurahkan kebenaran atasmu. Hati yang keras dapat menjadi tanah yang siap untuk pekerjaan Allah.</p></div>
+        <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 10:12">Hosea 10:12</button> <button class="verse-btn" data-ref="Filipi 2:12-13">Filipi 2:12-13</button> <button class="verse-btn" data-ref="Ulangan 4:3-4">Ulangan 4:3-4</button> <button class="verse-btn" data-ref="Matius 6:13">Matius 6:13</button></p></div>
+        <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pertobatan bukan topik kelas satu kali saja; pertobatan adalah bagian dari hubungan yang hidup dengan Allah.</p><ul><li>Kita berbalik kepada Allah ketika Roh Kudus menegur.</li><li>Kita berpaut kepada Allah ketika dosa ingin menarik kita kembali.</li><li>Kita meminta Allah terus bekerja di dalam kemauan dan tindakan kita.</li></ul></div>
+        <div class="guide-box question"><h3>Diskusikan</h3><p>Bagian mana yang paling sulit bagimu: mengaku, menerima pengampunan, memperbaiki hubungan, atau mengubah arah?</p></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Taman hati harus diolah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 56</a>.</li><li>Kasih karunia harus dipelihara dengan cermat. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 50</a>.</li><li>Setiap pagi, persembahkanlah dirimu kepada Allah. - <a href="https://www.ellenwhite.info/books/bk-sc-08.htm" rel="noopener">Steps to Christ, hlm. 70</a>.</li></ul></div>
+        <div class="guide-box full-row"><h3>Tantangan Mingguan</h3><ol><li>Berhenti sejenak ketika Roh Kudus menegurmu.</li><li>Mengakulah dengan jujur kepada Allah.</li><li>Terimalah pengampunan dengan iman.</li><li>Perbaiki hubungan dengan seseorang jika perlu.</li><li>Mintalah kuasa Yesus untuk berjalan dengan cara yang berbeda.</li></ol></div>
+      </div>
+    </article>
+
+    <section id="closing" class="closing">
+      <h2>Ajakan Penutup</h2>
+      <p>Allah tidak memintamu membersihkan dirimu sebelum datang kepada-Nya. Ia memintamu datang kepada-Nya supaya Ia dapat mengampuni dan menyucikanmu. Jangan bersembunyi dari satu-satunya Pribadi yang dapat menyembuhkanmu.</p>
+      <p><strong>Pokok doa:</strong> Tuhan, berikan kami hati yang jujur. Tolong kami mendengar ketika Roh-Mu berbicara. Ajarlah kami mengaku tanpa takut, menerima pengampunan-Mu dengan iman, dan memakai kebenaran Yesus daripada mempercayai diri sendiri. Amin.</p>
+    </section>
+  </main>
+
+  <aside id="scriptureDrawer" class="drawer" aria-live="polite" aria-hidden="true">
+    <div class="drawer-head"><h2 id="scriptureTitle" class="drawer-title">Alkitab</h2><button class="drawer-close" type="button" aria-label="Tutup teks Alkitab" id="closeDrawer">X</button></div>
+    <div class="drawer-body"><p id="scriptureText" class="scripture-text"></p><p class="drawer-note">Teks Alkitab adalah saduran Indonesia dari teks KJV untuk diskusi kelas.</p></div>
+  </aside>
+
+  <footer class="wrap">
+    <p>Metadata pelajaran diverifikasi dari <a href="https://ssnet.org/lessons/26b/less10.html" rel="noopener">Sabbath School Net</a> dan <a href="https://www.sabbath.school/SSchool/2026/2/ETQ226_10.pdf" rel="noopener">sabbath.school</a>. Materi disusun ulang dalam bahasa Indonesia untuk penggunaan kelas.</p>
+  </footer>
+
+  <script>
+    const scriptures = {
+      "1 Yohanes 1:9": "1 Yohanes 1:9\nJika kita mengaku dosa kita, Ia setia dan adil untuk mengampuni dosa-dosa kita dan menyucikan kita dari segala kejahatan.",
+      "Yesaya 61:10": "Yesaya 61:10\nAku akan sangat bersukacita di dalam TUHAN; jiwaku akan bergembira di dalam Allahku, sebab Ia mengenakan kepadaku pakaian keselamatan dan menyelubungi aku dengan jubah kebenaran, seperti pengantin laki-laki memakai hiasan dan pengantin perempuan mengenakan perhiasannya.",
+      "Yesaya 64:6": "Yesaya 64:6\nKami semua seperti sesuatu yang najis, dan segala kebenaran kami seperti kain kotor. Kami layu seperti daun, dan kesalahan kami membawa kami pergi seperti angin.",
+      "Zakharia 3:4": "Zakharia 3:4\nIa berkata kepada mereka yang berdiri di hadapannya, \"Tanggalkan pakaian kotor itu dari padanya.\" Lalu kepada Yosua Ia berkata, \"Lihat, Aku telah menjauhkan kesalahanmu dari padamu, dan Aku akan mengenakan kepadamu pakaian yang baru.\"",
+      "Hosea 6": "Hosea 6\n1 Mari, kita berbalik kepada TUHAN; sebab Dialah yang telah menerkam dan Dialah yang akan menyembuhkan kita; Dialah yang telah memukul dan Dialah yang akan membalut kita.\n2 Sesudah dua hari Ia akan menghidupkan kita; pada hari yang ketiga Ia akan membangkitkan kita, dan kita akan hidup di hadapan-Nya.\n3 Marilah kita mengenal, sungguh-sungguh berusaha mengenal TUHAN. Kedatangan-Nya pasti seperti fajar; Ia akan datang kepada kita seperti hujan, seperti hujan akhir dan hujan awal yang membasahi bumi.\n4 Apakah yang harus Kulakukan terhadapmu, hai Efraim? Apakah yang harus Kulakukan terhadapmu, hai Yehuda? Kasih setiamu seperti awan pagi dan seperti embun yang segera lenyap.\n5 Sebab itu Aku menegur mereka melalui para nabi; Aku menghukum mereka dengan perkataan mulut-Ku, dan hukum-Ku keluar seperti terang.\n6 Sebab Aku menghendaki kasih setia, bukan korban sembelihan; pengenalan akan Allah lebih daripada korban bakaran.",
+      "Kisah Para Rasul 3:18-19": "Kisah Para Rasul 3:18-19\n18 Tetapi apa yang dahulu telah diberitahukan Allah melalui mulut semua nabi, bahwa Kristus harus menderita, telah digenapi-Nya.\n19 Karena itu bertobatlah dan berbaliklah, supaya dosa-dosamu dihapuskan, sehingga datang waktu penyegaran dari hadirat Tuhan.",
+      "Keluaran 34:1-10": "Keluaran 34:1-10\n1 TUHAN berkata kepada Musa, \"Pahatlah dua loh batu seperti yang pertama; Aku akan menuliskan pada loh itu perkataan yang ada pada loh pertama, yang telah kaupecahkan.\"\n5 TUHAN turun dalam awan, berdiri di sana bersama Musa, dan menyerukan nama TUHAN.\n6 TUHAN lewat di depannya dan berseru, \"TUHAN, TUHAN, Allah yang penyayang dan pengasih, panjang sabar, berlimpah kebaikan dan kebenaran,\n7 yang memelihara kasih setia bagi beribu-ribu orang, yang mengampuni kesalahan, pelanggaran, dan dosa.\"",
+      "Roma 6:23": "Roma 6:23\nSebab upah dosa ialah maut, tetapi karunia Allah ialah hidup kekal melalui Yesus Kristus, Tuhan kita.",
+      "Matius 22:1-14": "Matius 22:1-14\nYesus menceritakan perumpamaan tentang seorang raja yang mengadakan pesta kawin. Banyak orang diundang, tetapi beberapa menolak. Ketika ruang pesta penuh, raja melihat seorang tamu tanpa pakaian pesta. Perumpamaan ini menunjuk kepada undangan keselamatan dan kebutuhan akan kebenaran yang Allah sediakan.",
+      "Yohanes 16:8": "Yohanes 16:8\nKetika Ia datang, Ia akan menegur dunia tentang dosa, kebenaran, dan penghakiman.",
+      "Efesus 4:30": "Efesus 4:30\nJangan mendukakan Roh Kudus Allah, yang memeteraikan kamu sampai hari penebusan.",
+      "Roma 2:4": "Roma 2:4\nAtaukah engkau meremehkan kekayaan kebaikan, kesabaran, dan kemurahan-Nya, tidak mengetahui bahwa kebaikan Allah menuntun engkau kepada pertobatan?",
+      "2 Petrus 3:9": "2 Petrus 3:9\nTuhan tidak lalai menepati janji-Nya, tetapi Ia sabar terhadap kita, tidak menghendaki seorang pun binasa, melainkan semua orang datang kepada pertobatan.",
+      "Matius 3:8": "Matius 3:8\nHasilkanlah buah yang sesuai dengan pertobatan.",
+      "Roma 5:20-21": "Roma 5:20-21\nDi mana dosa bertambah banyak, kasih karunia menjadi semakin berlimpah. Kasih karunia berkuasa melalui kebenaran menuju hidup kekal oleh Yesus Kristus, Tuhan kita.",
+      "Roma 5:8": "Roma 5:8\nTetapi Allah menunjukkan kasih-Nya kepada kita: ketika kita masih berdosa, Kristus telah mati untuk kita.",
+      "Hosea 10:12": "Hosea 10:12\nMenaburlah bagimu dalam kebenaran, tuailah menurut kasih setia; bukalah tanah hatimu yang keras, sebab sudah waktunya mencari TUHAN, sampai Ia datang dan mencurahkan kebenaran atasmu.",
+      "Filipi 2:12-13": "Filipi 2:12-13\nKerjakanlah keselamatanmu dengan takut dan gentar, sebab Allahlah yang bekerja di dalam kamu, baik kemauan maupun pekerjaan menurut kerelaan-Nya.",
+      "Ulangan 4:3-4": "Ulangan 4:3-4\nKamu telah melihat apa yang dilakukan TUHAN karena Baal-Peor. Tetapi kamu yang berpaut kepada TUHAN, Allahmu, masih hidup sampai hari ini.",
+      "Matius 6:13": "Matius 6:13\nJanganlah membawa kami ke dalam pencobaan, tetapi lepaskanlah kami dari yang jahat. Karena Engkaulah yang empunya kerajaan, kuasa, dan kemuliaan sampai selama-lamanya. Amin."
+};
+
+    const drawer = document.getElementById("scriptureDrawer");
+    const title = document.getElementById("scriptureTitle");
+    const text = document.getElementById("scriptureText");
+    const closeDrawer = document.getElementById("closeDrawer");
+
+    function openScripture(ref) {
+      title.textContent = ref;
+      text.textContent = scriptures[ref] || "Teks Alkitab belum dimuat untuk referensi ini.";
+      drawer.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+      closeDrawer.focus({ preventScroll: true });
+    }
+
+    function closeScripture() {
+      drawer.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+    }
+
+    document.querySelectorAll("[data-ref]").forEach((button) => {
+      button.addEventListener("click", () => openScripture(button.dataset.ref));
+    });
+
+    closeDrawer.addEventListener("click", closeScripture);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeScripture();
+    });
+  </script>
+</body>
+</html>
