@@ -88,8 +88,8 @@ Poin utama:
 
 Ellen White:
 
-- "Confession ... should be heartfelt" - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
-- "True confession is always ... specific" - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
+- Pengakuan dosa harus lahir dari hati yang sungguh-sungguh. - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
+- Pengakuan yang benar selalu jelas, jujur, dan langsung pada dosa yang nyata. - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
 
 #### Kelompok 2: Kisah Para Rasul 3:19
 
@@ -108,8 +108,8 @@ Poin utama:
 
 Ellen White:
 
-- "God promises to do all this for you" - [Steps to Christ, hlm. 49](https://www.ellenwhite.info/books/bk-sc-06.htm).
-- "pardon is freely extended" - [Steps to Christ, hlm. 52](https://www.ellenwhite.info/books/bk-sc-06.htm).
+- Allah berjanji melakukan semua ini bagimu. - [Steps to Christ, hlm. 49](https://www.ellenwhite.info/books/bk-sc-06.htm).
+- Pengampunan itu diberikan dengan cuma-cuma kepada orang yang bertobat. - [Steps to Christ, hlm. 52](https://www.ellenwhite.info/books/bk-sc-06.htm).
 
 #### Kelompok 3: Keluaran 34:6-7
 
@@ -128,8 +128,8 @@ Poin utama:
 
 Ellen White:
 
-- "Christ is the source of every right impulse" - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
-- "Acknowledge your sin" - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Kristus adalah sumber dari setiap dorongan yang benar. - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Akuilah dosamu di hadapan Allah tanpa alasan. - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
 
 ### 4. Pelajaran Utama - 15 Menit
 
@@ -147,8 +147,8 @@ Ikuti pelajaran:
 
 Ellen White:
 
-- "Christ is the source of every right impulse" - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
-- "Acknowledge your sin" - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Kristus adalah sumber dari setiap dorongan yang benar. - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Akuilah dosamu di hadapan Allah tanpa alasan. - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
 
 Tanyakan:
 
@@ -174,8 +174,8 @@ Ikuti pelajaran:
 
 Ellen White:
 
-- "Repentance includes sorrow for sin" - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
-- "turning away from it" - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Pertobatan mencakup dukacita karena dosa. - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- Pertobatan juga berarti berbalik meninggalkan dosa. - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
 
 Tanyakan:
 
@@ -212,8 +212,8 @@ Ikuti pelajaran:
 
 Ellen White:
 
-- "The wedding garment represents the character" - [Christ's Object Lessons, hlm. 307](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
-- "robe of His own righteousness" - [Christ's Object Lessons, hlm. 311](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
+- Pakaian pesta melambangkan karakter yang harus dimiliki setiap orang yang diakui layak hadir di pesta. - [Christ's Object Lessons, hlm. 307](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
+- Hanya penutup yang Kristus sendiri sediakan yang dapat membawa kita layak hadir di hadapan Allah. - [Christ's Object Lessons, hlm. 311](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
 
 ### 5. Diskusi Siswa - 10 Menit
 
@@ -251,9 +251,9 @@ Minggu ini, latih langkah "Kembali kepada Allah":
 
 Ellen White:
 
-- "The garden of the heart must be cultivated" - [Christ's Object Lessons, hlm. 56](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
-- "Grace must be carefully cultivated" - [Christ's Object Lessons, hlm. 50](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
-- "Each morning consecrate yourself to God" - [Steps to Christ, hlm. 70](https://www.ellenwhite.info/books/bk-sc-08.htm).
+- Taman hati harus diolah. - [Christ's Object Lessons, hlm. 56](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
+- Kasih karunia harus dipelihara dengan cermat. - [Christ's Object Lessons, hlm. 50](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
+- Setiap pagi, persembahkanlah dirimu kepada Allah. - [Steps to Christ, hlm. 70](https://www.ellenwhite.info/books/bk-sc-08.htm).
 
 ## Catatan Guru
 

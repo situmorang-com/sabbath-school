@@ -38,7 +38,7 @@
       line-height: 1.6;
     }
 
-    button, input { font: inherit; }
+    button { font: inherit; }
 
     .hero {
       min-height: 72vh;
@@ -190,7 +190,7 @@
 
     .day-head {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr;
       gap: 14px;
       align-items: center;
       padding: 20px 22px;
@@ -200,23 +200,6 @@
 
     .day-label { margin: 0 0 4px; color: var(--teal); font-size: 0.86rem; font-weight: 950; text-transform: uppercase; }
     .day-title { margin: 0; font-size: clamp(1.35rem, 3vw, 2rem); }
-
-    .done-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 40px;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
-      color: var(--muted);
-      cursor: pointer;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .done-toggle input { width: 18px; height: 18px; accent-color: var(--teal); }
 
     .day-body {
       display: grid;
@@ -271,8 +254,7 @@
     @media (max-width: 760px) {
       .hero { min-height: 64vh; }
       .top-grid, .day-body { grid-template-columns: 1fr; }
-      .day-head { grid-template-columns: 1fr; padding: 16px; }
-      .done-toggle { justify-content: flex-start; width: fit-content; }
+      .day-head { padding: 16px; }
       .panel, .day-body { padding: 16px; }
       .memory blockquote { font-size: 1.08rem; }
     }
@@ -348,82 +330,82 @@
     <div class="section-title"><h2>Ikuti Alur Pelajaran</h2></div>
 
     <article id="sabbath" class="day">
-      <div class="day-head"><div><p class="day-label">Sabat Sore</p><h2 class="day-title">Pertobatan dan Pengampunan</h2></div><label class="done-toggle"><input type="checkbox" data-done="sabbath"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Sabat Sore</p><h2 class="day-title">Pertobatan dan Pengampunan</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Kisah anak lembu emas mengingatkan kita bahwa manusia dapat gagal dengan serius bahkan setelah melihat kuasa Allah. Namun Allah tetap memanggil orang berdosa kembali kepada-Nya.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> dan <button class="verse-btn" data-ref="1 Yohanes 1:9">1 Yohanes 1:9</button></p></div>
         <div class="guide-box question full-row"><h3>Pertanyaan Kelas</h3><p>Ketika orang berdosa, mengapa mereka sering bersembunyi, membenarkan diri, atau menyalahkan orang lain daripada kembali kepada Allah?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"Confession ... should be heartfelt" - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li><li>"True confession is always ... specific" - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pengakuan dosa harus lahir dari hati yang sungguh-sungguh. - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li><li>Pengakuan yang benar selalu jelas, jujur, dan langsung pada dosa yang nyata. - <a href="https://www.ellenwhite.info/books/bk-sc-04.htm" rel="noopener">Steps to Christ, hlm. 38</a>.</li></ul></div>
       </div>
     </article>
 
     <article id="sunday" class="day">
-      <div class="day-head"><div><p class="day-label">Minggu - 31 Mei</p><h2 class="day-title">Kesibukan Hidup</h2></div><label class="done-toggle"><input type="checkbox" data-done="sunday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Minggu - 31 Mei</p><h2 class="day-title">Kesibukan Hidup</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Hidup yang sibuk dapat membuat kita kehilangan hal terpenting: mendekat kepada Yesus. Sabat bukan hanya tentang berhenti bekerja; Sabat adalah menerima waktu bersama Allah.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Yesaya 64:6">Yesaya 64:6</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pelajaran ini menuntun kita dari gangguan hidup kepada jubah kebenaran Kristus.</p><ul><li>Kita tidak dapat membersihkan diri secara rohani dengan usaha sendiri.</li><li>Kesibukan dapat membuat hati tidak lagi peka terhadap suara Allah.</li><li>Yesus menanggalkan pakaian kotor kita dan menutupi kita dengan kebenaran-Nya.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Hal-hal normal apa dalam kehidupan siswa yang dapat menyingkirkan waktu bersama Allah?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"The wedding garment represents the character" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 307</a>.</li><li>"Only the covering which Christ Himself has provided" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pakaian pesta melambangkan karakter yang harus dimiliki setiap orang yang diakui layak hadir di pesta. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 307</a>.</li><li>Hanya penutup yang Kristus sendiri sediakan yang dapat membawa kita layak hadir di hadapan Allah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li></ul></div>
         <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Pilih satu momen minggu ini untuk berhenti sejenak, berdoa, dan duduk bersama Yesus sebelum bergegas ke tugas berikutnya.</p></div>
       </div>
     </article>
 
     <article id="monday" class="day">
-      <div class="day-head"><div><p class="day-label">Senin - 1 Juni</p><h2 class="day-title">Dorongan Roh Kudus</h2></div><label class="done-toggle"><input type="checkbox" data-done="monday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Senin - 1 Juni</p><h2 class="day-title">Dorongan Roh Kudus</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Roh Kudus menegur kita tentang dosa supaya hubungan kita dengan Allah dapat dipulihkan. Teguran itu tidak nyaman, tetapi itu adalah karunia.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 6">Hosea 6</button> <button class="verse-btn" data-ref="Yohanes 16:8">Yohanes 16:8</button> <button class="verse-btn" data-ref="Efesus 4:30">Efesus 4:30</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pertumbuhan rohani yang nyata dimulai ketika kita berhenti membela dosa dan mendengarkan suara Allah.</p><ul><li>Roh Kudus menegur untuk memulihkan, bukan untuk menghancurkan.</li><li>Rasa bersalah harus membawa kita kepada Kristus, bukan kepada keputusasaan.</li><li>Kejujuran di hadapan Allah membuka jalan bagi pengampunan dan perubahan.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Bagaimana kamu membedakan rasa malu yang membuat putus asa dengan teguran Roh Kudus?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"Christ is the source of every right impulse" - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 26</a>.</li><li>"Acknowledge your sin" - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 35</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Kristus adalah sumber dari setiap dorongan yang benar. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 26</a>.</li><li>Aku akui dosaku di hadapan Allah tanpa alasan. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 35</a>.</li></ul></div>
         <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Rasa malu berkata, "Bersembunyilah dari Allah." Teguran berkata, "Kembalilah kepada Allah."</p></div>
       </div>
     </article>
 
     <article id="tuesday" class="day">
-      <div class="day-head"><div><p class="day-label">Selasa - 2 Juni</p><h2 class="day-title">Pertobatan Sejati</h2></div><label class="done-toggle"><input type="checkbox" data-done="tuesday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Selasa - 2 Juni</p><h2 class="day-title">Pertobatan Sejati</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Pertobatan sejati mencakup dukacita yang tulus atas dosa dan keputusan yang diserahkan kepada Allah untuk berbalik darinya.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Kisah Para Rasul 3:18-19">Kisah Para Rasul 3:18-19</button> <button class="verse-btn" data-ref="Roma 2:4">Roma 2:4</button> <button class="verse-btn" data-ref="2 Petrus 3:9">2 Petrus 3:9</button> <button class="verse-btn" data-ref="Matius 3:8">Matius 3:8</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Injil berkata, "Datanglah kepada Yesus apa adanya, dan biarkan Dia mengubahmu."</p><ul><li>Pertobatan bukan sekadar takut akibat dosa.</li><li>Pertobatan sejati setuju dengan penilaian Allah tentang dosa.</li><li>Pertobatan membawa penyerahan, perubahan arah, dan buah yang nyata.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Apa perbedaan antara menyesal karena ketahuan dan menyesal karena dosa itu sendiri?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"Repentance includes sorrow for sin" - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li><li>"turning away from it" - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Pertobatan mencakup dukacita karena dosa. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li><li>Pertobatan juga berarti berbalik meninggalkan dosa. - <a href="https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm" rel="noopener">Steps to Christ, hlm. 23</a>.</li></ul></div>
       </div>
     </article>
 
     <article id="wednesday" class="day">
-      <div class="day-head"><div><p class="day-label">Rabu - 3 Juni</p><h2 class="day-title">Kasih Karunia yang Cukup</h2></div><label class="done-toggle"><input type="checkbox" data-done="wednesday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Rabu - 3 Juni</p><h2 class="day-title">Kasih Karunia yang Cukup</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Kasih karunia Allah cukup bagi orang berdosa yang bertobat. Ia penyayang, pengasih, sabar, dan berlimpah dalam kebaikan serta kebenaran.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Keluaran 34:1-10">Keluaran 34:1-10</button> <button class="verse-btn" data-ref="Roma 6:23">Roma 6:23</button> <button class="verse-btn" data-ref="Roma 5:20-21">Roma 5:20-21</button> <button class="verse-btn" data-ref="Roma 5:8">Roma 5:8</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Setelah kegagalan Israel yang serius, Allah menyatakan karakter-Nya kepada Musa.</p><ul><li>Kasih karunia tidak mengecilkan dosa.</li><li>Kasih karunia menunjukkan bahwa belas kasihan Allah lebih besar daripada kegagalan kita.</li><li>Karakter Allah memberi keberanian untuk kembali, mengaku, dan menerima pemulihan.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Mengapa penting mengenal karakter Allah ketika kita merasa bersalah?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"God promises to do all this for you" - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 49</a>.</li><li>"pardon is freely extended" - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 52</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Allah berjanji melakukan semua ini bagimu. - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 49</a>.</li><li>Pengampunan itu diberikan dengan cuma-cuma kepada orang yang bertobat. - <a href="https://www.ellenwhite.info/books/bk-sc-06.htm" rel="noopener">Steps to Christ, hlm. 52</a>.</li></ul></div>
         <div class="guide-box full-row"><h3>Langkah Hidup</h3><p>Ketika rasa bersalah datang, jangan lari dari Allah. Berdoalah dengan jujur: "Tuhan, kasihanilah aku. Aku membutuhkan kasih karunia-Mu."</p></div>
       </div>
     </article>
 
     <article id="thursday" class="day">
-      <div class="day-head"><div><p class="day-label">Kamis - 4 Juni</p><h2 class="day-title">Jubah yang Paling Mahal</h2></div><label class="done-toggle"><input type="checkbox" data-done="thursday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Kamis - 4 Juni</p><h2 class="day-title">Jubah yang Paling Mahal</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Pakaian pesta menunjuk kepada kebenaran Kristus. Kita tidak dapat berdiri di hadapan Allah dengan kebaikan kita sendiri.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Matius 22:1-14">Matius 22:1-14</button> <button class="verse-btn" data-ref="Yesaya 61:10">Yesaya 61:10</button> <button class="verse-btn" data-ref="Zakharia 3:4">Zakharia 3:4</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Dalam perumpamaan itu, orang tanpa pakaian pesta sudah diundang tetapi menolak penutup yang disediakan.</p><ul><li>Keselamatan bukan buatan sendiri.</li><li>Kebaikan manusia tidak cukup untuk berdiri di hadapan Allah.</li><li>Kristus memberikan jubah kebenaran yang tidak mungkin kita buat.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Apa artinya dalam kehidupan sehari-hari menerima jubah kebenaran Kristus?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"robe of His own righteousness" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li><li>"Righteousness is right doing" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 312</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Jubah kebenaran itu adalah jubah milik Kristus sendiri. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 311</a>.</li><li>Kebenaran sejati adalah melakukan apa yang benar di hadapan Allah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm" rel="noopener">Christ's Object Lessons, hlm. 312</a>.</li></ul></div>
         <div class="guide-box full-row"><h3>Panduan Jawaban</h3><p>Artinya mempercayai Yesus, bukan kebaikan kita sendiri; mengaku dosa, bukan menyembunyikannya; dan mengizinkan kasih karunia-Nya mengubah perilaku kita.</p></div>
       </div>
     </article>
 
     <article id="friday" class="day">
-      <div class="day-head"><div><p class="day-label">Jumat - 5 Juni</p><h2 class="day-title">Pemikiran Lanjutan</h2></div><label class="done-toggle"><input type="checkbox" data-done="friday"> Selesai</label></div>
+      <div class="day-head"><div><p class="day-label">Jumat - 5 Juni</p><h2 class="day-title">Pemikiran Lanjutan</h2></div></div>
       <div class="day-body">
         <div class="guide-box callout"><h3>Poin Utama</h3><p>Hosea memakai bahasa pertanian: bukalah tanah yang keras, carilah Tuhan, dan biarkan Ia mencurahkan kebenaran atasmu. Hati yang keras dapat menjadi tanah yang siap untuk pekerjaan Allah.</p></div>
         <div class="guide-box"><h3>Baca Bersama</h3><p><button class="verse-btn" data-ref="Hosea 10:12">Hosea 10:12</button> <button class="verse-btn" data-ref="Filipi 2:12-13">Filipi 2:12-13</button> <button class="verse-btn" data-ref="Ulangan 4:3-4">Ulangan 4:3-4</button> <button class="verse-btn" data-ref="Matius 6:13">Matius 6:13</button></p></div>
         <div class="guide-box"><h3>Ikuti Pelajaran</h3><p>Pertobatan bukan topik kelas satu kali saja; pertobatan adalah bagian dari hubungan yang hidup dengan Allah.</p><ul><li>Kita berbalik kepada Allah ketika Roh Kudus menegur.</li><li>Kita berpaut kepada Allah ketika dosa ingin menarik kita kembali.</li><li>Kita meminta Allah terus bekerja di dalam kemauan dan tindakan kita.</li></ul></div>
         <div class="guide-box question"><h3>Diskusikan</h3><p>Bagian mana yang paling sulit bagimu: mengaku, menerima pengampunan, memperbaiki hubungan, atau mengubah arah?</p></div>
-        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>"The garden of the heart must be cultivated" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 56</a>.</li><li>"Grace must be carefully cultivated" - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 50</a>.</li><li>"Each morning consecrate yourself to God" - <a href="https://www.ellenwhite.info/books/bk-sc-08.htm" rel="noopener">Steps to Christ, hlm. 70</a>.</li></ul></div>
+        <div class="guide-box egw-box full-row"><h3>Ellen White</h3><ul><li>Taman hati harus diolah. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 56</a>.</li><li>Kasih karunia harus dipelihara dengan cermat. - <a href="https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm" rel="noopener">Christ's Object Lessons, hlm. 50</a>.</li><li>Setiap pagi, persembahkanlah dirimu kepada Allah. - <a href="https://www.ellenwhite.info/books/bk-sc-08.htm" rel="noopener">Steps to Christ, hlm. 70</a>.</li></ul></div>
         <div class="guide-box full-row"><h3>Tantangan Mingguan</h3><ol><li>Berhenti sejenak ketika Roh Kudus menegurmu.</li><li>Mengakulah dengan jujur kepada Allah.</li><li>Terimalah pengampunan dengan iman.</li><li>Perbaiki hubungan dengan seseorang jika perlu.</li><li>Mintalah kuasa Yesus untuk berjalan dengan cara yang berbeda.</li></ol></div>
       </div>
     </article>
@@ -494,12 +476,6 @@
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeScripture();
-    });
-
-    document.querySelectorAll("[data-done]").forEach((checkbox) => {
-      const key = `ss-l10-done-${checkbox.dataset.done}`;
-      checkbox.checked = localStorage.getItem(key) === "true";
-      checkbox.addEventListener("change", () => localStorage.setItem(key, String(checkbox.checked)));
     });
 
   </script>
