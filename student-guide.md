@@ -86,6 +86,11 @@ Poin utama:
 
 > Pertobatan adalah kembali kepada Tuhan yang menyembuhkan. Allah tidak memanggil kita kembali supaya Ia dapat menolak kita. Ia memanggil kita kembali karena Ia ingin memulihkan kita.
 
+Ellen White:
+
+- "Confession ... should be heartfelt" - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
+- "True confession is always ... specific" - [Steps to Christ, hlm. 38](https://www.ellenwhite.info/books/bk-sc-04.htm).
+
 #### Kelompok 2: Kisah Para Rasul 3:19
 
 Baca:
@@ -100,6 +105,11 @@ Pertanyaan:
 Poin utama:
 
 > Pertobatan dan perubahan arah hidup berjalan bersama. Allah tidak hanya ingin kita merasa menyesal; Ia ingin membalikkan hidup kita ke arah yang baru.
+
+Ellen White:
+
+- "God promises to do all this for you" - [Steps to Christ, hlm. 49](https://www.ellenwhite.info/books/bk-sc-06.htm).
+- "pardon is freely extended" - [Steps to Christ, hlm. 52](https://www.ellenwhite.info/books/bk-sc-06.htm).
 
 #### Kelompok 3: Keluaran 34:6-7
 
@@ -116,6 +126,11 @@ Poin utama:
 
 > Perkataan ini diberikan setelah dosa Israel dengan anak lembu emas. Bahkan ketika umat-Nya gagal dengan sangat serius, Allah menyatakan diri-Nya sebagai penyayang, pengasih, sabar, baik, dan benar.
 
+Ellen White:
+
+- "Christ is the source of every right impulse" - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- "Acknowledge your sin" - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+
 ### 4. Pelajaran Utama - 15 Menit
 
 Gunakan tiga poin pengajaran ini.
@@ -129,6 +144,11 @@ Ikuti pelajaran:
 - Roh Kudus menegur untuk memulihkan, bukan untuk menghancurkan.
 - Rasa bersalah harus membawa kita kepada Kristus, bukan kepada keputusasaan.
 - Kejujuran di hadapan Allah membuka jalan bagi pengampunan dan perubahan.
+
+Ellen White:
+
+- "Christ is the source of every right impulse" - [Steps to Christ, hlm. 26](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- "Acknowledge your sin" - [Steps to Christ, hlm. 35](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
 
 Tanyakan:
 
@@ -151,6 +171,11 @@ Ikuti pelajaran:
 - Pertobatan bukan sekadar takut akibat dosa.
 - Pertobatan sejati setuju dengan penilaian Allah tentang dosa.
 - Pertobatan membawa penyerahan, perubahan arah, dan buah yang nyata.
+
+Ellen White:
+
+- "Repentance includes sorrow for sin" - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+- "turning away from it" - [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
 
 Tanyakan:
 
@@ -184,6 +209,11 @@ Ikuti pelajaran:
 - Keselamatan bukan buatan sendiri.
 - Kebaikan manusia tidak cukup untuk berdiri di hadapan Allah.
 - Kristus memberikan jubah kebenaran yang tidak mungkin kita buat.
+
+Ellen White:
+
+- "The wedding garment represents the character" - [Christ's Object Lessons, hlm. 307](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
+- "robe of His own righteousness" - [Christ's Object Lessons, hlm. 311](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
 
 ### 5. Diskusi Siswa - 10 Menit
 
@@ -219,6 +249,12 @@ Minggu ini, latih langkah "Kembali kepada Allah":
 4. Perbaiki hubungan dengan seseorang jika perlu.
 5. Mintalah kuasa Yesus untuk berjalan dengan cara yang berbeda.
 
+Ellen White:
+
+- "The garden of the heart must be cultivated" - [Christ's Object Lessons, hlm. 56](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
+- "Grace must be carefully cultivated" - [Christ's Object Lessons, hlm. 50](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
+- "Each morning consecrate yourself to God" - [Steps to Christ, hlm. 70](https://www.ellenwhite.info/books/bk-sc-08.htm).
+
 ## Catatan Guru
 
 Jaga diskusi tetap pastoral. Beberapa siswa mungkin membawa rasa bersalah atau malu yang nyata. Hindari menjadikan pertobatan sebagai tekanan berbasis rasa takut. Inti pelajaran ini bukan "berusahalah lebih keras supaya Allah menerimamu." Intinya adalah "datanglah dengan jujur kepada Yesus, yang mengampuni, menyucikan, dan mengubahmu."
@@ -234,34 +270,6 @@ Gunakan pernyataan singkat ini jika kelas tersendat:
 ## Koneksi Advent
 
 Pelajaran ini sangat berkaitan dengan keselamatan oleh iman dan karakter Allah. Dalam pertentangan besar, Setan ingin manusia melihat Allah sebagai keras, tidak mau mengampuni, dan tidak aman untuk didekati. Tetapi Alkitab menyatakan Allah sebagai penyayang, pengasih, sabar, dan benar. Injil tidak membenarkan dosa; Injil membawa orang berdosa kepada Kristus, tempat mereka menerima pengampunan, penyucian, dan hidup baru.
-
-## Ellen White: Bacaan Pendukung
-
-Kutipan singkat ini menolong kelas menghubungkan pertobatan, pengampunan, dan kebenaran Kristus dengan tulisan Roh Nubuat.
-
-### Pertobatan Sejati
-
-> "Pertobatan mencakup dukacita karena dosa dan berbalik darinya."
-
-Referensi: Ellen G. White, [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
-
-### Jangan Menunggu Jadi Lebih Baik
-
-> "Jangan menunda untuk menjadikan dirimu lebih baik."
-
-Referensi: Ellen G. White, [Steps to Christ, hlm. 31](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
-
-### Jubah Kebenaran Kristus
-
-> "Pakaian pesta dalam perumpamaan itu melambangkan tabiat Kristus."
-
-Referensi: Ellen G. White, [Christ's Object Lessons, hlm. 310](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
-
-### Tanah Hati
-
-> "Tanah hati harus diolah."
-
-Referensi: Ellen G. White, [Christ's Object Lessons, hlm. 56](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
 
 ## Ajakan Penutup
 
