@@ -124,6 +124,12 @@ Gunakan tiga poin pengajaran ini.
 
 Teguran Roh Kudus terjadi ketika Allah menolong kita melihat kebenaran tentang dosa kita. Itu mungkin terasa tidak nyaman, tetapi itu adalah karunia.
 
+Ikuti pelajaran:
+
+- Roh Kudus menegur untuk memulihkan, bukan untuk menghancurkan.
+- Rasa bersalah harus membawa kita kepada Kristus, bukan kepada keputusasaan.
+- Kejujuran di hadapan Allah membuka jalan bagi pengampunan dan perubahan.
+
 Tanyakan:
 
 > Bagaimana seseorang dapat membedakan antara teguran Roh Kudus dan rasa malu yang membuat putus asa?
@@ -139,6 +145,12 @@ Contoh modern:
 #### Poin 2: Pertobatan Sejati Berbalik Kepada Allah
 
 Pertobatan bukan hanya takut pada konsekuensi. Pertobatan adalah dukacita atas dosa karena dosa merusak hubungan kita dengan Allah dan orang lain.
+
+Ikuti pelajaran:
+
+- Pertobatan bukan sekadar takut akibat dosa.
+- Pertobatan sejati setuju dengan penilaian Allah tentang dosa.
+- Pertobatan membawa penyerahan, perubahan arah, dan buah yang nyata.
 
 Tanyakan:
 
@@ -166,6 +178,12 @@ Tanyakan:
 Jawaban utama:
 
 > Kebaikan kita tidak pernah cukup untuk menyelamatkan kita. Kebenaran Kristus adalah satu-satunya harapan kita.
+
+Ikuti pelajaran:
+
+- Keselamatan bukan buatan sendiri.
+- Kebaikan manusia tidak cukup untuk berdiri di hadapan Allah.
+- Kristus memberikan jubah kebenaran yang tidak mungkin kita buat.
 
 ### 5. Diskusi Siswa - 10 Menit
 
@@ -216,6 +234,34 @@ Gunakan pernyataan singkat ini jika kelas tersendat:
 ## Koneksi Advent
 
 Pelajaran ini sangat berkaitan dengan keselamatan oleh iman dan karakter Allah. Dalam pertentangan besar, Setan ingin manusia melihat Allah sebagai keras, tidak mau mengampuni, dan tidak aman untuk didekati. Tetapi Alkitab menyatakan Allah sebagai penyayang, pengasih, sabar, dan benar. Injil tidak membenarkan dosa; Injil membawa orang berdosa kepada Kristus, tempat mereka menerima pengampunan, penyucian, dan hidup baru.
+
+## Ellen White: Bacaan Pendukung
+
+Kutipan singkat ini menolong kelas menghubungkan pertobatan, pengampunan, dan kebenaran Kristus dengan tulisan Roh Nubuat.
+
+### Pertobatan Sejati
+
+> "Pertobatan mencakup dukacita karena dosa dan berbalik darinya."
+
+Referensi: Ellen G. White, [Steps to Christ, hlm. 23](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+
+### Jangan Menunggu Jadi Lebih Baik
+
+> "Jangan menunda untuk menjadikan dirimu lebih baik."
+
+Referensi: Ellen G. White, [Steps to Christ, hlm. 31](https://www.ellenwhite.info/printer.htm?page=%2Fbooks%2Fbk-sc-03.htm).
+
+### Jubah Kebenaran Kristus
+
+> "Pakaian pesta dalam perumpamaan itu melambangkan tabiat Kristus."
+
+Referensi: Ellen G. White, [Christ's Object Lessons, hlm. 310](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-24.htm).
+
+### Tanah Hati
+
+> "Tanah hati harus diolah."
+
+Referensi: Ellen G. White, [Christ's Object Lessons, hlm. 56](https://www.ellenwhite.info/books/ellen-g-white-book-christs-object-lessons-col-02.htm).
 
 ## Ajakan Penutup
 
