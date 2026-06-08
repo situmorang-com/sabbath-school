@@ -7,7 +7,7 @@ Tema: Kemunduran adalah bagian nyata dari hidup di dunia berdosa. Tetapi badai, 
 
 ## Ayat Hafalan
 
-> "Dan bukan hanya itu saja. Kita malah bermegah juga dalam kesengsaraan kita, karena kita tahu bahwa kesengsaraan itu menimbulkan ketekunan, dan ketekunan menimbulkan tahan uji, dan tahan uji menimbulkan pengharapan. Dan pengharapan tidak mengecewakan, karena kasih Allah telah dicurahkan di dalam hati kita oleh Roh Kudus yang telah dikaruniakan kepada kita."
+> "Dan bukan hanya itu saja. Kita malah bermegah juga dalam kesengsaraan kita, karena kita tahu, bahwa kesengsaraan itu menimbulkan ketekunan, dan ketekunan menimbulkan tahan uji dan tahan uji menimbulkan pengharapan. Dan pengharapan tidak mengecewakan, karena kasih Allah telah dicurahkan di dalam hati kita oleh Roh Kudus yang telah dikaruniakan kepada kita."
 > - Roma 5:3-5
 
 ## Bacaan Alkitab Utama
@@ -261,3 +261,5 @@ Pokok doa: Tuhan Yesus, ketika hidup terasa mundur, ajar kami memandang Engkau. 
 
 - [Sabbath School Net](https://ssnet.org/lessons/26b/less11.html)
 - [sabbath.school](https://www.sabbath.school/SSchool/2026/2/ETQ226_11.pdf)
+- [Kebijakan Penggunaan Teks LAI](https://www.alkitab.or.id/tentang-kami/penggunaan-teks)
+- Dikutip dari ALKITAB (TB) © LAI 1974. [Alkitab Mobile SABDA - TB](https://alkitab.mobi/tb/)

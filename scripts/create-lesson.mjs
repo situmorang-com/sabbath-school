@@ -132,6 +132,12 @@ function renderFooter(sources = []) {
   return `Metadata pelajaran diverifikasi dari ${links.join(" dan ")}. Materi disusun ulang dalam bahasa Indonesia untuk penggunaan kelas.`;
 }
 
+function renderScriptureAttribution(lesson) {
+  if (!lesson.scriptureAttribution) return "";
+  const source = lesson.scriptureSource ? ` ${renderSourceLink(lesson.scriptureSource)}.` : "";
+  return `${escapeHtml(lesson.scriptureAttribution)}${source}`;
+}
+
 function navItems(days) {
   const labels = days.map((day) => {
     const shortLabel = day.navLabel || day.label.split(" ")[0];
@@ -247,11 +253,12 @@ function renderHtml(lesson, style) {
 
   <aside id="scriptureDrawer" class="drawer" aria-live="polite" aria-hidden="true">
     <div class="drawer-head"><h2 id="scriptureTitle" class="drawer-title">Alkitab</h2><button class="drawer-close" type="button" aria-label="Tutup teks Alkitab" id="closeDrawer">X</button></div>
-    <div class="drawer-body"><p id="scriptureText" class="scripture-text"></p><p class="drawer-note">Teks Alkitab adalah saduran Indonesia dari teks KJV untuk diskusi kelas.</p></div>
+    <div class="drawer-body"><p id="scriptureText" class="scripture-text"></p><p class="drawer-note">${renderScriptureAttribution(lesson) || "Teks Alkitab adalah saduran Indonesia dari teks KJV untuk diskusi kelas."}</p></div>
   </aside>
 
   <footer class="wrap">
     <p>${renderFooter(lesson.sources)}</p>
+    ${lesson.scriptureAttribution ? `<p>${renderScriptureAttribution(lesson)}</p>` : ""}
   </footer>
 
   <script>
@@ -327,6 +334,9 @@ function renderMarkdown(lesson) {
   if (lesson.closing?.prayer) lines.push(`Pokok doa: ${lesson.closing.prayer}`, "");
   lines.push("## Sumber", "");
   for (const source of lesson.sources || []) lines.push(`- [${source.label}](${source.url})`);
+  if (lesson.scriptureAttribution) {
+    lines.push(`- ${lesson.scriptureAttribution}${lesson.scriptureSource ? ` [${lesson.scriptureSource.label}](${lesson.scriptureSource.url})` : ""}`);
+  }
   lines.push("");
   return lines.join("\n");
 }
