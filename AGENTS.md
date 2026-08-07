@@ -138,9 +138,42 @@ When using Ellen G. White, include:
 
 Never invent EGW citations. If unsure, paraphrase carefully and say the reference needs verification.
 
-## Weekly Site Workflow
+## Weekly Site Workflow — Current
 
-When the user says `create this week's sabbath school lesson`:
+The site now publishes **teacher's guides** written by the `sabbath-school-lesson`
+skill in `~/DEV/skills-sermon-adventist`. That skill renders a self-contained
+`teachers-guide.html`; this repo only strips, wraps, and ships it.
+
+Do not write the lesson here. Write it there, then publish:
+
+```sh
+node scripts/publish-guide.mjs \
+  ~/DEV/skills-sermon-adventist/output/<YYYY-MM-DD>-ss-<slug>/teachers-guide.html --dry-run
+node scripts/publish-guide.mjs \
+  ~/DEV/skills-sermon-adventist/output/<YYYY-MM-DD>-ss-<slug>/teachers-guide.html
+```
+
+The script parses the title, removes the Verification Ledger and its contents
+entry, scrubs `para_id` locators out of citation notes, appends the LAI footer,
+writes both `index.html` and `lessons/<slug>/index.html`, rebuilds
+`lessons/index.html`, then commits and pushes.
+
+It refuses to run on a dirty tree or a branch behind `origin/main`, and it
+aborts rather than publish if teacher-only material survives the strip. Those
+guards are the point — do not work around them. Publishing the same guide twice
+is a safe no-op.
+
+**The site is public.** Anything left in the guide is world-readable and
+indexable. The ledger comes out automatically; nothing else does.
+
+## Weekly Site Workflow — Legacy
+
+Superseded by the section above. Kept because `lessons/2026-q2-l10/` and
+`lessons/2026-q2-l11/` were built this way and are still live. Use it only to
+regenerate one of those two pages; `npm run check:lesson` still passes.
+
+<details>
+<summary>Student-page pipeline (<code>lesson-data/*.json</code> → <code>create-lesson.mjs</code>)</summary>
 
 1. Verify the current lesson from official sources.
 2. Gather title, date range, memory text, weekly readings, daily lesson themes, and EGW references.
@@ -163,7 +196,9 @@ npm run check:lesson
 9. Verify `index.html` matches `lessons/<slug>/index.html` and `student-guide.md` matches the archive copy.
 10. Commit and push to `origin/main`.
 
-## How Lesson 11 Was Created
+</details>
+
+## How Lesson 11 Was Created (legacy pipeline)
 
 The 2026 Q2 Lesson 11 page, "Kemunduran," was created by:
 
@@ -184,11 +219,16 @@ Relevant commits:
 
 ## Generated Files
 
-Do not hand-edit generated root/archive pages unless fixing the generator. Prefer editing:
+`index.html`, `lessons/*/index.html`, and `lessons/index.html` are all generated.
+Never hand-edit them — the next publish overwrites the lot.
 
-- `lesson-data/<slug>.json`
-- `scripts/create-lesson.mjs`
-- `WORKFLOW.md`
-- `AGENTS.md`
+To change what the site shows, edit the thing upstream of it:
 
-Then regenerate with `npm run create:lesson -- lesson-data/<slug>.json --publish`.
+| To change | Edit |
+|---|---|
+| Lesson content | `teachers-guide.md` / `.html` in `skills-sermon-adventist/output/…` |
+| Page design, palette, markup | `sabbath-school-lesson/references/teachers-guide-template.html` |
+| What gets stripped, the footer, the archive index | `scripts/publish-guide.mjs` |
+| A legacy Q2 student page | `lesson-data/<slug>.json`, then `create-lesson.mjs` |
+
+Then republish.

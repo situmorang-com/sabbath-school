@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "publish:guide": "node scripts/publish-guide.mjs",
     "create:lesson": "node scripts/create-lesson.mjs",
     "check:lesson": "node scripts/create-lesson.mjs lesson-data/2026-q2-l11.json --dry-run"
   }

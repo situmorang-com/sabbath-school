@@ -1,38 +1,60 @@
 # Sekolah Sabat
 
-Halaman pelajaran Sekolah Sabat interaktif dalam bahasa Indonesia.
+Situs penuntun guru Sekolah Sabat, bahasa Indonesia, di `https://ss.situmorang.com/`.
+
+Dilayani oleh GitHub Pages dari `main` repo ini. Bukan dari VPS.
 
 ## Folder Proyek
-
-Folder kerja yang disarankan:
 
 ```txt
 /Users/edmundsitumorang/Library/Mobile Documents/iCloud~md~obsidian/Documents/BIBLE STUDY/200 Seedbox/ss
 ```
 
-Jika folder lama `/Users/edmundsitumorang/sabbath-school` masih ada, gunakan folder iCloud/Obsidian di atas setelah berisi `.git`, `package.json`, `scripts/`, `lesson-data/`, dan `lessons/`.
+## Alur Kerja
 
-## Membuat Pelajaran Mingguan
+Pelajaran **tidak ditulis di sini.** Pelajaran ditulis oleh skill
+`sabbath-school-lesson` di `~/DEV/skills-sermon-adventist`, yang menghasilkan
+`teachers-guide.html` mandiri. Repo ini hanya membersihkan dan menerbitkannya.
 
-Gunakan workflow di [WORKFLOW.md](WORKFLOW.md) ketika ingin membuat pelajaran baru.
+```txt
+skills-sermon-adventist/output/<YYYY-MM-DD>-ss-<slug>/teachers-guide.html
+   |  node scripts/publish-guide.mjs <path>
+   v
+index.html                     ->  ss.situmorang.com/
+lessons/<slug>/index.html      ->  arsip
+lessons/index.html             ->  daftar arsip
+```
 
-Instruksi AI-agent utama ada di [AGENTS.md](AGENTS.md).
+Selalu jalankan `--dry-run` lebih dahulu:
 
-Validasi generator:
+```sh
+node scripts/publish-guide.mjs <path-ke-teachers-guide.html> --dry-run
+node scripts/publish-guide.mjs <path-ke-teachers-guide.html>
+```
+
+Skrip menghapus Catatan Verifikasi beserta entri daftar isinya, membersihkan
+`para_id` dari catatan kutipan, menambahkan footer LAI, menulis halaman utama
+dan arsip, lalu commit dan push.
+
+**Situs ini publik.** Apa pun yang tertinggal di dalam penuntun dapat dibaca dan
+diindeks siapa saja.
+
+Rincian: [WORKFLOW.md](WORKFLOW.md). Instruksi AI-agent: [AGENTS.md](AGENTS.md).
+
+## Warisan
+
+`lesson-data/*.json` + `scripts/create-lesson.mjs` membangun halaman *siswa*
+Q2 2026. Sudah digantikan, tetapi tetap berfungsi karena
+`lessons/2026-q2-l10/` dan `lessons/2026-q2-l11/` masih tayang.
 
 ```sh
 npm run check:lesson
-```
-
-Buat arsip dan jadikan pelajaran sebagai halaman utama:
-
-```sh
 npm run create:lesson -- lesson-data/<slug>.json --publish
 ```
 
-Halaman utama dipublikasikan di `https://ss.situmorang.com/`, sementara arsip pelajaran berada di `lessons/<slug>/`.
+## Teks Alkitab
 
-Teks Alkitab di drawer memakai Terjemahan Baru (TB) dengan atribusi LAI:
+Terjemahan Baru (TB) dengan atribusi LAI:
 
 ```txt
 Dikutip dari ALKITAB (TB) © LAI 1974.

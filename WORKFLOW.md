@@ -16,26 +16,75 @@ Older working folder:
 
 If both folders exist, use the iCloud/Obsidian `ss` folder once it contains the git repo files (`.git`, `package.json`, `scripts/`, `lesson-data/`, and `lessons/`).
 
-This repo is set up so a future Codex request like `create this week's sabbath school lesson` can produce the current Indonesian lesson page and archive it.
-
 See [AGENTS.md](AGENTS.md) for the canonical AI-agent instructions.
 
-## Command Meaning
+## What This Repo Is Now
 
-When the user says `create this week's sabbath school lesson`, do this:
+**This repo no longer writes lessons. It publishes them.**
 
-1. Resolve the current Sabbath School lesson week from official sources.
-2. Gather the lesson title, date range, memory text, weekly readings, and daily lesson themes.
-3. Write an Indonesian lesson data file under `lesson-data/<slug>.json`.
-4. Use Alkitab Terjemahan Baru (TB) text for the memory text and Bible drawer entries, with LAI attribution metadata.
-5. Generate the site and archive with:
+The lesson is written by the `sabbath-school-lesson` skill in
+`~/DEV/skills-sermon-adventist`, which renders a self-contained
+`teachers-guide.html`. This repo strips the teacher-only parts, wraps it, and
+ships it to GitHub Pages.
+
+```txt
+skills-sermon-adventist/output/2026-08-08-ss-karunia-karunia-roh/teachers-guide.html
+   |  node scripts/publish-guide.mjs <path>
+   v
+index.html                                 ->  https://ss.situmorang.com/
+lessons/2026-08-08-karunia-karunia-roh/    ->  archive copy
+lessons/index.html                         ->  archive list, rebuilt each publish
+```
+
+## Publishing
+
+Always dry-run first:
+
+```sh
+node scripts/publish-guide.mjs <path-to-teachers-guide.html> --dry-run
+```
+
+Check the slug, that the ledger reports `stripped`, and the archive list. Then:
+
+```sh
+node scripts/publish-guide.mjs <path-to-teachers-guide.html>
+```
+
+| Flag | Effect |
+|---|---|
+| `--slug <slug>` | Override the archive slug. Default: source folder name with `-ss-` collapsed |
+| `--keep-ledger` | Publish the Verification Ledger. **Public site — think first** |
+| `--no-push` | Commit locally without pushing |
+| `--dry-run` | Report only, write nothing |
+
+What the script does, in order: parse `<title>`; remove the ledger section and
+its contents entry; scrub `(para_id …)` from citation notes; append the LAI
+footer; write root + archive; rebuild the archive index; commit; push.
+
+It refuses to run on a dirty tree or a branch behind `origin/main`, and aborts
+rather than publish if teacher-only material survives the strip. Republishing
+the same guide is a safe no-op.
+
+After pushing, GitHub Pages sets `cache-control: max-age=600`, so the edge can
+take up to ten minutes. Confirm the build:
+
+```sh
+gh api repos/situmorang-com/sabbath-school/pages/builds/latest --jq '{status,error}'
+curl -s "https://ss.situmorang.com/?cb=$(date +%s)" | grep -o '<title>[^<]*'
+```
+
+## Legacy: The Student-Page Pipeline
+
+`lesson-data/*.json` + `scripts/create-lesson.mjs` built the Q2 2026 student
+pages. Superseded, but kept working because `lessons/2026-q2-l10/` and
+`lessons/2026-q2-l11/` are still live. Use it only to regenerate those:
 
 ```sh
 npm run create:lesson -- lesson-data/<slug>.json --publish
+npm run check:lesson
 ```
 
-6. Verify locally in the browser on mobile and desktop when browser tooling is available.
-7. Commit and push to GitHub Pages.
+The TB/LAI text rules below still apply to everything published here.
 
 ## Official Sources
 
@@ -72,34 +121,23 @@ Lesson data should include:
 ## File Structure
 
 ```txt
-index.html
-student-guide.md
-lesson-data/
-  2026-q2-l10.json
-  2026-q2-l11.json
+index.html                        current guide  ->  ss.situmorang.com/
 lessons/
-  2026-q2-l10/
-    index.html
-    student-guide.md
-  2026-q2-l11/
-    index.html
-    student-guide.md
+  index.html                      archive list   ->  /lessons/
+  2026-08-08-.../index.html       teacher's guide (current pipeline)
+  2026-q2-l10/                    student page    (legacy)
+  2026-q2-l11/                    student page    (legacy)
 scripts/
-  create-lesson.mjs
-CNAME
-AGENTS.md
-CLAUDE.md
+  publish-guide.mjs               current publisher
+  create-lesson.mjs               legacy generator
+lesson-data/*.json                legacy source data
+student-guide.md                  legacy, left from the last student page
+CNAME  AGENTS.md  CLAUDE.md  WORKFLOW.md  README.md
 ```
 
-The root `index.html` is the current public lesson at `https://ss.situmorang.com/`.
+Everything named `index.html` is generated. Never hand-edit it.
 
-Each generated lesson is also archived at:
-
-```txt
-https://ss.situmorang.com/lessons/<slug>/
-```
-
-## Lesson Data Contract
+## Legacy: Lesson Data Contract
 
 Each `lesson-data/*.json` file must include:
 
@@ -120,41 +158,31 @@ Each `lesson-data/*.json` file must include:
 - `sources`: source links shown in the footer
 - `closing`: final appeal and prayer
 
-## Generation Commands
-
-Validate output paths without writing:
+## Legacy: Generation Commands
 
 ```sh
-npm run create:lesson -- lesson-data/2026-q2-l11.json --dry-run
-```
-
-Generate only the archive copy:
-
-```sh
-npm run create:lesson -- lesson-data/2026-q2-l11.json --archive-only
-```
-
-Generate the archive and publish it as the homepage:
-
-```sh
-npm run create:lesson -- lesson-data/2026-q2-l11.json --publish
+npm run create:lesson -- lesson-data/2026-q2-l11.json --dry-run       # validate paths
+npm run create:lesson -- lesson-data/2026-q2-l11.json --archive-only  # archive copy only
+npm run create:lesson -- lesson-data/2026-q2-l11.json --publish       # archive + homepage
 ```
 
 ## Verification Checklist
 
-After generating:
+After `publish-guide.mjs` runs, before trusting the live page:
 
-- Confirm `index.html` and `student-guide.md` changed intentionally.
-- Confirm `lessons/<slug>/index.html` and `lessons/<slug>/student-guide.md` exist.
-- Search for stale text from the previous week.
-- Confirm TB attribution appears in the Bible drawer, footer, Markdown guide, and source data.
-- Confirm every clickable `data-ref` has matching `scriptures` text.
-- Open the local site in the in-app browser.
-- Check mobile width and desktop width.
-- Click at least one Bible reference and confirm the drawer opens.
-- Push only after the page renders cleanly.
+- The dry run reported the slug you expected and `Ledger: stripped`.
+- `grep -c 'para_id\|id="ledger"' index.html` returns 0. The script enforces
+  this, but check once after any template change.
+- Cautions survived: `grep -c 'class="flag"' index.html` matches the source.
+- The page opens off disk with **no network** — no external CSS, JS, or fonts.
+- Contents links all resolve; the timed plan and every appendix are intact.
+- Mobile and desktop widths both render; tables scroll inside `.tablewrap`.
+- `lessons/index.html` lists the new guide *and* the legacy Q2 pages.
+- `/lessons/2026-q2-l11/` still loads.
+- Pages build succeeded: `gh api repos/situmorang-com/sabbath-school/pages/builds/latest --jq '{status,error}'`.
+- Live title matches, allowing up to ten minutes for the edge cache.
 
-## How the Last Page Was Done
+## Legacy: How the Last Student Page Was Done
 
 The 2026 Q2 Lesson 11 page, "Kemunduran," was created by:
 
