@@ -637,6 +637,22 @@ nav.toc details[open] > summary::after{content:"\2212"}
   a.v{text-decoration:none;color:#000}
   nav.toc details > summary{display:none}
 }
+
+/* Collapsible aside: provenance and apparatus the teacher needs once, not on
+   every screen. The chip on a quote card already says whose it is; this is for
+   the fuller story. Forced open before printing by the script. */
+details.fold{margin:22px 0;border:1px solid var(--edge-soft);border-radius:12px;
+  background:var(--glass);padding:0 16px}
+details.fold > summary{cursor:pointer;list-style:none;padding:13px 0;min-height:44px;
+  display:flex;align-items:center;gap:9px;font:600 10px/1.5 var(--mono);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+details.fold > summary::-webkit-details-marker{display:none}
+details.fold > summary::after{content:"+";margin-left:auto;font-size:15px;color:var(--hue)}
+details.fold[open] > summary::after{content:"\2212"}
+details.fold[open]{padding-bottom:4px}
+details.fold > summary:hover{color:var(--ink)}
+/* Citation lines sit closer to the quote they belong to. */
+p.note{font-size:13.5px;margin-top:-11px}
 </style>
 </head>
 <body>
@@ -653,10 +669,12 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <summary>Isi</summary>
   <div class="th">Isi</div><ol>
   <li data-hue="1"><a href="#s1">1. Apa yang diperdebatkan pekan ini</a></li>
+  <li class="l3" data-hue="1"><a href="#beda">Apa yang penuntun ini tambahkan</a></li>
   <li data-hue="2"><a href="#s2">2. Sasaran</a></li>
   <li data-hue="3"><a href="#s3">3. Rencana diskusi, 35 menit</a></li>
   <li class="l3" data-hue="3"><a href="#hook">Pembuka, 90 detik pertama</a></li>
   <li class="l3" data-hue="3"><a href="#plan">Rencana menit demi menit</a></li>
+  <li class="l3" data-hue="3"><a href="#lagu">Lagu untuk kelas ini</a></li>
   <li class="l3" data-hue="3"><a href="#close">Penutup, menit 33-35</a></li>
   <li data-hue="4"><a href="#s4">4. Peta harian</a></li>
   <li class="l3" data-hue="4"><a href="#d-min">Minggu, Rupa-Rupa Karunia</a></li>
@@ -705,6 +723,10 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <p><strong>Yang tidak dikatakan pelajaran ini:</strong> bahwa kasih menggantikan karunia, atau bahwa karunia yang mencolok itu palsu. Karunia di Korintus asli. Yang salah adalah pemakaiannya.</p>
 
   <p>Perhatikan ke mana pelajaran ini bermuara. <a class="v" data-v="Amos3:7" data-ref="Amos 3:7">Amos 3:7</a> ada di daftar bacaan, hari Kamis membahas karunia bernubuat, dan pertanyaan diskusi hari Jumat nomor dua menanyakan langsung tentang karunia nubuat Ellen G. White. <strong>Tujuan pekan ini bukan bahasa roh. Tujuannya Roh Nubuat.</strong></p>
+
+  <p class="note" id="beda">Penuntun ini kumpulan, bukan tulisan baru yang berdiri sendiri: bahan terbaik dari Teacher Comments resmi, empat kolom Sabbath School Net, video, SDABC, Ellen G. White, dan BRI, disatukan untuk dipakai di depan kelas. Peta sumbernya ada di <a href="#sumber">Lampiran B</a>, dan tiap kutipan menyebut asalnya di label kartunya.</p>
+
+
 </section>
 
 <section class="sec" data-hue="2">
@@ -761,6 +783,24 @@ nav.toc details[open] > summary::after{content:"\2212"}
 
   <p>Ingat bahwa blok pelajaran adalah bagian yang menyerap semua keterlambatan di depannya: nyanyian, cerita misi, pengumuman. Rencanakan untuk angka yang lebih pendek.</p>
 
+  
+  <h3 id="lagu">Lagu untuk kelas ini</h3>
+
+  <p>Corinne Knopper menyarankan lagu untuk tiap hari pelajaran, tetapi nomornya nomor SDA Hymnal, yang tidak bisa dipakai kelas berbahasa Indonesia. Berikut yang punya padanan di Lagu Sion Edisi Lengkap, diambil dari basis data Lagu Sion, bukan dari ingatan.</p>
+
+  <div class="tablewrap"><table class="grid">
+    <thead><tr><th>LSEL</th><th>Judul</th><th>SDAH</th><th>Dipakai di</th></tr></thead>
+    <tbody>
+      <tr><td><strong>202</strong></td><td>Walau Ku Berbahasa Malaikat</td><td>81</td><td><strong>Hari Selasa.</strong> Ini <a class="v" data-v="1Kor13:1" data-ref="1 Korintus 13:1">13:1</a> dalam bentuk lagu. Kalau hanya satu lagu yang dipakai, pakai yang ini</td></tr>
+      <tr><td>355</td><td>Dengarkanlah Sabda-Nya</td><td>413</td><td>Hari Kamis, karunia bernubuat</td></tr>
+      <tr><td>176</td><td>Kasih Allah Benar dan Teguh</td><td>79</td><td>Hari Selasa, sebagai alternatif</td></tr>
+      <tr><td>168</td><td>Kita Memiliki Pengharapan</td><td>214</td><td>Pembuka kelas</td></tr>
+      <tr><td>337</td><td>Maju Serta Yesus</td><td>377</td><td>Penutup</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="note">Enam lagu lain yang disarankan Knopper (SDAH 349, 600, 602, 234, 533, 235) tidak punya padanan di basis data Lagu Sion, jadi tidak dicantumkan. Nomor di atas sudah diperiksa terhadap basis data; jangan menambah nomor dari ingatan.</p>
+
   <h3 id="close">Penutup, menit 33-35</h3>
 
   <ol>
@@ -775,6 +815,8 @@ nav.toc details[open] > summary::after{content:"\2212"}
 
 <section class="sec" data-hue="4">
   <h2 id="s4"><span class="num">4</span> Peta harian: poin dari tiap hari</h2>
+
+  <p class="note">Kutipan SDABC di tiap hari adalah parafrase dari jilid 6, hasil ekstraksi paragraf pertama per ayat; jilid Anda memuat lebih banyak. Label di tepi tiap kartu menyebutkan ayatnya.</p>
 
   <div class="tablewrap"><table class="grid">
     <thead><tr><th>Hari</th><th>Judul</th><th>Ayat</th><th>Dipakai di</th></tr></thead>
@@ -808,13 +850,10 @@ nav.toc details[open] > summary::after{content:"\2212"}
     <h4>Kutipan untuk hari ini</h4>
     <p class="note">Tidak ada kutipan Ellen G. White yang langsung mengenai ayat-ayat hari ini. Tiga catatan SDABC di bawah inilah yang paling mengubah cara hari Minggu dibaca.</p>
     <blockquote class="cited" data-label="6SDABC pada 12:1"><p>Pasal ini membuka pokok baru yang berjalan sampai pasal 14. Pokoknya adalah karunia Roh, dan ada cukup banyak kesalahpahaman tentangnya, serta jelas ada penyalahgunaan karunia dan persaingan yang tidak sehat antara pemilik karunia yang berbeda-beda.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Pakai ini kalau ada anggota yang meragukan bahwa memang ada konflik di Korintus. Ini komentar denominasi yang mengatakannya, bukan tafsiran Anda sendiri.</p>
     <blockquote class="cited" data-label="6SDABC pada 12:3"><p>Paulus memberi jemaat sebuah kaidah untuk menguji ucapan yang mengaku datang dari Roh.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p><strong>Inilah poin kunci hari Minggu.</strong> Pasal tentang karunia dibuka dengan alat uji, bukan dengan perayaan. Sebutkan ini sebelum apa pun yang lain.</p>
     <blockquote class="cited" data-label="6SDABC pada 12:4"><p><em>Charismata</em> secara harfiah berarti karunia-karunia kasih karunia.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Kata itu sendiri sudah membantah kesalahan Korintus. Upah diperoleh; karunia tidak.</p>
     <div class="twomin" data-label="2 menit"><p>"Perhatikan Paulus tidak memulai dengan mendaftar karunia. Ia memulai dengan cara mengujinya. Yang pertama disebut bukan karunia yang paling hebat, melainkan pengakuan yang paling mahal."</p></div>
 
@@ -840,12 +879,9 @@ nav.toc details[open] > summary::after{content:"\2212"}
 
     <h4>Kutipan untuk hari ini</h4>
     <blockquote class="cited" data-label="6SDABC pada 12:12"><p>Tubuh manusia adalah satu organisme yang tersusun dari bagian-bagian, masing-masing memiliki fungsi yang tidak tergantikan, semuanya bersatu secara harmonis, semuanya di bawah satu kuasa yang memimpin, yaitu kepala.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <blockquote class="cited" data-label="6SDABC pada 12:21"><p>Ayat ini menegur kesombongan mereka yang merasa lebih berkarunia. Anggota yang paling berkarunia sama bergantungnya kepada yang kurang diperhatikan seperti sebaliknya. Kegagalan satu bagian memengaruhi efisiensi semua bagian lain. Kesimpulannya: tidak ada tempat sama sekali bagi kesombongan atau ketidakpuasan di dalam gereja.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p><strong>Kalau Anda hanya membawa satu hal dari hari Senin, bawa yang ini.</strong> Perhatikan dua arahnya: yang merasa hebat dan yang merasa tidak dibutuhkan sedang melakukan dosa yang sama dari dua ujung.</p>
     <blockquote class="cited" data-label="6SDABC pada 12:22"><p>Tidak pasti anggota tubuh mana yang Paulus maksud dengan yang nampaknya paling lemah, meskipun mungkin ada kiasan kepada bagian yang secara struktur tampak lebih lemah dan perlu dilindungi.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Ketidakpastian ini eksplisit di SDABC. Jadi bacaan populer tentang organ vital yang tersembunyi adalah bacaan khotbah, bukan tafsir yang terbukti. Sajikan sebagai ilustrasi.</p>
     <div class="bq">
       <div class="tabs" role="tablist">
@@ -858,7 +894,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Ikatan kesatuan yang mempersatukan anggota dengan anggota di dalam jemaat haruslah bekerja sekokoh dan seharmonis bagian-bagian tubuh yang sebenarnya. Tangan, kepala, dan kaki begitu erat bersatu dan begitu saling bergantung, sehingga satu anggota tidak dapat hidup dan bertindak lepas dari anggota yang lain. Hidup dan Roh Kristus menopang dan membuat setiap anggota tubuh-Nya sendiri bertumbuh, dan mereka hidup karena Kristus hidup di dalam mereka."</p></blockquote>
-        <p class="note"><em>Manuscript 44, 1900</em>, par. 35. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/14065.9349066">Baca di EGW Writings</a></p>
+        <p class="note"><em>Manuscript 44, 1900</em>, par. 35. <a href="https://text.egwwritings.org/read/14065.9349066">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Ini menambahkan apa yang tidak dikatakan perumpamaan anatomi Paulus sendiri: tubuh itu hidup <em>karena Kristus hidup di dalamnya</em>. Kesatuannya bersifat Kristologis, bukan organisatoris.</p>
@@ -873,10 +909,12 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Masing-masing mempunyai pekerjaan yang berbeda. Tidak seorang pun dituntut untuk mengambil pekerjaan orang lain lalu, meskipun tidak terlatih, mencoba mengerjakannya. Allah telah memberi kepada setiap orang sesuai dengan kemampuannya. Seseorang mungkin menyangka bahwa jabatannya memberi dia wewenang untuk mendikte pekerja yang lain, tetapi tidak demikian."</p></blockquote>
-        <p class="note"><em>Christian Leadership</em>, hlm. 38.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/12.212">Baca di EGW Writings</a></p>
+        <p class="note"><em>Christian Leadership</em>, hlm. 38.2. <a href="https://text.egwwritings.org/read/12.212">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Ini mata pisau yang biasanya terlewat. 1 Korintus 12 hampir selalu dikhotbahkan kepada anggota yang merasa tidak berguna; kalimat ini mengarahkan prinsip yang sama kepada pengurus yang merasa berhak mengatur departemen orang lain.</p>
+    <p><strong>Bentuk konkretnya, dan ini yang benar-benar terjadi di jemaat.</strong> Bukan hanya perasaan tidak dihargai, tetapi anggota yang menuntut jabatan tertentu, atau mengancam pindah kalau tidak mendapatkannya. Bruce Cameron mengembangkan sudut ini panjang lebar dengan contoh kasus di <a href="#apxB">Teaching Outline</a>-nya, dan itu bacaan yang baik sebelum kelas. Yang ditambahkan di sini hanya dasarnya: <a class="v" data-v="1Kor12:11" data-ref="1 Korintus 12:11">12:11</a> mengatakan Roh membagikan "seperti yang dikehendaki-Nya", jadi menuntut jabatan bukan sekadar tidak sopan, melainkan salah alamat.</p>
+
     <div class="twomin" data-label="2 menit"><p>"SDABC menutup bagian ini dengan kalimat yang memotong dua arah: tidak ada tempat sama sekali bagi kesombongan atau ketidakpuasan. Yang merasa hebat dan yang merasa tidak dibutuhkan sedang melakukan dosa yang sama dari dua ujung."</p></div>
 
     <h4>Pertanyaan cadangan</h4>
@@ -902,13 +940,10 @@ nav.toc details[open] > summary::after{content:"\2212"}
     <h4>Kutipan untuk hari ini</h4>
     <p class="note">Hari penopang, jadi di sinilah bahan terbanyak. Anda tidak akan memakai semuanya. Pilih satu SDABC, satu Ellen G. White, dan simpan Matthew Henry untuk kalau kelas butuh kalimat yang menempel.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:1"><p>Setelah menetapkan tempat karunia di pasal 12, Paulus kini menunjukkan bahwa memiliki semua karunia itu dan kualitas lain di sampingnya tidak membuat seseorang menjadi Kristen kalau ia tidak memiliki karunia tertinggi, yaitu kasih. SDABC juga meneruskan penilaian Harnack bahwa pasal ini adalah tulisan Paulus yang terbesar, terkuat, dan terdalam.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Kalimat "tidak membuat seseorang menjadi Kristen" lebih keras daripada yang biasanya dibaca dari pasal 13. Itu bukan tafsiran Anda; itu SDABC.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:3"><p>Kata Yunani <em>psomizo</em> berarti memberi makan dengan menyuapkan potongan kecil, membagikan sedikit-sedikit. Orang kaya lazim membagikan sedekah di depan gerbang mereka dalam porsi kecil kepada banyak orang supaya lebih banyak yang memuji si pemberi. Kalau seluruh milik dibagikan demikian tanpa kasih yang sejati, itu kemunafikan kosong dan tidak bernilai rohani.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Ini membuat ayat 3 jauh lebih tajam. Paulus tidak sedang membayangkan kedermawanan yang tulus tetapi kurang hangat. Ia sedang membayangkan pemberian yang dirancang supaya dilihat.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:4"><p>Ada tujuh ciri positif kasih di ayat 4-7 dan delapan sikap yang asing bagi hakikatnya. Di sepanjang bagian itu terlihat kilasan kesalahan-kesalahan khas Korintus yang dikontraskan langsung.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Hampir semuanya kata kerja, bukan kata sifat. Minta kelas menghitungnya sendiri dari ayat 4-7. Paulus menggambarkan praktik, bukan perasaan.</p>
     <div class="bq">
       <div class="tabs" role="tablist">
@@ -921,7 +956,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Setinggi apa pun pengakuannya, orang yang hatinya tidak dipenuhi kasih kepada Allah dan kepada sesamanya bukanlah murid Kristus yang sejati. Sekalipun ia memiliki iman yang besar dan kuasa untuk mengadakan mujizat, tanpa kasih imannya tidak ada harganya. Ia mungkin menunjukkan kemurahan yang besar; tetapi jika ia membagikan seluruh miliknya untuk memberi makan orang miskin karena motif lain selain kasih yang sejati, perbuatan itu tidak membuatnya berkenan kepada Allah. Dalam semangatnya ia bahkan mungkin menemui kematian sebagai martir, tetapi jika bukan kasih yang menggerakkannya, ia akan dipandang Allah sebagai orang yang terbawa khayalan atau seorang munafik yang berambisi."</p></blockquote>
-        <p class="note"><em>The Acts of the Apostles</em>, hlm. 318.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1407">Baca di EGW Writings</a></p>
+        <p class="note"><em>The Acts of the Apostles</em>, hlm. 318.2. <a href="https://text.egwwritings.org/read/127.1407">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Ini Ellen White menyusuri <a class="v" data-v="1Kor13:1,1Kor13:2,1Kor13:3" data-ref="1 Korintus 13:1-3">13:1-3</a> dalam urutan Paulus sendiri. <strong>Bacakan sampai kalimat terakhir, lalu berhenti.</strong> Jangan lanjut ke paragraf berikutnya: kalimat itu yang terkuat di seluruh bahan pekan ini, dan kekuatannya habis kalau ada apa pun dibacakan sesudahnya. Bacakan sebagai peringatan Paulus kepada jemaat yang sombong, bukan sebagai izin bagi kelas untuk mendiagnosis satu sama lain.</p>
@@ -936,7 +971,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Kasih seperti Kristus menaruh tafsiran yang paling baik atas motif dan tindakan orang lain. Ia tidak membuka-buka kesalahan mereka tanpa perlu; ia tidak dengan penuh minat mendengarkan kabar buruk tentang orang lain, melainkan berusaha mengingat sifat-sifat baik mereka."</p></blockquote>
-        <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1411">Baca di EGW Writings</a></p>
+        <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.2. <a href="https://text.egwwritings.org/read/127.1411">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Definisi <a class="v" data-v="1Kor13:5,1Kor13:6,1Kor13:7" data-ref="1 Korintus 13:5-7">13:5-7</a> yang paling bisa dipakai. Ia mengubah hal abstrak menjadi keputusan yang bisa diambil seseorang di jalan pulang dari gereja. Simpan untuk penerapan di menit 29-33.</p>
@@ -951,7 +986,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Kasih ini 'tidak berkesudahan.' Ia tidak pernah dapat kehilangan nilainya; ia adalah sifat sorgawi. Sebagai harta yang berharga, kasih itu akan dibawa oleh pemiliknya melalui pintu gerbang kota Allah."</p></blockquote>
-        <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.3. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1412">Baca di EGW Writings</a></p>
+        <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.3. <a href="https://text.egwwritings.org/read/127.1412">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Berpasangan dengan <a class="v" data-v="1Kor13:8" data-ref="1 Korintus 13:8">13:8</a> dan <a class="v" data-v="1Kor13:13" data-ref="1 Korintus 13:13">13:13</a>. Karunia adalah perancah untuk zaman ini; kasih satu-satunya yang dibawa masuk melalui pintu gerbang.</p>
@@ -966,7 +1001,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="id">
         <blockquote class="cited" data-label="Terjemahan kerja"><p>"Hati yang penuh kasih, bukan lidah yang lancar, itulah yang diterima Allah." &nbsp;&middot;&nbsp; "Kepala yang jernih dan dalam tidak ada artinya tanpa hati yang murah dan penuh kasih." &nbsp;&middot;&nbsp; "Memindahkan gunung adalah pencapaian besar dalam perhitungan manusia; tetapi satu dram kasih, dalam perhitungan Allah, jauh lebih bernilai daripada seluruh iman semacam itu di dunia ini."</p></blockquote>
-        <p class="note"><em>Complete Commentary</em>, hlm. 1076.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/14192.30685">Baca di EGW Writings</a></p>
+        <p class="note"><em>Complete Commentary</em>, hlm. 1076.2. <a href="https://text.egwwritings.org/read/14192.30685">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Henry juga menangkap sesuatu yang tajam secara tafsir: Paulus menyebut bahasa roh <em>paling dulu</em> di <a class="v" data-v="1Kor13:1" data-ref="1 Korintus 13:1">13:1</a> justru karena itulah karunia yang paling mereka banggakan dan yang membuat mereka memandang rendah saudaranya. Itu dasar pertanyaan pertama Anda di menit 6-16.</p>
@@ -991,13 +1026,10 @@ nav.toc details[open] > summary::after{content:"\2212"}
     <h4>Kutipan untuk hari ini</h4>
     <p class="note">Tidak ada kutipan Ellen G. White yang langsung mengenai ayat-ayat hari ini. Yang Anda butuhkan di sini adalah dua catatan penerjemahan dari SDABC dan posisi BRI, karena hari inilah yang akan ditanyai kelas.</p>
     <blockquote class="cited" data-label="6SDABC pada 14:2"><p>Kata "unknown" dalam KJV disisipkan oleh penerjemah, tidak ada dalam bahasa Yunani. SDABC menunda pembahasan hakikat bahasa roh ke Additional Note di akhir pasal 14.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p><strong>Sampaikan ini sebelum ayat apa pun dibahas.</strong> Satu kata sisipan sudah membentuk berabad-abad penafsiran. TB melakukan hal serupa dari arah lain dengan "bahasa roh".</p>
     <blockquote class="cited" data-label="6SDABC pada 14:27"><p>Kata "unknown" di sini juga disisipkan penerjemah.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Dua kali di satu pasal. Itu pola, bukan kebetulan.</p>
     <blockquote class="cited" data-label="6SDABC pada 14:40"><p><em>Kata taxin</em>, "menurut pangkat", "menurut aturan", adalah istilah militer untuk barisan tentara yang teratur. Segala sesuatu harus dilakukan dengan senonoh, sebagaimana patut bagi ibadah kepada Pencipta Yang Mahakuasa, tanpa kekacauan, kebisingan yang tidak perlu, atau ketidaktertiban.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Ini dasar Alkitab untuk ibadah Advent yang khidmat dan tertib, dan sekaligus kritik Advent terhadap ibadah ekstatis: bukan karunia Roh yang tidak diinginkan, melainkan karunia yang meninggalkan ruangan dalam kebingungan sudah kehilangan tujuannya sendiri.</p>
     <blockquote class="cited" data-label="Biblical Research Institute"><p>Karunia bahasa dalam Alkitab adalah kemampuan yang diberikan Roh untuk berbicara dalam bahasa manusia yang nyata, bukan ucapan ekstatis, dan glosolalia masa kini tidak boleh disamakan dengan karunia Perjanjian Baru. Kaidah tafsirnya: bagian yang sulit dibaca dalam terang bagian yang jelas, dan Kisah 2 jelas. Karunia itu juga tidak melibatkan hilangnya kendali diri, sebab tanpa penafsir mereka diam.</p></blockquote>
     <p class="note">Parafrase dari dua artikel BRI yang sudah dibaca penuh. Tautannya ada di <a href="#apxB">Lampiran B</a>.</p>
@@ -1022,21 +1054,17 @@ nav.toc details[open] > summary::after{content:"\2212"}
       <li><a class="v" data-v="Ef4:11,Ef4:12,Ef4:13" data-ref="Efesus 4:11-13">Efesus 4:11-13</a> punya klausa tujuan: sampai kita semua mencapai kesatuan iman dan kedewasaan penuh. Inilah dasar Advent membaca karunia sebagai masih berlaku. Tujuan itu belum tercapai.</li>
       <li><strong>Satu pengekangan penting.</strong> Timm dan Esmond berargumen bahwa nubuat tidak lebih tinggi pada dirinya sendiri, karena semua karunia berasal dari Roh yang sama dan diberikan untuk kepentingan bersama. Nubuat lebih besar dalam konteks ini justru karena ia dapat dimengerti dan karena itu dapat membangun. Paulus tidak sedang menyusun peringkat karunia yang permanen. Simpan ini, karena kelas akan cenderung membuat tangga karunia dari <a class="v" data-v="1Kor14:5" data-ref="1 Korintus 14:5">14:5</a>.</li>
       <li>Jembatan ke pemahaman Advent: <a class="v" data-v="Why12:17" data-ref="Wahyu 12:17">Wahyu 12:17</a> dengan 19:10. Sajikan sebagai hubungan teologis, bukan sebagai argumen Paulus di teks ini.</li>
-      <li>Kutipan <em>Spiritual Gifts</em> hlm. 16.2 di <a href="#s7">bagian 7</a> dipakai di sini, dengan peringatan penyebutan nama yang menyertainya.</li>
+      <li>Kutipan Loughborough hlm. 16.2 di <a href="#s7">bagian 7</a> dipakai di sini, dengan peringatan penyebutan nama yang menyertainya.</li>
     </ul>
 
     <h4>Kutipan untuk hari ini</h4>
     <blockquote class="cited" data-label="6SDABC pada 14:3"><p>Nabi berbicara dalam bahasa yang dikenal para pendengarnya.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Ini bergandengan langsung dengan hari Rabu, dan menjelaskan mengapa nubuat lebih besar dalam konteks ini: ia dapat dimengerti.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:2"><p>Nabi adalah orang yang berdiri di antara Allah dan manusia dan menyatakan kehendak Allah kepada manusia.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Definisi jabatan, bukan definisi ramalan. Pasangkan dengan definisi fungsional Paulus sendiri di <a class="v" data-v="1Kor14:3" data-ref="1 Korintus 14:3">14:3</a>: membangun, menasihati, menghibur.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:8"><p>Kasih yang sejati tidak jatuh seperti daun atau bunga; pada hari-hari yang berat maupun saat semuanya terang, kasih tetap sama. SDABC mendasarkan kekekalannya secara doktrinal: kasih adalah dasar hukum, dan hukum Allah kekal.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Ini langkah yang khas Advent, dan ia menghubungkan pasal kasih dengan tema pertentangan besar, tempat persoalan antara Kristus dan Setan akhirnya adalah tentang tabiat pemerintahan Allah.</p>
     <blockquote class="cited" data-label="6SDABC pada 13:13"><p>Kata "abideth" menyampaikan kekekalan. Selain kasih, segala hal yang dibahas di pasal ini, termasuk nubuat dan bahasa roh, akan berhenti bernilai atau dibatalkan, sedangkan iman, pengharapan, dan kasih tidak berkesudahan.</p></blockquote>
-    <p class="note">Parafrase dari SDABC jilid 6. Ekstraksi paragraf pertama saja, jilid Anda memuat lebih banyak.</p>
     <p>Perhatikan bahwa ini <em>tidak</em> mengatakan karunia sudah berhenti sekarang. Kapan berhentinya adalah pertanyaan berikutnya, dan itu dijawab kutipan di bawah.</p>
     <div class="bq">
       <div class="tabs" role="tablist">
@@ -1045,15 +1073,15 @@ nav.toc details[open] > summary::after{content:"\2212"}
       </div>
       <div class="lang" data-l="en">
         <blockquote class="egw" data-label="Spiritual Gifts"><p>"The more excellent way is not to have a church without the gifts of the Spirit; it is a more excellent way than simply to 'covet' gifts."</p></blockquote>
-        <p class="note"><em>Spiritual Gifts</em> (kode SGL), hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
+        <p class="note">J. N. Loughborough, <em>Spiritual Gifts</em> (1899), hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
       </div>
       <div class="lang" data-l="id">
         <blockquote class="egw" data-label="Terjemahan kerja"><p>"Jalan yang lebih utama itu bukan berarti gereja tanpa karunia-karunia Roh; itu adalah jalan yang lebih utama daripada sekadar 'menginginkan' karunia."</p></blockquote>
-        <p class="note"><em>Spiritual Gifts</em> (kode SGL), hlm. 16.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
+        <p class="note">J. N. Loughborough, <em>Spiritual Gifts</em> (1899), hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
       </div>
     </div>
     <p>Argumennya: pembahasan tentang kasih di pasal 13 tidak menghapus karunia. Membaca <a class="v" data-v="1Kor13:8" data-ref="1 Korintus 13:8-10" data-note="Hanya ayat yang sudah diambil yang ditampilkan. Sisanya buka Alkitab Anda.">13:8-10</a> bersama ayat 12, penulis menyimpulkan bahwa karunia bernubuat boleh tampak sampai keadaan yang sempurna datang, yaitu ketika Tuhan dilihat muka dengan muka. Inilah jawaban tafsir Advent yang klasik terhadap pandangan bahwa karunia sudah berhenti, dan ia diambil dari teks.</p>
-    <div class="flag" data-label="Perhatian"><p>Halaman 5-16 dari <em>Spiritual Gifts</em> vol. 1 tampaknya tulisan Roswell F. Cottrell, bukan Ellen G. White. <strong>Jangan memperkenalkan kutipan di atas dengan kalimat "Ellen White berkata".</strong> Sebut judul bukunya saja, dan pastikan penyebutan penulis di lembar pelajaran Anda sendiri. Halaman-halaman itu justru bacaan Jumat pelajaran ini.</p></div>
+    <div class="flag" data-label="Perhatian"><p><strong>Tiga hal berbeda, judulnya mirip semua, dan tidak satu pun tulisan Ellen G. White.</strong> Ini sudah diperiksa langsung ke katalog EGW Writings, jadi pakailah dengan yakin. <strong>(1)</strong> Kutipan hari Kamis berasal dari <em>Spiritual Gifts</em> terbitan 1899, 38 halaman, dan penulisnya <strong>J. N. Loughborough</strong>. <strong>(2)</strong> Bacaan Jumat yang ditugaskan pelajaran adalah karangan <strong>Roswell F. Cottrell</strong>, halaman 5 sampai 16, yang dimuat <em>di dalam</em> <strong>(3)</strong> <em>Spiritual Gifts</em> vol. 1 karya Ellen G. White, terbitan 1858, 219 halaman. Jadi jangan memperkenalkan kutipan hari Kamis dengan "Ellen White berkata", dan jangan pula menyebutnya karangan Cottrell. Sebut saja Loughborough. Pelajaran resminya sendiri menuliskan bacaan Jumat begini: "Read Roswell F. Cottrell, “Spiritual Gifts,” pp. 5–16, in Ellen G. White, Spiritual Gifts, vol. 1."</p></div>
     <blockquote class="cited" data-label="Timm &amp; Esmond, <em>The Gift of Prophecy</em>"><p>Nubuat tidak lebih tinggi pada dirinya sendiri, karena semua karunia berasal dari Roh yang sama dan diberikan untuk kepentingan bersama. Nubuat lebih besar dalam konteks ini justru karena ia dapat dimengerti dan karena itu dapat membangun. Kata "membangun" mengendalikan seluruh pasal 14, dan pasal itu dikurung oleh inklusio: perintah yang sama di ayat 1 dan ayat 39.</p></blockquote>
     <p class="note">Parafrase dari <em>The Gift of Prophecy</em>, eds. Alberto Timm &amp; Dwain Esmond (2015), hlm. 174.2. <a href="https://text.egwwritings.org/read/13965.1101">Baca di EGW Writings</a></p>
     <p><strong>Simpan pengekangan ini.</strong> Kelas akan cenderung membuat tangga karunia yang permanen dari <a class="v" data-v="1Kor14:5" data-ref="1 Korintus 14:5">14:5</a>. Paulus tidak sedang menyusun peringkat; ia sedang menerapkan satu ukuran.</p>
@@ -1109,6 +1137,13 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <h3>3. Teguran SDABC memotong dua arah, dan kelas hanya menyangka satu</h3>
   <p>Pada <a class="v" data-v="1Kor12:21" data-ref="1 Korintus 12:21">12:21</a>, "Aku tidak membutuhkan engkau", SDABC menulis bahwa ayat ini menegur kesombongan mereka yang merasa lebih berkarunia, bahwa anggota yang paling berkarunia sama bergantungnya kepada yang kurang diperhatikan seperti sebaliknya, dan bahwa kegagalan satu bagian memengaruhi seluruh efisiensi yang lain. Kesimpulannya tegas: tidak ada tempat sama sekali bagi kesombongan <strong>atau ketidakpuasan</strong> di dalam gereja.</p>
   <p>Perhatikan dua arahnya. 1 Korintus 12 biasanya dikhotbahkan kepada anggota yang merasa tidak berguna. SDABC mengarahkan prinsip yang sama kepada anggota yang merasa berhak mengatur semua orang. Penghinaan si berkarunia dan rasa kasihan pada diri si biasa adalah dosa yang sama dari dua ujung.</p>
+
+  <h3>4. Ucapan ekstatis punya alamat yang sangat konkret di dunia mereka</h3>
+  <p>Latar ini datang dari Teacher Comments resmi, dan ini bagian terbaiknya. Jangan lewatkan hanya karena sumbernya resmi.</p>
+  <p>Di Korintus abad pertama, pengalaman mistis seperti nubuat dan ucapan ekstatis adalah hal biasa dalam agama Yunani dan Romawi, dan dianggap tanda kerasukan ilahi. <strong>Orakel Delfi</strong> punya imam perempuan, Pythia, yang masuk ke keadaan seperti kesurupan dan dipercaya dirasuki Apolo, lalu mengucapkan pesan yang kacau dan penuh teka-teki, yang kemudian ditafsirkan para imam. Orakel Dodona memakai tanda-tanda alam. Kultus misteri Dionisus, Kibele, dan Isis memakai musik, tarian, dan nyanyian sampai jemaatnya masuk ke keadaan trans dan merasa penuh kehadiran dewa.</p>
+  <p><strong>Inilah yang membuat pasal 14 masuk akal.</strong> Sebagian anggota jemaat Korintus tidak sedang menemukan cara baru beribadah; mereka sedang memakai satu-satunya ukuran kerohanian yang pernah mereka kenal. Makin tidak terkendali, makin ilahi. Paulus membalikkannya: yang terkendali, yang dapat dimengerti, yang membangun. Bandingkan dengan <a class="v" data-v="1Kor14:27,1Kor14:28" data-ref="1 Korintus 14:27-28">14:27-28</a>, di mana karunia itu justru bisa dihentikan atas perintah.</p>
+  <p class="note">Kalau Anda hanya punya satu kalimat untuk ini: "Mereka datang dari agama yang mengukur kerohanian dengan seberapa hilang kendali Anda. Paulus mengukurnya dengan seberapa banyak yang terbangun."</p>
+
 </section>
 
 <section class="sec" data-hue="7">
@@ -1119,13 +1154,13 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <h3>Bacaan Jumat yang ditugaskan pelajaran</h3>
   <p><em>Spiritual Gifts</em>, vol. 1, hlm. 5-16. Periksa ini di lembar pelajaran Anda sendiri sebelum menyebutkannya, karena saya membacanya lewat ringkasan halaman, bukan dari lembaran aslinya.</p>
 
-  <div class="flag" data-label="Perhatian"><p>Halaman-halaman itu tampaknya tulisan Roswell F. Cottrell, bukan Ellen G. White. Jangan memperkenalkan apa pun dari sana dengan kalimat "Ellen White berkata". Sebut judul bukunya saja. Kesalahan seperti ini akan ditemukan seseorang dalam waktu satu menit, dan itu merugikan bukan hanya Anda tetapi juga bobot Roh Nubuat di kelas Anda.</p></div>
+  <div class="flag" data-label="Perhatian"><p><strong>Tiga hal berbeda, judulnya mirip semua, dan tidak satu pun tulisan Ellen G. White.</strong> Ini sudah diperiksa langsung ke katalog EGW Writings, jadi pakailah dengan yakin. <strong>(1)</strong> Kutipan hari Kamis berasal dari <em>Spiritual Gifts</em> terbitan 1899, 38 halaman, dan penulisnya <strong>J. N. Loughborough</strong>. <strong>(2)</strong> Bacaan Jumat yang ditugaskan pelajaran adalah karangan <strong>Roswell F. Cottrell</strong>, halaman 5 sampai 16, yang dimuat <em>di dalam</em> <strong>(3)</strong> <em>Spiritual Gifts</em> vol. 1 karya Ellen G. White, terbitan 1858, 219 halaman. Jadi jangan memperkenalkan kutipan hari Kamis dengan "Ellen White berkata", dan jangan pula menyebutnya karangan Cottrell. Sebut saja Loughborough. Pelajaran resminya sendiri menuliskan bacaan Jumat begini: "Read Roswell F. Cottrell, “Spiritual Gifts,” pp. 5–16, in Ellen G. White, Spiritual Gifts, vol. 1."</p></div>
 
   <h3>Empat aturan membacakan kutipan di kelas</h3>
   <ol>
     <li><strong>Satu paragraf, bukan tiga.</strong> Kutipan panjang yang dibacakan nyaring kehilangan ruangan. Kalau sebuah kutipan butuh dua tarikan napas, potong.</li>
     <li><strong>Tandai di mana berhenti.</strong> Kutipan <em>Acts of the Apostles</em> hlm. 318.2 di hari Selasa adalah contohnya: kekuatannya ada di kalimat terakhir, dan habis kalau ada apa pun dibacakan sesudahnya.</li>
-    <li><strong>Bacakan bahasa Inggrisnya kalau ketepatan kata penting.</strong> Tab Indonesia di setiap kartu adalah terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. Tombol <code>EN</code> di kanan atas mengubah semua kartu sekaligus.</li>
+    <li><strong>Bacakan bahasa Inggrisnya kalau ketepatan kata penting.</strong> Setiap tab bertanda <em>Terjemahan kerja</em> adalah terjemahan untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. Itu berlaku untuk semua kartu, jadi tidak diulang di bawah tiap kutipan. Tombol <code>EN</code> di kanan atas mengubah semua kartu sekaligus.</li>
     <li><strong>Kutipan adalah peringatan bagi jemaat, bukan alat diagnosis.</strong> Bacakan sebagai teguran Paulus kepada jemaat yang sombong, jangan sebagai izin bagi kelas untuk menilai satu sama lain.</li>
   </ol>
 </section>
@@ -1306,7 +1341,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Setinggi apa pun pengakuannya, orang yang hatinya tidak dipenuhi kasih kepada Allah dan kepada sesamanya bukanlah murid Kristus yang sejati. Sekalipun ia memiliki iman yang besar dan kuasa untuk mengadakan mujizat, tanpa kasih imannya tidak ada harganya. Ia mungkin menunjukkan kemurahan yang besar; tetapi jika ia membagikan seluruh miliknya untuk memberi makan orang miskin karena motif lain selain kasih yang sejati, perbuatan itu tidak membuatnya berkenan kepada Allah. Dalam semangatnya ia bahkan mungkin menemui kematian sebagai martir, tetapi jika bukan kasih yang menggerakkannya, ia akan dipandang Allah sebagai orang yang terbawa khayalan atau seorang munafik yang berambisi."</p></blockquote>
-      <p class="note"><em>The Acts of the Apostles</em>, hlm. 318.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1407">Baca di EGW Writings</a></p>
+      <p class="note"><em>The Acts of the Apostles</em>, hlm. 318.2. <a href="https://text.egwwritings.org/read/127.1407">Baca di EGW Writings</a></p>
     </div>
   </div>
 
@@ -1322,7 +1357,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Kasih 'tidak melakukan yang tidak sopan, tidak mencari keuntungan diri sendiri, tidak pemarah, tidak menyimpan kesalahan orang lain.' Kasih seperti Kristus menaruh tafsiran yang paling baik atas motif dan tindakan orang lain. Ia tidak membuka-buka kesalahan mereka tanpa perlu; ia tidak dengan penuh minat mendengarkan kabar buruk tentang orang lain, melainkan berusaha mengingat sifat-sifat baik mereka."</p></blockquote>
-      <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1411">Baca di EGW Writings</a></p>
+      <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.2. <a href="https://text.egwwritings.org/read/127.1411">Baca di EGW Writings</a></p>
     </div>
   </div>
 
@@ -1338,7 +1373,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Kasih 'tidak bersukacita karena ketidakadilan, tetapi karena kebenaran; ia menutupi segala sesuatu, percaya segala sesuatu, mengharapkan segala sesuatu, sabar menanggung segala sesuatu.' Kasih ini 'tidak berkesudahan.' Ia tidak pernah dapat kehilangan nilainya; ia adalah sifat sorgawi. Sebagai harta yang berharga, kasih itu akan dibawa oleh pemiliknya melalui pintu gerbang kota Allah."</p></blockquote>
-      <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.3. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/127.1412">Baca di EGW Writings</a></p>
+      <p class="note"><em>The Acts of the Apostles</em>, hlm. 319.3. <a href="https://text.egwwritings.org/read/127.1412">Baca di EGW Writings</a></p>
     </div>
   </div>
   <p>Berpasangan langsung dengan 1 Korintus 13:13. Karunia adalah perancah untuk zaman ini; kasih adalah satu-satunya yang dibawa masuk melalui pintu gerbang.</p>
@@ -1355,7 +1390,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Ikatan kesatuan yang mempersatukan anggota dengan anggota di dalam jemaat haruslah bekerja sekokoh dan seharmonis bagian-bagian tubuh yang sebenarnya. Tangan, kepala, dan kaki begitu erat bersatu dan begitu saling bergantung, sehingga satu anggota tidak dapat hidup dan bertindak lepas dari anggota yang lain. Hidup dan Roh Kristus menopang dan membuat setiap anggota tubuh-Nya sendiri bertumbuh, dan mereka hidup karena Kristus hidup di dalam mereka."</p></blockquote>
-      <p class="note"><em>Manuscript 44, 1900</em>, par. 35. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/14065.9349066">Baca di EGW Writings</a></p>
+      <p class="note"><em>Manuscript 44, 1900</em>, par. 35. <a href="https://text.egwwritings.org/read/14065.9349066">Baca di EGW Writings</a></p>
     </div>
   </div>
   <p>Menambahkan apa yang tidak dikatakan perumpamaan anatomi Paulus sendiri. Kesatuannya bersifat Kristologis, bukan organisatoris.</p>
@@ -1372,12 +1407,12 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Masing-masing mempunyai pekerjaan yang berbeda. Tidak seorang pun dituntut untuk mengambil pekerjaan orang lain lalu, meskipun tidak terlatih, mencoba mengerjakannya. Allah telah memberi kepada setiap orang sesuai dengan kemampuannya. Seseorang mungkin menyangka bahwa jabatannya memberi dia wewenang untuk mendikte pekerja yang lain, tetapi tidak demikian."</p></blockquote>
-      <p class="note"><em>Christian Leadership</em>, hlm. 38.2, dihimpun dari <em>Testimonies for the Church</em>, jld. 8, hlm. 170-171. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/12.212">Baca di EGW Writings</a></p>
+      <p class="note"><em>Christian Leadership</em>, hlm. 38.2, dihimpun dari <em>Testimonies for the Church</em>, jld. 8, hlm. 170-171. <a href="https://text.egwwritings.org/read/12.212">Baca di EGW Writings</a></p>
     </div>
   </div>
   <p>1 Korintus 12 biasanya dikhotbahkan kepada anggota yang merasa tidak berguna. Kalimat ini mengarahkan prinsip yang sama kepada pengurus yang merasa berhak mengatur departemen orang lain.</p>
 
-  <h3>B.2 &nbsp;<em>Spiritual Gifts</em> halaman 16, dengan peringatan penyebutan nama</h3>
+  <h3>B.2 &nbsp;Kutipan Loughborough, dan tiga buku yang mudah tertukar</h3>
   <div class="bq">
     <div class="tabs" role="tablist">
       <button type="button" data-l="en" role="tab" aria-selected="true">English</button>
@@ -1385,15 +1420,15 @@ nav.toc details[open] > summary::after{content:"\2212"}
     </div>
     <div class="lang" data-l="en">
       <blockquote class="egw" data-label="Spiritual Gifts"><p>"The more excellent way is not to have a church without the gifts of the Spirit; it is a more excellent way than simply to 'covet' gifts."</p></blockquote>
-      <p class="note"><em>Spiritual Gifts</em>, hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
+      <p class="note">J. N. Loughborough, <em>Spiritual Gifts</em> (1899), hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
     </div>
     <div class="lang" data-l="id">
       <blockquote class="egw" data-label="Terjemahan kerja"><p>"Jalan yang lebih utama itu bukan berarti gereja tanpa karunia-karunia Roh; itu adalah jalan yang lebih utama daripada sekadar 'menginginkan' karunia."</p></blockquote>
-      <p class="note"><em>Spiritual Gifts</em>, hlm. 16.2. Terjemahan kerja untuk penuntun ini, bukan kutipan dari edisi Indonesia resmi. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
+      <p class="note">J. N. Loughborough, <em>Spiritual Gifts</em> (1899), hlm. 16.2. <a href="https://text.egwwritings.org/read/1340.76">Baca di EGW Writings</a></p>
     </div>
   </div>
 
-  <div class="flag" data-label="Perhatian"><p>Kutipan ini verbatim dan sudah diperiksa. Tetapi <strong>jangan memperkenalkannya dengan kalimat "Ellen White berkata".</strong> Bagian <em>Spiritual Gifts</em> vol. 1 hlm. 5-16, yang justru merupakan bacaan Jumat pelajaran ini, tampaknya tulisan Roswell F. Cottrell. Sebut judul bukunya saja, dan pastikan penyebutan penulis di lembar pelajaran Anda sendiri.</p></div>
+  <div class="flag" data-label="Perhatian"><p><strong>Tiga hal berbeda, judulnya mirip semua, dan tidak satu pun tulisan Ellen G. White.</strong> Ini sudah diperiksa langsung ke katalog EGW Writings, jadi pakailah dengan yakin. <strong>(1)</strong> Kutipan hari Kamis berasal dari <em>Spiritual Gifts</em> terbitan 1899, 38 halaman, dan penulisnya <strong>J. N. Loughborough</strong>. <strong>(2)</strong> Bacaan Jumat yang ditugaskan pelajaran adalah karangan <strong>Roswell F. Cottrell</strong>, halaman 5 sampai 16, yang dimuat <em>di dalam</em> <strong>(3)</strong> <em>Spiritual Gifts</em> vol. 1 karya Ellen G. White, terbitan 1858, 219 halaman. Jadi jangan memperkenalkan kutipan hari Kamis dengan "Ellen White berkata", dan jangan pula menyebutnya karangan Cottrell. Sebut saja Loughborough. Pelajaran resminya sendiri menuliskan bacaan Jumat begini: "Read Roswell F. Cottrell, “Spiritual Gifts,” pp. 5–16, in Ellen G. White, Spiritual Gifts, vol. 1."</p></div>
 
   <p>Isi argumennya: pembahasan tentang kasih di pasal 13 tidak menghapus karunia. Membaca 1 Korintus 13:8-10 bersama 13:12, penulis menyimpulkan bahwa karunia bernubuat boleh tampak sesuai kehendak Tuhan sampai keadaan yang sempurna datang, yaitu ketika Tuhan dilihat muka dengan muka. Inilah jawaban tafsir Advent yang klasik terhadap pandangan bahwa karunia sudah berhenti, dan ia diambil dari teks.</p>
 
@@ -1404,29 +1439,30 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <div class="tablewrap"><table class="grid">
     <thead><tr><th>Bacaan</th><th>Untuk apa</th><th>Buka</th></tr></thead>
     <tbody>
-      <tr><td><em>Spiritual Gifts</em>, vol. 1, hlm. 5-16</td><td><strong>Bacaan Jumat yang ditugaskan pelajaran.</strong> Lihat peringatan penyebutan nama di bawah</td><td><a href="https://m.egwwritings.org/en/book/104/toc">Buku</a>, lalu ke hlm. 5</td></tr>
+      <tr><td>Roswell F. Cottrell, hlm. 5-16, di dalam <em>Spiritual Gifts</em> vol. 1 karya Ellen G. White</td><td><strong>Bacaan Jumat yang ditugaskan pelajaran</strong>, persis seperti disebut pelajarannya</td><td><a href="https://m.egwwritings.org/en/book/104/toc">Buku</a>, lalu ke hlm. 5</td></tr>
       <tr><td><em>The Acts of the Apostles</em>, hlm. 318-319</td><td>Pembahasan 1 Korintus 13 secara utuh. Ketiga kutipan hari Selasa berasal dari sini</td><td><a href="https://text.egwwritings.org/read/127.1407">Langsung ke hlm. 318.2</a> &middot; <a href="https://m.egwwritings.org/en/book/127/toc">Buku</a></td></tr>
-      <tr><td><em>Spiritual Gifts</em> (kode SGL), hlm. 16</td><td>Sumber kutipan hari Kamis tentang karunia yang berlanjut. <strong>Bukan buku yang sama dengan baris pertama</strong></td><td><a href="https://text.egwwritings.org/read/1340.76">Langsung ke hlm. 16.2</a> &middot; <a href="https://m.egwwritings.org/en/book/1340/toc">Buku</a></td></tr>
+      <tr><td>J. N. Loughborough, <em>Spiritual Gifts</em> (1899), hlm. 16</td><td>Sumber kutipan hari Kamis. <strong>Penulisnya Loughborough, bukan Ellen G. White dan bukan Cottrell</strong></td><td><a href="https://text.egwwritings.org/read/1340.76">Langsung ke hlm. 16.2</a> &middot; <a href="https://m.egwwritings.org/en/book/1340/toc">Buku</a></td></tr>
       <tr><td><em>Christian Leadership</em>, hlm. 38</td><td>Sumber kutipan hari Senin tentang tidak mengambil pekerjaan orang lain</td><td><a href="https://text.egwwritings.org/read/12.212">Langsung ke hlm. 38.2</a> &middot; <a href="https://m.egwwritings.org/en/book/12/toc">Buku</a></td></tr>
     </tbody>
   </table></div>
 
-  <div class="flag" data-label="Perhatian"><p><strong>Dua buku berbeda dengan nama yang mirip, dan saya sempat menyatukannya.</strong> Kutipan hari Kamis diambil dari <em>Spiritual Gifts</em> berkode SGL, yaitu buku 1340 di perpustakaan EGW Writings. Bacaan Jumat yang ditugaskan pelajaran adalah <em>Spiritual Gifts</em>, vol. 1, yaitu buku 104. Keduanya <em>mungkin</em> memuat teks yang sama di halaman itu, tetapi saya belum memeriksanya. Jadi jangan menyebut kutipan hari Kamis sebagai "bacaan Jumat", dan jangan menyebut keduanya sebagai tulisan Ellen G. White sebelum Anda membuka kedua tautan di atas dan melihat sendiri catatan penulisnya. Halaman 5-16 dari vol. 1 disebut sebagai tulisan Roswell F. Cottrell pada halaman pelajaran, dan itu pun saya baca lewat ringkasan.</p></div>
+  <div class="flag" data-label="Perhatian"><p><strong>Tiga hal berbeda, judulnya mirip semua, dan tidak satu pun tulisan Ellen G. White.</strong> Ini sudah diperiksa langsung ke katalog EGW Writings, jadi pakailah dengan yakin. <strong>(1)</strong> Kutipan hari Kamis berasal dari <em>Spiritual Gifts</em> terbitan 1899, 38 halaman, dan penulisnya <strong>J. N. Loughborough</strong>. <strong>(2)</strong> Bacaan Jumat yang ditugaskan pelajaran adalah karangan <strong>Roswell F. Cottrell</strong>, halaman 5 sampai 16, yang dimuat <em>di dalam</em> <strong>(3)</strong> <em>Spiritual Gifts</em> vol. 1 karya Ellen G. White, terbitan 1858, 219 halaman. Jadi jangan memperkenalkan kutipan hari Kamis dengan "Ellen White berkata", dan jangan pula menyebutnya karangan Cottrell. Sebut saja Loughborough. Pelajaran resminya sendiri menuliskan bacaan Jumat begini: "Read Roswell F. Cottrell, “Spiritual Gifts,” pp. 5–16, in Ellen G. White, Spiritual Gifts, vol. 1."</p></div>
 
   <h4>Ketertiban dan kekhidmatan ibadah, dari 1 Korintus 14:40</h4>
-  <p>SDABC sendiri menunjuk daftar berikut pada ayat itu. Nomor halamannya berasal dari daftar rujukan SDABC, bukan dari pemeriksaan saya atas tiap halaman, jadi periksa sebelum mengutip isinya. Untuk kelompok ini tidak ada tautan langsung: nomor paragrafnya belum diverifikasi, jadi buka bukunya lalu menuju halaman yang disebut.</p>
+  <p>SDABC sendiri menunjuk daftar berikut pada ayat itu. Nomor halamannya berasal dari daftar rujukan SDABC, bukan dari pilihan saya, jadi periksa isinya sebelum mengutip. Setiap tautan di bawah membuka <strong>tepat pada halaman yang disebut</strong>: nomor paragrafnya sudah saya ambil satu per satu dari daftar isi dan isi buku di API EGW Writings. Kolom "Bab" memberi tahu Anda apa yang akan terbuka, karena beberapa di antaranya bukan bab tentang ibadah.</p>
   <div class="tablewrap"><table class="grid">
-    <thead><tr><th>Rujukan SDABC</th><th>Buka bukunya</th></tr></thead>
+    <thead><tr><th>Rujukan SDABC</th><th>Bab</th><th>Buka</th></tr></thead>
     <tbody>
-      <tr><td><em>Evangelism</em>, hlm. 314, 636, 637</td><td><a href="https://m.egwwritings.org/en/book/30/toc">Evangelism</a></td></tr>
-      <tr><td><em>Education</em>, hlm. 243</td><td><a href="https://m.egwwritings.org/en/book/29/toc">Education</a></td></tr>
-      <tr><td><em>Prophets and Kings</em>, hlm. 48, 49</td><td><a href="https://m.egwwritings.org/en/book/88/toc">Prophets and Kings</a></td></tr>
-      <tr><td><em>Patriarchs and Prophets</em>, hlm. 303</td><td><a href="https://m.egwwritings.org/en/book/84/toc">Patriarchs and Prophets</a></td></tr>
-      <tr><td><em>Testimonies for the Church</em>, jld. 4, hlm. 626</td><td><a href="https://m.egwwritings.org/en/book/114/toc">Testimonies, vol. 4</a></td></tr>
-      <tr><td>Habakuk 2:20</td><td>Buka Alkitab Anda</td></tr>
+      <tr><td><em>Evangelism</em>, hlm. 314</td><td>Baptism and Church Membership</td><td><a href="https://text.egwwritings.org/read/30.1728">Langsung ke hlm. 314</a></td></tr>
+      <tr><td><em>Evangelism</em>, hlm. 636, 637</td><td>The Graces of Culture and Kindness</td><td><a href="https://text.egwwritings.org/read/30.3528">hlm. 636</a> &middot; <a href="https://text.egwwritings.org/read/30.3535">hlm. 637</a></td></tr>
+      <tr><td><em>Education</em>, hlm. 243</td><td>Bab 27, Deportment</td><td><a href="https://text.egwwritings.org/read/29.1277">Langsung ke hlm. 243</a></td></tr>
+      <tr><td><em>Prophets and Kings</em>, hlm. 48, 49</td><td>Bab 2, The Temple and Its Dedication</td><td><a href="https://text.egwwritings.org/read/88.172">hlm. 48</a> &middot; <a href="https://text.egwwritings.org/read/88.178">hlm. 49</a></td></tr>
+      <tr><td><em>Patriarchs and Prophets</em>, hlm. 303</td><td>Bab 27, The Law Given to Israel</td><td><a href="https://text.egwwritings.org/read/84.1328">Langsung ke hlm. 303</a></td></tr>
+      <tr><td><em>Testimonies for the Church</em>, jld. 4, hlm. 626</td><td>Bab 61, Love of the World</td><td><a href="https://text.egwwritings.org/read/114.3101">Langsung ke hlm. 626</a></td></tr>
+      <tr><td>Habakuk 2:20</td><td>&mdash;</td><td>Buka Alkitab Anda</td></tr>
     </tbody>
   </table></div>
-  <p class="note">Nomor buku di semua tautan di atas diperiksa satu per satu, bukan diterka dari pola.</p>
+  <p class="note">Nomor buku dan nomor paragraf di semua tautan di atas diambil dari API EGW Writings satu per satu, bukan diterka dari pola.</p>
 
   <h3>B.4 &nbsp;SDA Bible Commentary jilid 6 tentang 1 Korintus 12 sampai 14</h3>
   <p>Semua yang ada di tabel ini diparafrase dari teks SDABC yang benar-benar terbaca. Ekstraksi hanya mengambil paragraf pertama per ayat, jadi jilid Anda memuat lebih banyak daripada ini.</p>
@@ -1470,6 +1506,37 @@ nav.toc details[open] > summary::after{content:"\2212"}
   <p><strong>Andrews Bible Commentary (2020).</strong> ABC-NT hlm. 1473, 1614, dan 1644 membahas bahan ini. Halaman-halaman itu belum terbaca, jadi tidak ada klaim apa pun di penuntun ini tentang isinya. Periksa di jilid Anda sendiri.</p>
 
   <p><strong>Ke mana melangkah untuk pertanyaan lain.</strong> Ángel Rodríguez dan staf BRI adalah suara yang tepat untuk pertanyaan doktrinal apakah dan bagaimana karunia berlanjut. Richard Davidson adalah suara yang tepat untuk metode hermeneutik kalau ada yang berargumen dari tipologi Pentakosta. Ini penunjuk kepada pakar yang tepat, bukan ringkasan tentang apa yang mereka simpulkan tentang perikop ini.</p>
+
+  <details class="fold" id="sumber">
+    <summary>Peta sumber: dari mana tiap bagian datang</summary>
+<div class="tablewrap"><table class="grid">
+    <thead><tr><th>Bagian</th><th>Isi</th><th>Dari</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#s6">Latar Yunani-Romawi</a></td><td>Orakel Delfi, Pythia, kultus Dionisus dan Kibele</td><td><strong>Teacher Comments resmi, Bagian II.</strong> Bagian terbaiknya, diambil utuh dengan menyebut sumbernya</td></tr>
+      <tr><td><a href="#d-sen">Hari Senin</a></td><td>Anggota yang menuntut jabatan, dan ancaman pindah</td><td>Teaching Outline, Bruce Cameron. Dasarnya dari <a class="v" data-v="1Kor12:11" data-ref="1 Korintus 12:11">12:11</a> ditambahkan di sini</td></tr>
+      <tr><td><a href="#s5">Pertanyaan kedua</a></td><td>Nilai dan batas tulisan Ellen G. White</td><td>Discussion Starters no. 10, Robert Nohr. Jawaban, pagar Alkitab, dan batas waktunya ditambahkan di sini</td></tr>
+      <tr><td><a href="#lagu">Lagu</a></td><td>Pilihan lagu per hari</td><td>Singing with Inspiration, Corinne Knopper. Nomor Lagu Sion dicarikan dari basis data</td></tr>
+      <tr><td><a href="#s4">Peta harian</a></td><td>SDABC tujuh belas ayat, kata sisipan "unknown", <em>psomizo</em>, Matthew Henry, Timm dan Esmond</td><td>Penelitian sendiri lewat API EGW Writings dan bibletools. Tidak ada di sumber gratis mana pun</td></tr>
+      <tr><td><a href="#s6">Latar bahasa</a></td><td>TB "bahasa roh" sebagai pilihan tafsir</td><td>Penelitian sendiri. Tidak bisa muncul di sumber berbahasa Inggris</td></tr>
+      <tr><td><a href="#s8">Titik sulit</a></td><td>Posisi BRI tentang karunia bahasa</td><td>Dua artikel Biblical Research Institute, dibaca penuh</td></tr>
+      <tr><td>Seluruh penuntun</td><td>Rencana 35 menit, ayat TB lengkap, kutipan bertautan</td><td>Disusun untuk kelas ini, jam ini, bahasa ini</td></tr>
+    </tbody>
+  </table></div>
+    <p><strong>Beberapa pokok muncul di lebih dari satu sumber, dan itu bagus.</strong> Perumpamaan tubuh ada di Teacher Comments resmi, di Earnhardt, dan di Cameron. <em>Charisma</em> sebagai pemberian untuk kepentingan bersama ada di Discussion Starters no. 6 dan di <a href="#s6">bagian 6</a> penuntun ini. Kalau tiga orang sampai ke pokok yang sama, kemungkinan besar pokok itu memang inti pelajarannya. Yang tidak boleh terjadi bukan pengulangan, melainkan mengambil tanpa menyebut sumbernya.</p>
+    <p class="note">Kalau Anda punya waktu membaca satu sumber saja, baca Discussion Starters: sepuluh pertanyaan Nohr sering lebih tajam daripada yang sempat dimuat penuntun mana pun, termasuk yang ini.</p>
+  </details>
+
+  <h3>B.5 &nbsp;Penuntun lain untuk pelajaran ini</h3>
+  <p>Empat kolom Sabbath School Net terbit untuk setiap pelajaran, dan semuanya gratis. Penuntun ini sengaja tidak mengulangi isinya; lihat <a href="#beda">bagian 1</a> untuk apa yang sudah dibahas di sana.</p>
+  <ul>
+    <li><a href="https://ssnet.org/blog/6-spiritual-gifts-sabbath-school-lesson-teaching-plan/">Teaching Plan</a>, William Earnhardt. Format Study, Apply, Share, Mission. Sudut pandangnya: konteks relasional karunia, dan bagaimana orang percaya dan bukan percaya mengalami nubuat secara berbeda</li>
+    <li><a href="https://ssnet.org/blog/6-spiritual-gifts-1-corinthians-12-14-sabbath-school-lesson-teaching-outline/">Teaching Outline</a>, Bruce Cameron. Enam bagian, dengan penekanan kuat pada anggota yang menuntut jabatan tertentu, lengkap dengan contoh kasus jemaat. Bagian yang paling berguna dan tidak ada di penuntun ini</li>
+    <li><a href="https://ssnet.org/blog/6-discussion-starters-spiritual-gifts/">Discussion Starters</a>, Robert Nohr. Sepuluh pertanyaan. No. 8 tentang seberapa baik jemaat Anda memanggil keluar karunia setiap orang, dan no. 10 tentang nilai dan batas tulisan Ellen G. White, keduanya layak dipakai apa adanya</li>
+    <li><a href="https://ssnet.org/blog/6-spiritual-gifts-singing-with-inspiration/">Singing with Inspiration</a>, Corinne Knopper. Sumber saran lagu di <a href="#lagu">bagian 3</a></li>
+    <li><a href="https://www.youtube.com/watch?v=jvxt7qoXMtU">Deep Made Simple</a>, 37 menit, terbit 1 Agustus 2026. Kedalaman pada teksnya sendiri. Transkrip otomatisnya ada di folder penelitian, tetapi takarir otomatis bukan naskah penyaji: jangan mengutip kata demi kata dari sana</li>
+    <li><a href="https://sabbath-school.adventech.io/api/v2/en/quarterlies/2026-03/lessons/06/days/teacher-comments/read/index.json">Teacher Comments resmi</a>, lewat API Adventech yang menjalankan aplikasi Sekolah Sabat resmi. Situs <code>absg.sspmadventist.org</code> sendiri dirender JavaScript dan tidak bisa dibaca skrip, tetapi isinya sama dan terbuka lewat API ini</li>
+  </ul>
+
 </section>
 
 
@@ -1608,6 +1675,16 @@ nav.toc details[open] > summary::after{content:"\2212"}
     a.onkeydown=function(e){
       if(e.key==='Enter'||e.key===' '){e.preventDefault();open(a)}};
   });
+
+
+  /* Provenance foldouts open before printing so nothing vanishes on paper. */
+  function openFolds(){[].forEach.call(document.querySelectorAll('details.fold'),
+    function(d){d.dataset.was=d.open?'1':'';d.open=true})}
+  function restoreFolds(){[].forEach.call(document.querySelectorAll('details.fold'),
+    function(d){d.open=d.dataset.was==='1'})}
+  if(window.matchMedia){var mq=window.matchMedia('print');
+    if(mq.addEventListener)mq.addEventListener('change',function(e){e.matches?openFolds():restoreFolds()})}
+  addEventListener('beforeprint',openFolds); addEventListener('afterprint',restoreFolds);
 
   /* --- Contents: force open at desktop width, collapsible below -------- */
   var td=document.getElementById('tocd');
