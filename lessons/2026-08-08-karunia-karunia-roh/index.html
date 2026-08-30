@@ -289,8 +289,8 @@ code{font:13.5px/1.5 var(--mono);background:var(--edge-soft);padding:2px 6px;
 
 /* Contents ---------------------------------------------------------------- */
 nav.toc{padding:30px 24px;font:14px/1.45 var(--sans)}
-nav.toc .th{font:600 10px/1 var(--mono);letter-spacing:.19em;text-transform:uppercase;
-  color:var(--faint);margin:0 0 16px}
+nav.toc .th{display:none;font:600 10px/1 var(--mono);letter-spacing:.19em;
+  text-transform:uppercase;color:var(--faint);margin:0 0 16px}
 nav.toc ol{list-style:none;margin:0;padding:0}
 nav.toc li{margin:0;--hue:var(--muted)}
 nav.toc li[data-hue="1"]{--hue:var(--s1)}
@@ -575,6 +575,7 @@ nav.toc details[open] > summary::after{content:"\2212"}
 @media (min-width:1120px){
   nav.toc details > summary{display:none}
   nav.toc details{display:block}
+  nav.toc .th{display:block}
 }
 
 /* TABLET: 721px to 1119px. Wider gutters, two-up cards, contents collapsed. */
